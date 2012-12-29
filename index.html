@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Kort - An OpenStreetMap Game</title>
+    <link rel="icon" href="./resources/images/kort-favicon.ico" type="image/png" />
+    <meta charset="utf-8">
+    <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="./resources/styles/styles.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="index.html">Kort</a>
+                <ul class="nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="proposals.php">Lösungen</a></li>
+                </ul>
+                <p><a href="http://www.kort.ch" target="_blank" class="btn btn-success" type="button">Jetzt spielen!</a></p>
+            </div>
+        </div>
+    </div>
+    <header class="jumbotron subhead">
+        <div class="container">
+            <h1>Kort</h1>
+            <p>An OpenStreetMap Game</p>
+        </div>
+    </header>
+    <div class="bs-docs-social">
+        <div class="container">
+            <ul class="bs-docs-social-buttons">
+                <li><iframe src="http://ghbtns.com/github-btn.html?user=odi86&repo=kort&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe></li>
+                <li><iframe src="http://ghbtns.com/github-btn.html?user=odi86&repo=kort&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe></li>
+                <li><a href="https://twitter.com/tschortsch85" class="twitter-follow-button" data-show-count="false" data-lang="de">@tschortsch85 folgen</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+                <li><a href="https://twitter.com/odi" class="twitter-follow-button" data-show-count="false" data-lang="de">@odi folgen</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="marketing">
+            <p>Mobile Applikation (WebApp) um fehlerhafte Daten in OpenStreetMap zu verbessern.</p>
+            <p><a href="http://www.kort.ch" target="_blank" class="btn btn-large btn-success">Jetzt spielen!</a></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="marketing">
+            <div class="row-fluid">
+                <div class="span4">
+                    <h2>Gamification</h2>
+                    <p>Die Applikation nutzt Gamification um Benutzer zu motivieren die App zu verwenden. Dies bedeutet, dass spieltypische Elemente eingesetzt werden, so können z.B. Punkte und Badges gesammelt werden, um dann in der Highscore aufzusteigen.</p>
+                    <p>Die Punkte, sogenannte Koins, können Spieler sammeln indem sie Aufträge erfüllen. Aufträge können beispielsweise POIs ohne Namen oder Tracks ohne Tracktype sein. Alle gemachten Lösungsvorschläge werden anschliessend von anderen Spielern überprüft (validiert). Wenn ein Vorschlag von genügend Spielern validiert wurde (je nach Fehlertyp drei bis fünf), gilt er als abgeschlossen und ist somit bereit in OpenStreetMap eingepflegt zu werden.</p>
+                </div>
+                <div class="span4">
+                    <h2>Cross-platform</h2>
+                    <p>WebApp</p>
+                </div>
+                <div class="span4">
+                    <h2>OpenStreetMap</h2>
+                    <p>Derzeit ist das Zurückschreiben der validierten Daten zu OSM nicht implementiert! Stattdessen können Mapper auf der <a href="proposals.php">Lösungs-Seite</a> die derzeit gemachten Lösungsvorschläge anschauen und diese allenfalls in OSM einpflegen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="https://github.com/odi86/kort" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1500;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+</body>
+</html>
