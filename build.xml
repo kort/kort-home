@@ -6,23 +6,14 @@
 	</taskdef>
 
     <property environment="env"/>
+    <property name="php.dir" value="php" />
 
 	<target name="build" depends="css,lint">
 		<echo message="BUILD FINISHED!"/>
     </target>
 
     <target name="lint">
-        <antcall target="js-lint"/>
         <antcall target="php-lint"/>
-    </target>
-
-	<target name="js-lint">
-		<echo message="Linting JavaScript files"/>
-		<exec executable="grunt">
-			<arg value="lint"/>
-			<arg value="--verbose"/>
-			<arg value="--force"/>
-		</exec>
     </target>
 
     <target name="php-lint">
@@ -31,7 +22,7 @@
             <arg value="--standard=code_standard.xml"/>
             <arg value="--report-width=60"/>
             <arg value="${php.dir}"/>
-        </exec>
+		</exec>
     </target>
 
 	<target name="css">
@@ -43,7 +34,7 @@
 				</dirset>
 			</path>
 		</foreach>
-	</target>
+    </target>
 
     <target name="compile_sass">
         <echo message="Compile sass files in ${dir}"/>
