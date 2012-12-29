@@ -51,6 +51,8 @@ $fixesUrl = 'http://db.kort.ch/server/webservices/bug/fix/completed'
         $result = $curl->execute();
         $curl->close();
         $fixes = json_decode($result, true);
+
+        if (!empty($fixes)) {
         ?>
         <table class="table table-striped table-bordered">
             <tr>
@@ -115,6 +117,11 @@ $fixesUrl = 'http://db.kort.ch/server/webservices/bug/fix/completed'
             }
             ?>
         </table>
+        <?php
+        } else {
+            echo "<div class=\"alert alert-info\">Derzeit sind keine validierten L&ouml;sungsvorschl&auml;ge vorhanden.</div>";
+        }
+        ?>
     </div>
     <a href="https://github.com/odi86/kort" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1500;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 </body>
