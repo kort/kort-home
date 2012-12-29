@@ -4,8 +4,12 @@
  */
 
 /** Load the ClassLoader */
-require_once('../server/php/ClassLoader.php');
+require_once('./php/ClassLoader.php');
 Kort\ClassLoader::registerAutoLoader();
+
+use Helper\CurlHelper;
+
+$fixesUrl = 'http://localhost/kort/server/webservices/bug/fix/completed'
 ?>
 
 <!DOCTYPE html>
@@ -37,42 +41,44 @@ Kort\ClassLoader::registerAutoLoader();
             <p>Von Benutzern von Kort erfasst und validiert.</p>
         </div>
     </header>
-    <div class="container">
+    <div class="container with-margin">
         <?php
-        $completedFixHandler = new Webservice\Fix\FixGetHandler();
-        $fixes = json_decode($completedFixHandler->getCompletedValidFixes(), true);
+        $curl = new CurlHelper();
+        $curl->setOption(CURLOPT_URL, $fixesUrl);
+        $curl->setOption(CURLOPT_RETURNTRANSFER, 1);
+        $result = $curl->execute();
+        $curl->close();
+        $fixes = json_decode($result, true);
         ?>
-        <table class="table table-striped">
+        <table class="table table-striped table-bordered">
             <tr>
-                <th>Benutzername</th>
-                <th>Erstellungsdatum</th>
-                <th>Fehler</th>
-                <th>Lösungsvorschlag</th>
-                <th>Prüfungen</th>
-                <th>OSM-Objekt</th>
-                <th>Bearbeiten in OSM</th>
+                <th width="120">Erfasser</th>
+                <th width="*">Fehler</th>
+                <th width="*">Lösungsvorschlag</th>
+                <th width="80">Prüfungen</th>
+                <th width="80">OSM-Objekt</th>
+                <th width="80">Bearbeiten in OSM</th>
             </tr>
             <?php
             foreach ($fixes as $fix) {
                 echo "<tr>\n";
-                echo "<td>" . $fix['username'] . "</td>\n";
-                echo "<td>" . $fix['formatted_create_date'] . "</td>\n";
-                echo "<td>" . $fix['error_type'] . "</td>\n";
+                echo "<td>" . $fix['username'] . "<br /><small><em>" . $fix['formatted_create_date'] . "</em></small></td>\n";
+                echo "<td><strong>" . $fix['error_type'] . "</strong></td>\n";
                 
                 // answer
                 if ($fix['falsepositive'] == "t") {
                     $fix['answer'] = "Nicht lösbar";
                 }
-                echo "<td>" . $fix['answer'] . "</td>\n";
+                echo "<td><p class=\"text-success\"><strong>" . $fix['answer'] . "</strong></p></td>\n";
                 
                 // votes
                 $fix['votes'] = "";
                 if ($fix['upratings'] > 0) {
-                    $thumbsUp = "<img class=\"thumb\" src=\"../resources/images/validation/thumbs-up.png\" />";
+                    $thumbsUp = "<img class=\"thumb\" src=\"./resources/images/thumbs-up.png\" />";
                     $fix['votes'] = $fix['votes'] . "+" . $fix['upratings'] . $thumbsUp;
                 }
                 if ($fix['downratings'] > 0) {
-                    $thumbsDown = "<img class=\"thumb\" src=\"../resources/images/validation/thumbs-down.png\" />";
+                    $thumbsDown = "<img class=\"thumb\" src=\"./resources/images/thumbs-down.png\" />";
                     $fix['votes'] = $fix['votes'] . "-" . $fix['downratings'] . $thumbsDown;
                 }
                 echo "<td>" . $fix['votes'] . "</td>\n";
@@ -90,7 +96,7 @@ Kort\ClassLoader::registerAutoLoader();
                 $keeprightUrl .= "?schema=" . $fix['schema'] . "&error=" . $fix['error_id'];
 
                 $fix['edit'] = "<div class=\"btn-group\">";
-                $fix['edit'] = $fix['edit'] . "<a class=\"btn btn-success dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">";
+                $fix['edit'] = $fix['edit'] . "<a class=\"btn btn-info dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">";
                 $fix['edit'] = $fix['edit'] . "Editor";
                 $fix['edit'] = $fix['edit'] . " <span class=\"caret\"></span>";
                 $fix['edit'] = $fix['edit'] . "</a>";

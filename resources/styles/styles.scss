@@ -6,9 +6,8 @@ body {
 
 .thumb {
     width: 10px;
-    height: 12.5px;
-    margin-left: 0.3em;
-    margin-right: 0.3em;
+    height: auto;
+    margin: 0 0.3em;
 }
 
 .screenshots {
@@ -18,6 +17,12 @@ body {
 .marketing {
     text-align: center;
     color: #5A5A5A;
+}
+
+.container {
+    &.with-margin {
+        margin-top: 20px;
+    }
 }
 
 /* Social proof buttons from GitHub & Twitter */
