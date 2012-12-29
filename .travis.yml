@@ -1,0 +1,14 @@
+language: php
+
+php: 
+  - 5.3
+  - 5.4
+
+before_script:
+  - gem install sass
+  - gem install compass
+  - curl -s http://getcomposer.org/installer | php --
+  - php composer.phar install --dev
+  - phpenv rehash
+
+script: ant build

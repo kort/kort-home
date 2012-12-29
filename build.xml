@@ -1,0 +1,59 @@
+<project name="kort-build" basedir="." default="build">
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+		<classpath>
+			<pathelement location="lib/antlibs/ant-contrib-1.0b3.jar"/>
+		</classpath>
+	</taskdef>
+
+    <property environment="env"/>
+
+	<target name="build" depends="css,lint">
+		<echo message="BUILD FINISHED!"/>
+    </target>
+
+    <target name="lint">
+        <antcall target="js-lint"/>
+        <antcall target="php-lint"/>
+    </target>
+
+	<target name="js-lint">
+		<echo message="Linting JavaScript files"/>
+		<exec executable="grunt">
+			<arg value="lint"/>
+			<arg value="--verbose"/>
+			<arg value="--force"/>
+		</exec>
+    </target>
+
+    <target name="php-lint">
+        <echo message="Linting PHP files"/>
+        <exec executable="bin/phpcs">
+            <arg value="--standard=code_standard.xml"/>
+            <arg value="--report-width=60"/>
+            <arg value="${php.dir}"/>
+        </exec>
+    </target>
+
+	<target name="css">
+		<echo message="Compile sass files to css"/>
+		<foreach target="compile_sass" param="dir">
+			<path>
+				<dirset dir="${basedir}">
+					<include name="**/styles"/>
+				</dirset>
+			</path>
+		</foreach>
+	</target>
+
+    <target name="compile_sass">
+        <echo message="Compile sass files in ${dir}"/>
+        <apply executable="sass" dest="${dir}" verbose="true" force="true" failonerror="true">
+            <arg value="--unix-newlines" />
+            <srcfile />
+            <targetfile />
+            <fileset dir="${dir}" includes="**/*.scss" />
+            <mapper type="glob" from="*.scss" to="*.css"/>
+        </apply>
+    </target>
+
+</project>

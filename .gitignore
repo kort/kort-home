@@ -1,2 +1,7 @@
 /nbproject/private/
 /resources/styles/styles.css
+/.sass-cache/
+/bin/
+/vendor/
+composer.lock
+composer.phar

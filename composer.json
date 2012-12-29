@@ -1,0 +1,9 @@
+{
+    "minimum-version": "dev",
+    "require-dev": {
+        "squizlabs/php_codesniffer": "dev-master"
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
