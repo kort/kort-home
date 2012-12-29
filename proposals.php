@@ -9,7 +9,7 @@ Kort\ClassLoader::registerAutoLoader();
 
 use Helper\CurlHelper;
 
-$fixesUrl = 'http://localhost/kort/server/webservices/bug/fix/completed'
+$fixesUrl = 'http://db.kort.ch/server/webservices/bug/fix/completed'
 ?>
 
 <!DOCTYPE html>
