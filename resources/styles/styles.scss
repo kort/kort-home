@@ -2,51 +2,20 @@ body {
     position: relative;
     // padding for navbar
     padding-top: 40px;
+    padding-bottom: 30px;
 }
 
-.thumb {
-    width: 10px;
-    height: auto;
-    margin: 0 0.3em;
-}
-
-.screenshots {
-    width: 200px;
-}
-
-.marketing {
+/* ----------------------
+ * Global
+ * ---------------------- */
+.centered {
     text-align: center;
-    color: #5A5A5A;
 }
 
 .container {
     &.with-margin {
         margin-top: 20px;
     }
-}
-
-/* Social proof buttons from GitHub & Twitter */
-.bs-docs-social {
-    padding: 10px 0;
-    text-align: center;
-    background-color: #f5f5f5;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Quick links on Home */
-.bs-docs-social-buttons {
-    margin-left: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-}
-.bs-docs-social-buttons li {
-    display: inline-block;
-    padding: 5px 8px;
-    line-height: 1;
-    *display: inline;
-    *zoom: 1;
 }
 
 /* Jumbotrons
@@ -131,4 +100,50 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 }
 .subhead .navbar {
     display: none;
+}
+
+/* ----------------------
+ * Home
+ * ---------------------- */
+img.introduction-image {
+    height: 150px;
+}
+
+/* Social proof buttons from GitHub & Twitter */
+.bs-docs-social {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Quick links on Home */
+.bs-docs-social-buttons {
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.bs-docs-social-buttons li {
+    display: inline-block;
+    padding: 5px 8px;
+    line-height: 1;
+    *display: inline;
+    *zoom: 1;
+}
+
+/* ----------------------
+ * Screenshots
+ * ---------------------- */
+img.screenshot {
+    width: 250px;
+}
+
+/* ----------------------
+ * Lösungen
+ * ---------------------- */
+img.thumb {
+    width: 10px;
+    margin: 0 0.3em;
 }

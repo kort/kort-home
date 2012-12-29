@@ -29,19 +29,21 @@ $fixesUrl = 'http://localhost/kort/server/webservices/bug/fix/completed'
                 <a class="brand" href="index.html">Kort</a>
                 <ul class="nav">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="screenshots.html">Screenshots</a></li>
                     <li class="active"><a href="proposals.php">Lösungen</a></li>
                 </ul>
-                <p><a href="http://www.kort.ch" class="btn btn-success" type="button">Jetzt spielen!</a></p>
+                <p><a href="http://www.kort.ch" class="btn btn-success" type="button">Jetzt spielen! <i class="icon-play-circle icon-white"></i></a></p>
             </div>
         </div>
     </div>
     <header class="jumbotron subhead">
         <div class="container">
             <h1>L&ouml;sungsvorschl&auml;ge</h1>
-            <p>Von Benutzern von Kort erfasst und validiert.</p>
+            <p>Von Benutzern von Kort erfasst und validiert</p>
         </div>
     </header>
     <div class="container with-margin">
+        <p class="lead">Derzeit ist das Zurückschreiben der validierten Daten zu OSM nicht implementiert! Stattdessen können Mapper auf dieser Seite die validierten Lösungen anschauen und diese allenfalls in OSM einpflegen.</p>
         <?php
         $curl = new CurlHelper();
         $curl->setOption(CURLOPT_URL, $fixesUrl);
