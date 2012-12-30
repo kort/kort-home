@@ -4,11 +4,22 @@ php:
   - 5.3
   - 5.4
 
+env:
+  global:
+    - CI_HOME=`pwd`/odi86/kort
+    - BUILD_DIR=`pwd`/build_heroku
+    - secure: "YYySn8SFZEAMKDqNMPpdhatf0QmzQRNeOFrc/LAb7LSR1oFzSDltiCtUl08W\nzJTIFuPT/6Q4D06wsMiSD4nTfKtnc61N1SUqJd1hFt9VqQRZyUtgigtl6Ub8\n63l95MZGYnuDxD9Une++xO7IPuXs05uKDu62WOYwOJLiHhKZJRg="
+
 before_script:
   - gem install sass
   - gem install compass
+  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh >/dev/null 2>&1
+  - export PATH="$PATH:$CI_HOME:/usr/local/heroku/bin"
   - curl -s http://getcomposer.org/installer | php --
   - php composer.phar install --dev
   - phpenv rehash
 
 script: ant build
+
+after_script:
+  - bash $CI_HOME/heroku/heroku.sh
