@@ -11,6 +11,7 @@ cp -r $SOURCE_DIR/php $BUILD_DIR
 cp -r $SOURCE_DIR/lib $BUILD_DIR
 cp -r $SOURCE_DIR/vendor $BUILD_DIR
 cp -r $SOURCE_DIR/resources $BUILD_DIR
+cp -r $SOURCE_DIR/proposals $BUILD_DIR
 cp -r $SOURCE_DIR/*.php $BUILD_DIR
 cp -r $SOURCE_DIR/*.html $BUILD_DIR
 cp -r $SOURCE_DIR/.htaccess $BUILD_DIR
