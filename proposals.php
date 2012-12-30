@@ -30,6 +30,7 @@ $fixesUrl = 'http://play.kort.ch/server/webservices/bug/fix/completed'
                 <ul class="nav">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="screenshots.html">Screenshots</a></li>
+                    <li><a href="developers.html">Entwickler</a></li>
                     <li class="active"><a href="proposals.php">Lösungen</a></li>
                 </ul>
                 <p><a href="http://www.kort.ch" class="btn btn-success" type="button">Jetzt spielen! <i class="icon-play-circle icon-white"></i></a></p>
@@ -124,5 +125,14 @@ $fixesUrl = 'http://play.kort.ch/server/webservices/bug/fix/completed'
         ?>
     </div>
     <a href="https://github.com/odi86/kort" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1500;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <!-- UserVoice widget -->
+    <script type="text/javascript">
+    var uvOptions = {};
+    (function() {
+        var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+        uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/ciFv45SRa04ZQzkujVJKw.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+    })();
+    </script>
 </body>
 </html>
