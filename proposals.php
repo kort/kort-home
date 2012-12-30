@@ -40,7 +40,7 @@ $fixesUrl = 'http://play.kort.ch/server/webservices/bug/fix/completed'
     <header class="jumbotron subhead">
         <div class="container">
             <h1>L&ouml;sungsvorschl&auml;ge</h1>
-            <p>Von Benutzern von Kort erfasst und validiert</p>
+            <p>Von Kort-Benutzern erfasst und validiert</p>
         </div>
     </header>
     <div class="container with-margin">
