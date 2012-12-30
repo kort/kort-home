@@ -7,9 +7,12 @@
 require_once('./php/ClassLoader.php');
 Kort\ClassLoader::registerAutoLoader();
 
-use Helper\CurlHelper;
+use Helper\HttpHelper;
 
-$fixesUrl = 'http://play.kort.ch/server/webservices/bug/fix/completed'
+$fixesUrl = 'http://play.kort.ch/server/webservices/bug/fix/completed';
+$http = new HttpHelper();
+$result = $http->get($fixesUrl);
+$fixes = json_decode($result, true);
 ?>
 
 <!DOCTYPE html>
@@ -46,13 +49,6 @@ $fixesUrl = 'http://play.kort.ch/server/webservices/bug/fix/completed'
     <div class="container with-margin">
         <p class="lead">Derzeit ist das Zurückschreiben der validierten Daten zu OSM nicht implementiert! Stattdessen können Mapper auf dieser Seite die validierten Lösungen anschauen und diese allenfalls in OSM einpflegen.</p>
         <?php
-        $curl = new CurlHelper();
-        $curl->setOption(CURLOPT_URL, $fixesUrl);
-        $curl->setOption(CURLOPT_RETURNTRANSFER, 1);
-        $result = $curl->execute();
-        $curl->close();
-        $fixes = json_decode($result, true);
-
         if (!empty($fixes)) {
         ?>
         <table class="table table-striped table-bordered">
@@ -69,13 +65,13 @@ $fixesUrl = 'http://play.kort.ch/server/webservices/bug/fix/completed'
                 echo "<tr>\n";
                 echo "<td>" . $fix['username'] . "<br /><small><em>" . $fix['formatted_create_date'] . "</em></small></td>\n";
                 echo "<td><strong>" . $fix['error_type'] . "</strong></td>\n";
-                
+
                 // answer
                 if ($fix['falsepositive'] == "t") {
                     $fix['answer'] = "Nicht lösbar";
                 }
                 echo "<td><p class=\"text-success\"><strong>" . $fix['answer'] . "</strong></p></td>\n";
-                
+
                 // votes
                 $fix['votes'] = "";
                 if ($fix['upratings'] > 0) {
@@ -87,12 +83,12 @@ $fixesUrl = 'http://play.kort.ch/server/webservices/bug/fix/completed'
                     $fix['votes'] = $fix['votes'] . "-" . $fix['downratings'] . $thumbsDown;
                 }
                 echo "<td>" . $fix['votes'] . "</td>\n";
-                
+
                 // osm link
                 $osmUrl = "http://www.openstreetmap.org/browse/" . $fix['osm_type'] . "/" . $fix['osm_id'];
                 $fix['osm_link'] = "<a href=\"" . $osmUrl . "\" target=\"_blank\">" . $fix['osm_id'] . "</a>";
                 echo "<td>" . $fix['osm_link'] . "</td>\n";
-                
+
                 // edit
                 $potlatchUrl  = "http://www.openstreetmap.org/edit?editor=potlatch2&";
                 $remoteUrl  = "http://www.openstreetmap.org/edit?editor=remote&";
@@ -111,9 +107,9 @@ $fixesUrl = 'http://play.kort.ch/server/webservices/bug/fix/completed'
                 $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $keeprightUrl . "\"><i class=\"icon-pencil\"></i> KeepRight</a></li>";
                 $fix['edit'] = $fix['edit'] . "</ul>";
                 $fix['edit'] = $fix['edit'] . "</div>";
-                
+
                 echo "<td>" . $fix['edit'] . "</td>\n";
-                
+
                 echo "</tr>\n";
             }
             ?>
