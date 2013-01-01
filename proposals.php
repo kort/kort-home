@@ -36,7 +36,7 @@ $fixes = json_decode($result, true);
                     <li><a href="developers.html">Entwickler</a></li>
                     <li class="active"><a href="proposals.php">Lösungen</a></li>
                 </ul>
-                <p><a href="http://play.kort.ch" class="btn btn-success" type="button">Jetzt spielen! <i class="icon-play-circle icon-white"></i></a></p>
+                <p><a href="http://play.kort.ch" target="_blank" class="btn btn-success" type="button">Jetzt spielen! <i class="icon-play-circle icon-white"></i></a></p>
             </div>
         </div>
     </div>
