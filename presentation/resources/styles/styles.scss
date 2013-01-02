@@ -12,6 +12,9 @@
 
 @import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic);
 
+$dark-grey: #4B4B4B;
+$light-grey: #7b7b7b;
+
 // Override theme settings (see ../template/settings.scss)
 // Background of the presentation
 $backgroundColor: #56b8d8;
@@ -42,7 +45,7 @@ $selectionColor: #fff;
 
 // Background generator
 @mixin bodyBackground() {
-	@include radial-gradient( rgba(161, 200, 225,1), rgba(255,255,255,1) );
+	@include radial-gradient( #a8d1ed, #fff );
 }
 
 
@@ -59,18 +62,63 @@ $selectionColor: #fff;
     h4,
     h5,
     h6 {
+        text-align: center;
         margin: 0 0 30px 0;
     }
+    h1 { font-size: 3em; }
+    h2 { margin-top: 0.3em; }
+    
+    dl {
+        font-size: 0.8em;
+        line-height: 1.3em;
+        
+        dt {
+            font-size: 0.7em;
+            clear: both;
+            float: left;
+            text-transform: uppercase;
+        }
+        dd {
+            text-align: left;
+            margin-left: 5.5em;
+        }
+        dd.last {
+            margin-bottom: 0.3em;
+        }
+    }
+    
+    span.small {
+        font-size: 0.8em;
+    }
+    
     .slides {
-        margin-top: -300px;
+        /*top: 0;
+        margin-top: 100px;*/
+        text-align: left;
+        max-width: 800px;
         
         section {
             line-height: $mainLineHeight;
         }
     }
+    
+    .center {
+        text-align: center;
+    }
 }
 
-.title-image {
+.reveal section img {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+.reveal a:hover img {
+    background: none;
+    border-color: none;
+    box-shadow: none;
+}
+
+.section-image {
     position: absolute;
     right: 0;
     top: 0;
@@ -82,13 +130,49 @@ $selectionColor: #fff;
         background: url('../images/agenda.png') no-repeat;
         background-size: 100px auto;
     }
+    &.ziele {
+        background: url('../images/ziele.png') no-repeat;
+        background-size: 100px auto;
+    }
+    &.fehlerquellen {
+        background: url('../images/fehlerquellen.png') no-repeat;
+        background-size: 100px auto;
+    }
 }
 
+/* ------------------------
+ * Press Start
+ * ------------------------ */
+.press-start .reveal {
+    .state-background {
+        background: #000;
+    }
+    .slides {
+        top: 50%;
+        margin-top: -200px;
+    }
+}
+
+/* ------------------------
+ * Title
+ * ------------------------ */
+section.title {
+    .date {
+        margin-top: 2em;
+        font-size: 0.6em;
+        color: $light-grey;
+        text-align: center;
+    }
+}
+
+/* ------------------------
+ * Twitter
+ * ------------------------ */
 #tweetme {
 	background: url('../images/tweet.png') no-repeat top center;
 	height: 218px;
-	padding: 40px 0 0 190px;
-	color: #00daff;
+	padding: 40px 0 0 410px;
+	color: #00CCFF;
 }
 .tweet .reveal {
     h1,
@@ -101,5 +185,5 @@ $selectionColor: #fff;
     }
 }
 .tweet .reveal .state-background {
-	@include radial-gradient( rgba(0, 218, 255, 1), rgba(107, 233, 255, 0.3) );
+	@include radial-gradient( rgba(0, 153, 255, 1), rgba(120, 222, 255, 0.8) );
 }

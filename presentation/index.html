@@ -34,23 +34,34 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-
-                <!-- Folie 1 - Titel -->
-                <section>
+                
+                <!-- Press Start -->
+                <section data-state="press-start">
+                    <div class="center">
+                        <a class="image" href="#/1"><img src="resources/images/press_start.png" /></a>
+                    </div>
+                </section>
+                
+                <!-- Titel -->
+                <section class="title">
                     <h1>Kort</h1>
-                    <h3>Gamified Mobile App zur Verbesserung von OpenStreetMap</h3>
-                    <p>
-                        <small><a href="http://about.me/juerg.hunziker">Jürg Hunziker</a> / <a href="http://twitter.com/tschortsch85">@tschortsch85</a></small>
-                    </p>
-                    <p>
-                        <small><a href="http://readmore.ch">Stefan Oderbolz</a> / <a href="http://twitter.com/odi">@odi</a></small>
-                    </p>
+                    <h4>Gamified Mobile App zur Verbesserung von OpenStreetMap</h4>
+                    <div class="center"><img src="resources/images/kort-icon_with_gloss.png" width="100px" /></div>
+                    <dl>
+                        <dt>Entwickler:</dt>
+                        <dd>Jürg Hunziker <span class="small"><a href="http://twitter.com/tschortsch85">@tschortsch85</a></span></dd>
+                        <dd class="last">Stefan Oderbolz <span class="small"><a href="http://twitter.com/odi">@odi</a></span></dd>
+                        <dt>Arbeit:</dt>
+                        <dd>Bachelorarbeit HS2012/13</dd>
+                        <dd class="last">HSR Hochschule für Technik Rapperswil</dd>
+                    </dl>
+                    <p class="date">15. Januar 2013</p>
                 </section>
 
-                <!-- Titel -->
+                <!-- Agenda -->
                 <section>
                     <h2>Agenda</h2>
-                    <div class="title-image agenda"></div>
+                    <div class="section-image agenda"></div>
                     <ul>
                         <li>Ziel der Arbeit</li>
                         <li>Demo</li>
@@ -67,6 +78,7 @@
                 <!-- Ziele der Arbeit -->
                 <section>
                     <h2>Ziele der Arbeit</h2>
+                    <div class="section-image ziele"></div>
                     <ul>
                         <li>Cross-platform WebApp mit HTML5 und JavaScript</li>
                         <li>Daten von OpenStreetMap verwenden</li>
@@ -75,9 +87,11 @@
                     </ul>
                 </section>
                 
+                <!-- Fehlerquellen -->
                 <section>
                     <section>
                         <h2>Fehlerquellen</h2>
+                        <div class="section-image fehlerquellen"></div>
                         <h3>Anforderungen</h3>
                         <ul>
                             <li>Für Nicht-Mapper lösbar</li>
@@ -123,70 +137,6 @@
                     <p>
                         Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
                     </p>
-                </section>
-
-                <section data-markdown>
-                    <script type="text/template">
-                        ## Markdown support
-
-                        For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-                            <section data-markdown>
-                              ## Markdown support
-
-                              For those of you who like that sort of thing.
-                              Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-                            </section>
-                    </script>
-                </section>
-
-                <section>
-                    <section data-state="alert">
-                        <h2>Global State</h2>
-                        <p>
-                            Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-                            will be added as a class to the document element when the slide is open. This lets you
-                            apply broader style changes, like switching the background.
-                        </p>
-                        <a href="#/7/1" class="image">
-                            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-                        </a>
-                    </section>
-                    <section data-state="blackout">
-                        <h2>"blackout"</h2>
-                        <a href="#/7/2" class="image">
-                            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-                        </a>
-                    </section>
-                    <section data-state="soothe">
-                        <h2>"soothe"</h2>
-                        <a href="#/7/0" class="image">
-                            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-                        </a>
-                    </section>
-                </section>
-
-                <section data-state="customevent">
-                    <h2>Custom Events</h2>
-                    <p>
-                        Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-                    </p>
-                    <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-    console.log( '"customevent" has fired' );
-} );
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Clever Quotes</h2>
-                    <p>
-                        These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                        The nice thing about standards is that there are so many to choose from</q> and block:
-                    </p>
-                    <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                        For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-                        reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-                    </blockquote>
                 </section>
 
                 <section>
@@ -236,13 +186,6 @@ function linkify( selector ) {
                         <p class="fragment highlight-green">highlight-green</p>
                         <p class="fragment highlight-blue">highlight-blue</p>
                     </section>
-                </section>
-
-                <section>
-                    <h2>Spectacular image!</h2>
-                    <a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-                        <img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-                    </a>
                 </section>
 
                 <section>
