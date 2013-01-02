@@ -1,5 +1,103 @@
+/**
+ * Beige theme for reveal.js.
+ * 
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../../reveal.js/css/theme/template/mixins";
+@import "../../reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+@import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic);
+
+// Override theme settings (see ../template/settings.scss)
+// Background of the presentation
+$backgroundColor: #56b8d8;
+
+// Primary/body text
+$mainFont: 'Noticia Text';
+$mainFontSize: 36px;
+$mainColor: #333;
+$mainLineHeight: 1.4em;
+
+// Headings
+$headingFont: 'Noticia Text';
+$headingColor: #333;
+$headingLineHeight: 1em;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: none;
+$headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
+$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+
+
+// Links and actions
+$linkColor: #296581;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: rgba(79, 64, 28, 0.99);
+$selectionColor: #fff;
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( rgba(161, 200, 225,1), rgba(255,255,255,1) );
+}
+
+
+// Theme template ------------------------------
+@import "../../reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+
+// Other styles ------------------------------
 .reveal {
-    span.kort-title-k {
-        font-size: 1.1em;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0 0 30px 0;
     }
+    .slides {
+        margin-top: -300px;
+        
+        section {
+            line-height: $mainLineHeight;
+            
+            img.title {
+                position: absolute;
+                right: 0;
+                top: 0;
+                max-height: 100px;
+                max-width: 100px;
+                margin: 0;
+                background: none;
+                box-shadow: none;
+                border: none;
+            }
+        }
+    }
+}
+
+#tweetme {
+	background: url('../images/tweet.png') no-repeat top center;
+	height: 218px;
+	padding: 40px 0 0 190px;
+	color: #00daff;
+}
+.tweet .reveal {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fff;
+    }
+}
+.tweet .reveal .state-background {
+	@include radial-gradient( rgba(0, 218, 255, 1), rgba(107, 233, 255, 0.3) );
 }
