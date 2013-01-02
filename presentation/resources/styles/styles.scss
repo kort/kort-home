@@ -66,19 +66,21 @@ $selectionColor: #fff;
         
         section {
             line-height: $mainLineHeight;
-            
-            img.title {
-                position: absolute;
-                right: 0;
-                top: 0;
-                max-height: 100px;
-                max-width: 100px;
-                margin: 0;
-                background: none;
-                box-shadow: none;
-                border: none;
-            }
         }
+    }
+}
+
+.title-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110px;
+    height: 110px;
+    z-index: -1;
+    
+    &.agenda {
+        background: url('../images/agenda.png') no-repeat;
+        background-size: 100px auto;
     }
 }
 
