@@ -45,7 +45,7 @@ $selectionColor: #fff;
 
 // Background generator
 @mixin bodyBackground() {
-	@include radial-gradient( #a8d1ed, #fff );
+    @include radial-gradient( #a8d1ed, #fff );
 }
 
 
@@ -92,13 +92,15 @@ $selectionColor: #fff;
     }
     
     .slides {
-        /*top: 0;
-        margin-top: 100px;*/
+        top: 0;
+        margin-top: 0px;
         text-align: left;
         max-width: 800px;
         
         section {
             line-height: $mainLineHeight;
+            min-height: 700px;
+            max-height: 700px;
         }
     }
     
@@ -107,6 +109,9 @@ $selectionColor: #fff;
     }
 }
 
+.reveal img {
+    max-height: 700px;
+}
 .reveal section img {
     background: none;
     border: none;
