@@ -66,7 +66,7 @@ $selectionColor: #fff;
         margin: 0 0 30px 0;
     }
     h1 { font-size: 3em; }
-    h2 { margin-top: 0.3em; }
+    h2 { font-size: 1.7em; margin-top: 0.3em; }
     
     dl {
         font-size: 0.8em;
@@ -145,6 +145,20 @@ $selectionColor: #fff;
     }
 }
 
+.reveal h3.kort-link {
+    font-size: 1.3em;
+    background-color: #691E21;
+    padding: 0.3em;
+    color: white;
+    border: #F1EDEF 2px solid;
+    box-shadow: 0 0 50px #463641;
+    
+    a:not(.image) {
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
 /* ------------------------
  * Press Start
  * ------------------------ */
@@ -170,6 +184,29 @@ section.title {
     }
 }
 
+
+/* ------------------------
+ * Team
+ * ------------------------ */
+section.developer {
+    .picture {
+        margin-top: 0.3em;
+        float: left;
+        border: solid $light-grey 1px;
+        line-height: 0.1em;
+        
+        img {
+            width: 180px;
+            margin: 0;
+            border: solid #fff 0.2em;
+        }
+    }
+    ul.info {
+        display: block;
+        margin-left: 270px;
+    }
+}
+
 /* ------------------------
  * Twitter
  * ------------------------ */
@@ -191,4 +228,11 @@ section.title {
 }
 .tweet .reveal .state-background {
 	@include radial-gradient( rgba(0, 153, 255, 1), rgba(120, 222, 255, 0.8) );
+}
+
+/* ------------------------
+ * Questions
+ * ------------------------ */
+h1.questions {
+    font-size: 11em;
 }

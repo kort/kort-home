@@ -64,24 +64,27 @@
                         <h2>Le Team</h2>
                         <div class="center"><img src="resources/images/team.jpg" /></div>
                     </section>
-                    <section>
+                    <section class="developer">
                         <h2>Jürg Hunziker</h2>
+                        <div class="picture"><img src="resources/images/tschortsch.jpg" /></div>
                         <div class="section-image aboutus"></div>
-                        <ul>
+                        <ul class="info">
                             <li>Webentwickler, Stadt Winterthur</li>
                             <li>Interessen: Design, Webtechnologien</li>
                             <li>Fokus: Frontend-Entwicklung</li>
-                            <li>Twitter: <a href="http://twitter.com/tschortsch85">@tschortsch85</a></li>
+                            <li>Twitter: <a href="http://twitter.com/tschortsch85">@tschortsch85</a>
+                            </li>
                         </ul>
                     </section>
-                    <section>
+                    <section class="developer">
                         <h2>Stefan Oderbolz</h2>
-                        <div class="section-image aboutus"></div>
-                        <ul>
+                        <div class="picture"><img src="resources/images/odi.jpg" /></div>
+                        <ul class="info">
                             <li>Webentwickler, Liip AG Zürich</li>
                             <li>Interessen: Automatisierung, Architektur</li>
                             <li>Fokus: Backend-Entwicklung</li>
-                            <li>Twitter: <a href="http://twitter.com/odi">@odi</a></li>
+                            <li>Twitter: <a href="http://twitter.com/odi">@odi</a>
+                            </li>
                         </ul>
                     </section>
                 </section>
@@ -110,7 +113,7 @@
                     <h2>Kort</h2>
                     <div class="section-image kort"></div>
                     <ul>
-                        <li>WebApp auf Basis von HTML5 und JavaScript</li>
+                        <li>WebApp basierend auf HTML5 und JavaScript</li>
                         <li>
                             OpenStreetMap-Fehler
                             <ul>
@@ -165,8 +168,16 @@
                         </ul>
                     </section>
                     <section>
-                        <!-- TODO add image of mobile phones -->
-                        image of mobile phones
+                        <h2>Vorher</h2>
+                        <div class="center"><img src="resources/images/kort-devices_before.jpg" /></div>
+                    </section>
+                    <section>
+                        <h2>Nachher</h2>
+                        <div class="center"><img src="resources/images/kort-devices_after.jpg" /></div>
+                    </section>
+                    <section>
+                        <h2>Wait there is more!</h2>
+                        <div class="center"><img src="resources/images/kort-devices_after_more.jpg" /></div>
                     </section>
                 </section>
                 
@@ -237,7 +248,7 @@
                     <section>
                         <h2>Probleme</h2>
                         <ul>
-                            <li>Nicht genügend Fehlerdaten ;-)</li>
+                            <li>Nicht genügend Fehlerdaten <small>OpenStreetMap hat zu wenig Fehler ;-)</small></li>
                             <li>Gamification zeitaufwändig</li>
                             <li>Zurückschreiben der validierten Lösungen</li>
                         </ul>
@@ -248,18 +259,59 @@
                             <li>OSM Stammtisch</li>
                             <li>Technische Benutzer nicht erlaubt (?)</li>
                             <li>Fehlende Zeit</li>
-                            <li>Übergangslösung: <a href="http://www.kort.ch" target="_blank">www.kort.ch</a></li>
+                            <li>Übergangslösung:<br /><a href="http://www.kort.ch" target="_blank">Proposals auf www.kort.ch</a></li>
                         </ul>
                     </section>
+                </section>
+                
+                <!-- Ext.ux.LeafletMap -->
+                <section>
+                    <section>
+                        <h2>OSM-Daten in Sencha Touch</h2>
+                        <ul>
+                            <li>Nur Google Maps Komponente</li>
+                            <li>Neue Komponente basierend auf Leaflet.js
+                                <ul>
+                                    <li>Leichtgewichtige Karten-Library</li>
+                                    <li>Für mobile Anwendung optiomiert</li>
+                                    <li>Verwendung verschiedener Tile-Server</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Ext.ux.LeafletMap</h2>
+                        <ul>
+                            <li>Im <a href="https://market.sencha.com/users/162/extensions/177" target="_blank">Sencha Market</a> veröffentlicht!</li>
+                        </ul>
+                        <div class="center"><img src="resources/images/leafletmap-sencha-market.png" /></div>
+                    </section>
+                </section>
+                
+                <!-- Kort live -->
+                <section>
+                    <h2>Fakten über Kort</h2>
+                    <ul>
+                        <li>Kort ist <strong>live</strong>!<br /><small>Beginne noch heute Koins zu sammeln.</small></li>
+                        <li>Benutzer: <strong>294!</strong></li>
+                        <li>Lösungsvorschläge: <strong>1566</strong></li>
+                    </ul>
+                    <br /><br />
+                    <h3 class="kort-link"><a href="http://play.kort.ch" target="_blank">play.kort.ch</a></h3>
+                </section>
+                
+                
+                <section>
+                    <h1>Fragen</h1>
+                    <h1 class="questions">?</h1>
                 </section>
                 
                 <section>
                     <h2>TODO</h2>
                     <ul>
-                        <li>Bilder von Smartphones (then and now)</li>
-                        <li>Ext.ux.LeafletMap</li>
                         <li>Infrastruktur</li>
                         <li>Gamification</li>
+                        <li>REST API</li>
                     </ul>
                 </section>
 
@@ -282,42 +334,6 @@ function linkify( selector ) {
 }
                     </code></pre>
                     <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-                </section>
-
-                <section>
-                    <section>
-                        <h2>Fragmented Views</h2>
-                        <p>Hit the next arrow...</p>
-                        <p class="fragment">... to step through ...</p>
-                        <ol>
-                            <li class="fragment"><code>any type</code></li>
-                            <li class="fragment"><em>of view</em></li>
-                            <li class="fragment"><strong>fragments</strong></li>
-                        </ol>
-
-                        <aside class="notes">
-                            This slide has fragments which are also stepped through in the notes window.
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Fragment Styles</h2>
-                        <p>There's a few styles of fragments, like:</p>
-                        <p class="fragment grow">grow</p>
-                        <p class="fragment shrink">shrink</p>
-                        <p class="fragment roll-in">roll-in</p>
-                        <p class="fragment fade-out">fade-out</p>
-                        <p class="fragment highlight-red">highlight-red</p>
-                        <p class="fragment highlight-green">highlight-green</p>
-                        <p class="fragment highlight-blue">highlight-blue</p>
-                    </section>
-                </section>
-
-                <section>
-                    <h2>Take a Moment</h2>
-                    <p>
-                        Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take disctracting slides off the screen
-                        during a presentation.
-                    </p>
                 </section>
 
             </div>
