@@ -143,6 +143,9 @@ $selectionColor: #fff;
     .center {
         text-align: center;
     }
+    .important {
+        font-weight: bold;
+    }
 }
 
 .reveal img {
@@ -317,4 +320,14 @@ section.developer {
  * ------------------------ */
 h1.questions {
     font-size: 11em;
+}
+
+/* ------------------------
+ * Statistics
+ * ------------------------ */
+.statistics {
+    img.loading {
+        margin: 0;
+        margin-left: 0.5em;
+    }
 }

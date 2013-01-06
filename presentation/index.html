@@ -351,13 +351,20 @@
                 </section>
                 
                 <!-- Kort live -->
-                <section>
+                <section data-state="statistics">
                     <h2>Fakten über Kort</h2>
                     <div class="section-image facts"></div>
                     <ul>
                         <li>Kort ist <strong>live</strong>!<br /><small>Beginne noch heute Koins zu sammeln.</small></li>
-                        <li>Benutzer: <strong>294!</strong></li>
-                        <li>Lösungsvorschläge: <strong>1566</strong></li>
+                        
+                        <li>Benutzer
+                            <ul>
+                                <li>OpenStreetMap: <span id="osm_user_count" class="important"></span></li>
+                                <li>Google: <span id="google_user_count" class="important"></span></li>
+                                <li>=> Total: <span id="user_count" class="important"></span>!</li>
+                            </ul>
+                        </li>
+                        <li>Lösungsvorschläge: <span id="fix_count" class="important"></span></li>
                     </ul>
                     <br /><br />
                     <h3 class="kort-link"><a href="http://play.kort.ch" target="_blank">play.kort.ch</a></h3>
@@ -382,6 +389,7 @@
 
         </div>
 
+        <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
         <script src="reveal.js/lib/js/head.min.js"></script>
         <script src="reveal.js/js/reveal.min.js"></script>
 
