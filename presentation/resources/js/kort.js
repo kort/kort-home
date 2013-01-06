@@ -10,10 +10,10 @@ Reveal.addEventListener( 'statistics', function() {
 var KortPresentation = {};
 KortPresentation.updateStatistics = function() {
     var host = window.location.host,
-        statisticsUrl = 'http://' + host;
+        statisticsUrl = 'http://play.kort.ch';
 
     if (host === 'localhost') {
-        statisticsUrl += '/kort';
+        statisticsUrl = 'http://' + host + '/kort';
     }
     statisticsUrl += '/server/webservices/statistics';
 
