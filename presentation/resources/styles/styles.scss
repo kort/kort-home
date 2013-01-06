@@ -10,44 +10,54 @@
 @import "../../reveal.js/css/theme/template/settings";
 // ---------------------------------------------
 
-@import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic);
+// Include theme-specific fonts
+@font-face {
+	font-family: 'Cambria';
+	src: url('../fonts/cambria.ttc');
+
+	font-weight: normal;
+	font-style: normal;
+}
 
 $dark-grey: #4B4B4B;
 $light-grey: #7b7b7b;
 
 // Override theme settings (see ../template/settings.scss)
 // Background of the presentation
-$backgroundColor: #56b8d8;
+$backgroundColor: #fff;
 
 // Primary/body text
-$mainFont: 'Noticia Text';
+$mainFont: 'Cambria';
 $mainFontSize: 36px;
-$mainColor: #333;
+$mainColor: #404040;
 $mainLineHeight: 1.4em;
 
 // Headings
-$headingFont: 'Noticia Text';
-$headingColor: #333;
+$headingFont: 'Cambria';
+$headingColor: #262626;
 $headingLineHeight: 1em;
 $headingLetterSpacing: 0.02em;
 $headingTextTransform: none;
-$headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
-$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+$headingTextShadow: none;
+$heading1TextShadow: none;
 
 
 // Links and actions
-$linkColor: #296581;
+$linkColor: #9C1818;
 $linkColorHover: lighten( $linkColor, 20% );
 
 // Text selection
-$selectionBackgroundColor: rgba(79, 64, 28, 0.99);
+$selectionBackgroundColor: rgb(156, 92, 33);
 $selectionColor: #fff;
 
 // Background generator
 @mixin bodyBackground() {
-    @include radial-gradient( #a8d1ed, #fff );
+    background: url('../images/template/quadrat-raster.png');
 }
 
+.reveal .state-background {
+    @include radial-gradient( rgba(255, 249, 237, 0.77), rgba(255, 255, 255, 0.7) );
+}
 
 // Theme template ------------------------------
 @import "../../reveal.js/css/theme/template/theme";
@@ -66,7 +76,7 @@ $selectionColor: #fff;
         margin: 0 0 30px 0;
     }
     h1 { font-size: 3em; }
-    h2 { font-size: 1.7em; margin-top: 0.3em; }
+    h2 { font-size: 1.8em; margin-top: 0.3em; }
     
     dl {
         font-size: 0.8em;
@@ -85,6 +95,32 @@ $selectionColor: #fff;
         dd.last {
             margin-bottom: 0.3em;
         }
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        li {
+            background: url('../images/template/list-style.png') no-repeat 0 12px;
+            padding-left: 1.4em;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+        }
+    }
+    
+    blockquote {
+        width: auto;
+        background-color: #fff;
+        padding: 0.3em 0.7em;
+    }
+    
+    .blockquote-source {
+        margin-top: 0.4em;
+        float: right;
+        color: #A7A7A7;
     }
     
     span.small {
@@ -132,43 +168,89 @@ $selectionColor: #fff;
     z-index: -1;
     
     &.agenda {
-        background: url('../images/agenda.png') no-repeat;
+        background: url('../images/section/agenda.png') no-repeat;
         background-size: 100px auto;
     }
     &.ziele {
-        background: url('../images/ziele.png') no-repeat;
+        background: url('../images/section/ziele.png') no-repeat;
+        background-size: 90px auto;
+    }
+    &.team {
+        background: url('../images/section/team.png') no-repeat;
         background-size: 100px auto;
     }
+    &.kort {
+        background: url('../images/section/kort-icon_with_gloss.png') no-repeat;
+        background-size: 80px auto;
+    }
+    &.crossplatform {
+        background: url('../images/section/crossplatform.png') no-repeat;
+        background-size: 90px auto;
+        margin-right: -50px;
+    }
+    &.login {
+        background: url('../images/section/login.png') no-repeat;
+        background-size: 90px auto;
+    }
     &.fehlerquellen {
-        background: url('../images/fehlerquellen.png') no-repeat;
+        background: url('../images/section/fehlerquellen.png') no-repeat;
         background-size: 100px auto;
+        margin-right: -30px;
+    }
+    &.problems {
+        background: url('../images/section/problems.png') no-repeat;
+        background-size: 90px auto;
+        margin-right: -30px;
+    }
+    &.osm {
+        background: url('../images/section/osm.png') no-repeat;
+        background-size: 90px auto;
+        margin-right: -50px;
+    }
+    &.gamification {
+        background: url('../images/section/gamification.png') no-repeat;
+        background-size: 90px auto;
+    }
+    &.projectmanagement {
+        background: url('../images/section/projectmanagement.png') no-repeat;
+        background-size: 90px auto;
+        margin-right: -30px;
+    }
+    &.facts {
+        background: url('../images/section/facts.png') no-repeat;
+        background-size: 90px auto;
     }
 }
 
+
+/* ------------------------
+ * Global
+ * ------------------------ */
+.kort-logo {
+    position: absolute;
+    background: url('../images/template/kort-text_black.png') no-repeat;
+    background-size: 100px auto;
+    height: 100px;
+    width: 100px;
+    bottom: 70px;
+    right: 80px;
+    opacity: 0.3;
+}
+
+.reveal h2.left {
+    text-align: left;
+}
 .reveal h3.kort-link {
-    font-size: 1.3em;
+    font-size: 1.2em;
     background-color: #691E21;
     padding: 0.3em;
     color: white;
     border: #F1EDEF 2px solid;
-    box-shadow: 0 0 50px #463641;
+    box-shadow: 0 0 30px #463641;
     
     a:not(.image) {
         color: #fff;
         font-weight: bold;
-    }
-}
-
-/* ------------------------
- * Press Start
- * ------------------------ */
-.press-start .reveal {
-    .state-background {
-        background: #000;
-    }
-    .slides {
-        top: 50%;
-        margin-top: -200px;
     }
 }
 
@@ -203,7 +285,7 @@ section.developer {
     }
     ul.info {
         display: block;
-        margin-left: 270px;
+        margin-left: 240px;
     }
 }
 

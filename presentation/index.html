@@ -31,16 +31,10 @@
     <body>
 
         <div class="reveal">
-
+            
+            <div class="kort-logo"></div>
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-                
-                <!-- Press Start -->
-                <section data-state="press-start">
-                    <div class="center">
-                        <a class="image" href="#/1"><img src="resources/images/press_start.png" /></a>
-                    </div>
-                </section>
                 
                 <!-- Titel -->
                 <section class="title">
@@ -65,6 +59,7 @@
                         <div class="center"><img src="resources/images/team.jpg" /></div>
                     </section>
                     <section class="developer">
+                        <div class="section-image team"></div>
                         <h2>Jürg Hunziker</h2>
                         <div class="picture"><img src="resources/images/tschortsch.jpg" /></div>
                         <div class="section-image aboutus"></div>
@@ -77,6 +72,7 @@
                         </ul>
                     </section>
                     <section class="developer">
+                        <div class="section-image team"></div>
                         <h2>Stefan Oderbolz</h2>
                         <div class="picture"><img src="resources/images/odi.jpg" /></div>
                         <ul class="info">
@@ -138,19 +134,20 @@
                 <section>
                     <h2>Demo</h2>
                     <div class="center"><a href="http://play.kort.ch/index_iphone.html" target="_blank"><img src="resources/images/demo.png" /></a></div>
-                    <div class="center"><a href="http://play.kort.ch" target="_blank">play.kort.ch</a></div>
+                    <div class="center"><h3 class="kort-link"><a href="http://play.kort.ch" target="_blank">play.kort.ch</a></h3></div>
                 </section>
                 
                 <!-- Big picture -->
                 <section>
-                    <h2>Überblick</h2>
+                    <h2>Wie bitte?</h2>
                     <div class="center"><img src="resources/images/kort-big_picture.png" /></div>
                 </section>
                 
                 <!-- Crossplatform -->
                 <section>
                     <section>
-                        <h2>Cross-platform WebApp</h2>
+                        <h2 class="left">Cross-platform WebApp</h2>
+                        <div class="section-image crossplatform"></div>
                         <ul>
                             <li>Sencha Touch 2 Framework
                                 <ul>
@@ -185,6 +182,7 @@
                 <section>
                     <section>
                         <h2>Login (OAuth)</h2>
+                        <div class="section-image login"></div>
                         <ul>
                             <li>Standard für Authentifizierung</li>
                             <li>Freigabe von Daten oder Diensten
@@ -197,6 +195,7 @@
                         </ul>
                     </section>
                     <section>
+                        <h2>Ablauf</h2>
                         <div class="center"><img src="resources/images/kort-login.png" /></div>
                     </section>
                 </section>
@@ -205,8 +204,11 @@
                 <section>
                     <section>
                         <h2>Fehlerquellen</h2>
+                        <div class="center"><img src="resources/images/fehlerquellen.png" /></div>
+                    </section>
+                    <section>
+                        <h2>Anforderungen</h2>
                         <div class="section-image fehlerquellen"></div>
-                        <h3>Anforderungen</h3>
                         <ul>
                             <li>Für Nicht-Mapper lösbar</li>
                             <li>Übersetzbar -> Müssen Schema folgen</li>
@@ -216,19 +218,20 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>Fehlerquellen</h2>
+                        <h2>Mögliche Quellen</h2>
+                        <div class="section-image fehlerquellen"></div>
                         <ul>
                             <li>Direkt aus OpenStreetMap</li>
                             <li>FIXME-Tags</li>
                             <li>OpenStreetBugs</li>
-                            <li>KeepRight</li>
-                            <li>MapDust</li>
                             <li>Housenumbervalidator</li>
+                            <li>MapDust</li>
+                            <li>KeepRight</li>
                         </ul>
                     </section>
                     <section>
-                        <h2>Fehlerquellen</h2>
-                        <h3>Entscheid KeepRight</h3>
+                        <h2>Entscheid KeepRight</h2>
+                        <div class="section-image fehlerquellen"></div>
                         <ul>
                             <li>Erstellt durch automatisierten Job</li>
                             <li>Daten werden als Dump-File angeboten</li>
@@ -247,14 +250,20 @@
                 <section>
                     <section>
                         <h2>Probleme</h2>
+                        <div class="center"><img src="resources/images/problems.jpg" /></div>
+                    </section>
+                    <section>
+                        <h2>Probleme</h2>
+                        <div class="section-image problems"></div>
                         <ul>
-                            <li>Nicht genügend Fehlerdaten <small>OpenStreetMap hat zu wenig Fehler ;-)</small></li>
+                            <li>Nicht genügend Fehlerdaten<br /><span class="small">OpenStreetMap hat zu wenig Fehler ;-)</span></li>
                             <li>Gamification zeitaufwändig</li>
                             <li>Zurückschreiben der validierten Lösungen</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Zurückschreiben der Lösungen</h2>
+                        <div class="section-image problems"></div>
                         <ul>
                             <li>OSM Stammtisch</li>
                             <li>Technische Benutzer nicht erlaubt (?)</li>
@@ -268,6 +277,7 @@
                 <section>
                     <section>
                         <h2>OSM-Daten in Sencha Touch</h2>
+                        <div class="section-image osm"></div>
                         <ul>
                             <li>Nur Google Maps Komponente</li>
                             <li>Neue Komponente basierend auf Leaflet.js
@@ -281,6 +291,7 @@
                     </section>
                     <section>
                         <h2>Ext.ux.LeafletMap</h2>
+                        <div class="section-image osm"></div>
                         <ul>
                             <li>Im <a href="https://market.sencha.com/users/162/extensions/177" target="_blank">Sencha Market</a> veröffentlicht!</li>
                         </ul>
@@ -288,9 +299,54 @@
                     </section>
                 </section>
                 
+                <!-- Gamification -->
+                <section>
+                    <section>
+                        <h2>Gamification</h2>
+                        <div class="section-image gamification"></div>
+                        <blockquote cite="http://de.wikipedia.org/wiki/Gamification">
+                            Als Gamification bezeichnet man die Anwendung <strong>spieltypischer Elemente</strong> und Prozesse in einen <strong>spielfremden Kontext</strong>.
+                        </blockquote>
+                        <small class="blockquote-source"><a href="http://de.wikipedia.org/wiki/Gamification" target="_blank">Quelle: Wikipedia</a></small>
+                    </section>
+                    <section>
+                        <h2>Gamification</h2>
+                        <div class="section-image gamification"></div>
+                        <ul>
+                            <li>Punkte</li>
+                            <li>Auszeichnungen</li>
+                            <li>Highscore</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <!-- Projektmanagement -->
+                <section>
+                    <h2>Projektmanagement</h2>
+                    <div class="section-image projectmanagement"></div>
+                    <ul>
+                        <li>Scrum
+                            <ul>
+                                <li>3 Sprints à 2 Wochen</li>
+                                <li>2 Sprints à 3 Wochen</li>
+                                <li>Leicht angepasstes Vorgehen</li>
+                            </ul>
+                        </li>
+                        <li>Offen für Änderungen
+                            <ul>
+                                <li>Timeboxed</li>
+                                <li>Dynamisches Scoping</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <br /><br />
+                    <p>-> Agile Methodik bewährte sich</p>
+                </section>
+                
                 <!-- Kort live -->
                 <section>
                     <h2>Fakten über Kort</h2>
+                    <div class="section-image facts"></div>
                     <ul>
                         <li>Kort ist <strong>live</strong>!<br /><small>Beginne noch heute Koins zu sammeln.</small></li>
                         <li>Benutzer: <strong>294!</strong></li>
@@ -310,8 +366,8 @@
                     <h2>TODO</h2>
                     <ul>
                         <li>Infrastruktur</li>
-                        <li>Gamification</li>
                         <li>REST API</li>
+                        <li>Meilensteine</li>
                     </ul>
                 </section>
 
