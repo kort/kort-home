@@ -1,5 +1,9 @@
 $(document).ready(function(){
     KortPresentation.updateStatistics();
+    
+    $('#statistics-refresh').click(function() {
+        KortPresentation.updateStatistics();
+    });
 });
 
 Reveal.addEventListener( 'statistics', function() {
