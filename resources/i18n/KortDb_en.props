@@ -1,0 +1,8 @@
+# error types
+error_type.title.motorway_ref=Motorway without reference
+error_type.title.poi_wo_name=Object without a name
+error_type.title.missing_speedlimit=Missing speed limit
+error_type.title.tracktype=Type of track unknown
+error_type.title.worship_religion=Place of worship without religion
+error_type.title.language_name=Language of the name unknown
+error_type.title.street_wo_name=Street without a name

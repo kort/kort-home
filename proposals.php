@@ -8,10 +8,12 @@ require_once('./php/ClassLoader.php');
 Kort\ClassLoader::registerAutoLoader();
 
 use Helper\HttpHelper;
+use Helper\LocaleHelper;
 use Osm\OsmChecker;
 
 $fixesUrl = 'http://play.kort.ch/server/webservices/bug/fix/completed';
 $http = new HttpHelper();
+$locale = new LocaleHelper("de");
 $result = $http->get($fixesUrl);
 $fixes = json_decode($result, true);
 ?>
@@ -66,7 +68,7 @@ $fixes = json_decode($result, true);
                 if (OsmChecker::notChangedInOsm($fix)) {
                     echo "<tr>\n";
                     echo "<td>" . $fix['username'] . "<br /><small><em>" . $fix['formatted_create_date'] . "</em></small></td>\n";
-                    echo "<td><strong>" . $fix['error_type'] . "</strong></td>\n";
+                    echo "<td><strong>" . $locale->getValue($fix['error_type']) . "</strong></td>\n";
 
                     // answer
                     if ($fix['falsepositive'] == "t") {
