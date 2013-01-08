@@ -113,6 +113,8 @@ class HttpHelper
 
         $this->curl->setOption(CURLOPT_URL, $url);
         $this->curl->setOption(CURLOPT_RETURNTRANSFER, 1);
+        $this->curl->setOption(CURLOPT_TIMEOUT, 60);
+        
 
         $result = $this->curl->execute();
         $this->curl->close();
