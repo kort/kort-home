@@ -10,14 +10,7 @@
 @import "../../reveal.js/css/theme/template/settings";
 // ---------------------------------------------
 
-// Include theme-specific fonts
-@font-face {
-	font-family: 'Cambria';
-	src: url('../fonts/cambria.ttc');
-
-	font-weight: normal;
-	font-style: normal;
-}
+@import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic);
 
 $dark-grey: #4B4B4B;
 $light-grey: #7b7b7b;
@@ -27,13 +20,13 @@ $light-grey: #7b7b7b;
 $backgroundColor: #fff;
 
 // Primary/body text
-$mainFont: 'Cambria';
+$mainFont: 'Noticia Text';
 $mainFontSize: 36px;
 $mainColor: #404040;
 $mainLineHeight: 1.4em;
 
 // Headings
-$headingFont: 'Cambria';
+$headingFont: 'Noticia Text';
 $headingColor: #262626;
 $headingLineHeight: 1em;
 $headingLetterSpacing: 0.02em;
@@ -122,11 +115,7 @@ $selectionColor: #fff;
         float: right;
         color: #A7A7A7;
     }
-    
-    span.small {
-        font-size: 0.8em;
-    }
-    
+
     .slides {
         top: 0;
         margin-top: 0px;
@@ -138,13 +127,6 @@ $selectionColor: #fff;
             min-height: 700px;
             max-height: 700px;
         }
-    }
-    
-    .center {
-        text-align: center;
-    }
-    .important {
-        font-weight: bold;
     }
 }
 
@@ -230,17 +212,29 @@ $selectionColor: #fff;
 /* ------------------------
  * Global
  * ------------------------ */
-.kort-logo {
-    position: absolute;
-    background: url('../images/template/kort-text_black.png') no-repeat;
-    background-size: 100px auto;
-    height: 100px;
-    width: 100px;
-    bottom: 70px;
-    right: 80px;
-    opacity: 0.3;
-}
+.reveal {
+    .kort-logo {
+        position: absolute;
+        background: url('../images/template/kort-text_black.png') no-repeat;
+        background-size: 100px auto;
+        height: 100px;
+        width: 100px;
+        bottom: 70px;
+        right: 80px;
+        opacity: 0.3;
+    }
 
+
+    span.small {
+        font-size: 0.8em;
+    }
+    .center {
+        text-align: center;
+    }
+    .important {
+        font-weight: bold;
+    }
+}
 .reveal h2.left {
     text-align: left;
 }
