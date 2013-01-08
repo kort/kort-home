@@ -148,63 +148,82 @@ $selectionColor: #fff;
 .section-image {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 10px;
     width: 110px;
     height: 110px;
     z-index: -1;
     
-    &.agenda {
-        background: url('../images/section/agenda.png') no-repeat;
-        background-size: 100px auto;
+    
+    &.team {
+        background: url('../images/section/team.png') no-repeat;
+        $width: 100px;
+        width: $width;
+        background-size: $width auto;
     }
     &.ziele {
         background: url('../images/section/ziele.png') no-repeat;
-        background-size: 90px auto;
-    }
-    &.team {
-        background: url('../images/section/team.png') no-repeat;
-        background-size: 100px auto;
+        $width: 90px;
+        width: $width;
+        background-size: $width auto;
     }
     &.kort {
         background: url('../images/section/kort-icon_with_gloss.png') no-repeat;
-        background-size: 80px auto;
+        $width: 80px;
+        width: $width;
+        background-size: $width auto;
     }
     &.crossplatform {
         background: url('../images/section/crossplatform.png') no-repeat;
-        background-size: 90px auto;
-        margin-right: -50px;
+        $width: 90px;
+        width: $width;
+        background-size: $width auto;
+        margin-right: -70px;
     }
     &.login {
         background: url('../images/section/login.png') no-repeat;
-        background-size: 90px auto;
+        $width: 90px;
+        width: $width;
+        background-size: $width auto;
     }
     &.fehlerquellen {
         background: url('../images/section/fehlerquellen.png') no-repeat;
-        background-size: 100px auto;
-        margin-right: -30px;
+        $width: 100px;
+        width: $width;
+        background-size: $width auto;
+        margin-right: -50px;
     }
     &.problems {
         background: url('../images/section/problems.png') no-repeat;
-        background-size: 90px auto;
-        margin-right: -30px;
+        $width: 90px;
+        width: $width;
+        background-size: $width auto;
+        margin-right: -50px;
     }
     &.osm {
         background: url('../images/section/osm.png') no-repeat;
-        background-size: 90px auto;
-        margin-right: -50px;
+        $width: 90px;
+        width: $width;
+        background-size: $width auto;
+        margin-right: -70px;
     }
     &.gamification {
         background: url('../images/section/gamification.png') no-repeat;
-        background-size: 90px auto;
+        $width: 90px;
+        width: $width;
+        background-size: $width auto;
     }
     &.projectmanagement {
         background: url('../images/section/projectmanagement.png') no-repeat;
-        background-size: 90px auto;
-        margin-right: -30px;
+        $width: 90px;
+        width: $width;
+        background-size: $width auto;
+        margin-right: -50px;
     }
     &.facts {
         background: url('../images/section/facts.png') no-repeat;
-        background-size: 90px auto;
+        $width: 90px;
+        width: $width;
+        background-size: $width auto;
     }
 }
 
@@ -310,13 +329,6 @@ section.developer {
 }
 
 /* ------------------------
- * Questions
- * ------------------------ */
-h1.questions {
-    font-size: 11em;
-}
-
-/* ------------------------
  * Statistics
  * ------------------------ */
 .statistics {
@@ -337,4 +349,11 @@ h1.questions {
         margin: 0;
         width: 20px;
     }
+}
+
+/* ------------------------
+ * Questions
+ * ------------------------ */
+h1.questions {
+    font-size: 10.3em;
 }
