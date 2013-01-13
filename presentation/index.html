@@ -62,27 +62,30 @@
                     <section class="developer">
                         <div class="section-image team"></div>
                         <h2>Jürg Hunziker</h2>
-                        <div class="picture"><img src="resources/images/tschortsch.jpg" /></div>
-                        <div class="section-image aboutus"></div>
-                        <ul class="info">
-                            <li>Webentwickler, Stadt Winterthur</li>
-                            <li>Interessen: Design, Webtechnologien</li>
-                            <li>Fokus: Frontend-Entwicklung</li>
-                            <li>Twitter: <a href="http://twitter.com/tschortsch85">@tschortsch85</a>
-                            </li>
-                        </ul>
+                        <div class="textpic">
+                            <div class="picture poloraid"><img src="resources/images/tschortsch.jpg" /></div>
+                            <ul class="text">
+                                <li>Webentwickler, Stadt Winterthur</li>
+                                <li>Interessen: Design, Webtechnologien</li>
+                                <li>Fokus: Frontend-Entwicklung</li>
+                                <li>Twitter: <a href="http://twitter.com/tschortsch85">@tschortsch85</a>
+                                </li>
+                            </ul>
+                        </div>
                     </section>
                     <section class="developer">
                         <div class="section-image team"></div>
                         <h2>Stefan Oderbolz</h2>
-                        <div class="picture"><img src="resources/images/odi.jpg" /></div>
-                        <ul class="info">
-                            <li>Webentwickler, Liip AG Zürich</li>
-                            <li>Interessen: Automatisierung, Architektur</li>
-                            <li>Fokus: Backend-Entwicklung</li>
-                            <li>Twitter: <a href="http://twitter.com/odi">@odi</a>
-                            </li>
-                        </ul>
+                        <div class="textpic">
+                            <div class="picture poloraid"><img src="resources/images/odi.jpg" /></div>
+                            <ul class="text">
+                                <li>Webentwickler, Liip AG Zürich</li>
+                                <li>Interessen: Automatisierung, Architektur</li>
+                                <li>Fokus: Backend-Entwicklung</li>
+                                <li>Twitter: <a href="http://twitter.com/odi">@odi</a>
+                                </li>
+                            </ul>
+                        </div>
                     </section>
                 </section>
                 
@@ -219,7 +222,7 @@
                         <div class="section-image fehlerquellen"></div>
                         <ul>
                             <li>Für Nicht-Mapper lösbar</li>
-                            <li>Übersetzbar -> Müssen Schema folgen</li>
+                            <li>Übersetzbar &rarr; Müssen Schema folgen</li>
                             <li>Nur Fehler in Metadaten von OSM</li>
                             <li>Ein betroffnener Tag pro Fehler</li>
                             <li>Automatisiert UI zur Lösungseingabe erstellen</li>
@@ -323,14 +326,41 @@
                         <h2>Gamification</h2>
                         <div class="section-image gamification"></div>
                         <ul>
-                            <li>Punkte</li>
-                            <li>Auszeichnungen</li>
-                            <li>Highscore</li>
+                            <li>Elemente
+                                <ul>
+                                    <li>Punkte</li>
+                                    <li>Auszeichnungen</li>
+                                    <li>Highscore</li>
+                                </ul>
+                            </li>
                         </ul>
+                        <p>&rarr; Ziel: Attraktivität weniger beliebter Arbeiten steigern</p>
                     </section>
                     <section>
                         <h2>SBB.Connect</h2>
-                        <div class="section-image gamification"></div>
+                        <div class="section-image sbbconnect"></div>
+                        <div class="textpic">
+                            <div class="picture"><img src="resources/images/sbbconnect-screenshot.png" /></div>
+                            <ul class="text">
+                                <li><strong>Ein- und Auschecken</strong> beim Reisen</li>
+                                <li>Gewinnen von <strong>ConnectPoints</strong> und <strong>Badges</strong></li>
+                                <li>Highscore</li>
+                                <li><strong>Mayor</strong> von Haltestellen werden</li>
+                                <li>Könnte den "Vo-wo-bis-wo-fahred-si"-Kontrolleur ablösen</li>
+                            </ul>
+                        </div>
+                        
+                    </section>
+                    <section>
+                        <h2>RedCritter Tracker</h2>
+                        <div class="section-image redcritter"></div>
+                        <ul>
+                            <li>Gamified Agile Project Management</li>
+                            <li>Mehr Punkte für unbeliebte Stories</li>
+                            <li>Badges</li>
+                            <li>Belohnungen aus Shop</li>
+                        </ul>
+                        <div class="center"><img src="resources/images/redcritterprofile.jpg" width="500px" /></div>
                     </section>
                 </section>
                 
@@ -354,7 +384,7 @@
                         </li>
                     </ul>
                     <br /><br />
-                    <p>-> Agile Methodik bewährte sich</p>
+                    <p>&rarr; Agile Methodik bewährte sich</p>
                 </section>
                 
                 <!-- Kort live -->
@@ -362,13 +392,13 @@
                     <h2>Fakten über Kort</h2>
                     <div class="section-image facts"></div>
                     <ul>
-                        <li>Kort ist <strong>live</strong>!<br />-> Beginne noch heute Koins zu sammeln.</li>
+                        <li>Kort ist <strong>live</strong>!<br />&rarr; Beginne noch heute Koins zu sammeln.</li>
                         
                         <li>Benutzer
                             <ul>
                                 <li>OpenStreetMap: <span id="osm_user_count" class="important"></span></li>
                                 <li>Google: <span id="google_user_count" class="important"></span></li>
-                                <li>=> Total: <span id="user_count" class="important"></span>!</li>
+                                <li>&rArr; Total: <span id="user_count" class="important"></span>!</li>
                             </ul>
                         </li>
                         <li>Lösungsvorschläge: <span id="fix_count" class="important"></span></li>
@@ -390,6 +420,7 @@
                     <ul>
                         <li>Infrastruktur</li>
                         <li>REST API</li>
+                        <li>Transactions</li>
                         <li>Meilensteine</li>
                     </ul>
                 </section>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="resources/images/template/kort-favicon.ico" type="image/png" />
+
+        <title>Kort - An OpenStreetMap Game</title>
+
+        <meta name="description" content="Gamified Mobile App zur Verbesserung von OpenStreetMap">
+        <meta name="author" content="Jürg Hunziker, Stefan Oderbolz">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link rel="stylesheet" href="reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="resources/styles/styles.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+            
+            <div class="kort-logo"></div>
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                
+                <!-- Titel -->
+                <section class="title">
+                    <h1>Kort</h1>
+                    <h4>Gamified Mobile App zur Verbesserung von OpenStreetMap</h4>
+                    <div class="center"><img src="resources/images/kort-icon_with_gloss.png" width="100px" /></div>
+                    <dl>
+                        <dt>Arbeit:</dt>
+                        <dd>Bachelorarbeit HS2012/13</dd>
+                        <dd class="last">HSR Hochschule für Technik Rapperswil</dd>
+                        <dt>Entwickler:</dt>
+                        <dd>Jürg Hunziker <span class="small">(<a href="http://twitter.com/tschortsch85">@tschortsch85</a>)</span></dd>
+                        <dd class="last">Stefan Oderbolz <span class="small">(<a href="http://twitter.com/odi">@odi</a>)</span></dd>
+                    </dl>
+                    <p class="date">15. Januar 2013</p>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/jquery-1.8.3/jquery-1.8.3.min.js"></script>
+        <script src="reveal.js/lib/js/head.min.js"></script>
+        <script src="reveal.js/js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                rollingLinks: false,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+        
+        <script src="resources/js/kort.js"></script>
+    </body>
+</html>

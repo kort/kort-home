@@ -93,6 +93,7 @@ $selectionColor: #fff;
     ul {
         list-style-type: none;
         margin: 0;
+        margin-bottom: 0.5em;
         li {
             background: url('../images/template/list-style.png') no-repeat 0 12px;
             padding-left: 1.4em;
@@ -212,6 +213,20 @@ $selectionColor: #fff;
         width: $width;
         background-size: $width auto;
     }
+    &.sbbconnect {
+        background: url('../images/section/sbbconnect.jpg') no-repeat;
+        $width: 80px;
+        width: $width;
+        background-size: $width auto;
+    }
+    &.redcritter {
+        background: url('../images/section/redcritter.png') no-repeat;
+        $width: 100px;
+        width: $width;
+        background-size: $width auto;
+        margin-top: 20px;
+        margin-right: -20px;
+    }
     &.projectmanagement {
         background: url('../images/section/projectmanagement.png') no-repeat;
         $width: 90px;
@@ -269,6 +284,32 @@ $selectionColor: #fff;
         color: #fff;
     }
 }
+.reveal .textpic {
+    .picture {
+        margin-top: 0.3em;
+        float: left;
+        line-height: 0.1em;
+        
+        img {
+            width: 180px;
+            margin: 0;
+        }
+    }
+    .text {
+        display: block;
+        margin-left: 240px;
+    }
+}
+.reveal .poloraid {
+    border: solid $light-grey 1px;
+    line-height: 0.1em;
+    float: left;
+        
+    img {
+        margin: 0;
+        border: solid #fff 0.2em;
+    }
+}
 
 /* ------------------------
  * Title
@@ -287,16 +328,9 @@ section.title {
  * Team
  * ------------------------ */
 section.developer {
-    .picture {
-        margin-top: 0.3em;
-        float: left;
-        border: solid $light-grey 1px;
-        line-height: 0.1em;
-        
+    .poloraid {
         img {
             width: 180px;
-            margin: 0;
-            border: solid #fff 0.2em;
         }
     }
     ul.info {
