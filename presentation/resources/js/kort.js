@@ -71,7 +71,8 @@ KortPresentation.fields = [
     'fix_count',
     'user_count',
     'osm_user_count',
-    'google_user_count'
+    'google_user_count',
+    'vote_count'
 ];
 KortPresentation.setLoadingState = function() {
     var fieldsCount = KortPresentation.fields.length,

@@ -279,6 +279,40 @@
                     <div class="center"><img src="resources/images/leafletmap-sencha-market.jpg" height="300px" /></div>
                 </section>
                 
+                <!-- REST -->
+                <section>
+                    <section>
+                        <h2>REST Schnittstellen</h2>
+                        <div class="center"><img src="resources/images/kort-big_picture.png" /></div><!-- TODO -->
+                    </section>
+                    <section>
+                        <h2>REST Schnittstellen</h2>
+                        <div class="section-image rest"></div>
+                        <ul>
+                            <li>Architekturentscheid</li>
+                            <li>Sprachunabhängigkeit</li>
+                            <li>Komponenten voneinander unabhängig</li>
+                            <li>Erweiterbarkeit</li>
+                        </ul>
+                        <br /><br />
+                        <p>Problem &#10132; <strong>Konsistenz</strong></p>
+                    </section>
+                    <section>
+                        <h2>Transaktionen</h2>
+                        <div class="section-image rest"></div>
+                        <ul>
+                            <li>Mehrere REST-Requests &#10132; <span class="color-bad important">Inkonsistent</span></li>
+                            <li>Zusammenfassen der Änderungen in einem Request<br />
+                                <span class="small">&#10132; Best practice für Webapplikationen</span>
+                            </li>
+                            <li>Ausführen der Änderungen in einer Datenbanktransaktion<br />
+                                &#10132; Alles oder nichts (ACID)<br />
+                                &#10132; <span class="color-good important">Konsistent</span>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                
                 <!-- Deployment -->
                 <section>
                     <h2>Deployment</h2>
@@ -402,33 +436,55 @@
                             <li><span class="color-good"><span class="symbol">&#10003;</span>MS2: Lesen von Fehlerdaten</span></li>
                             <li><span class="color-good"><span class="symbol">&#10003;</span>MS3: Kartenanzeige von Fehlern</span></li>
                             <li><span class="color-good"><span class="symbol">&#10003;</span>MS4: OAuth</span></li>
-                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS5: Schreiben von Fehlerbehebungen</span></li>
-                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS6: Verifizieren von Änderungen</span></li>
+                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS5: Schreiben von Lösungsvorschlägen</span></li>
+                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS6: Validieren von Lösungsvorschlägen</span></li>
                             <li><span class="color-good"><span class="symbol">&#10003;</span>MS7: Gamification-Konzepte</span></li>
                             <li><span class="color-bad"><span class="symbol">&#10007;</span>MS8: Daten zu OSM schicken</span></li>
                         </ul>
                     </section>
                 </section>
                 
-                <!-- Kort live -->
-                <section data-state="statistics">
-                    <h2>Fakten über Kort</h2>
-                    <div class="section-image facts"></div>
+                <!-- Weiterentwicklung -->
+                <section>
+                    <h2>Weiterentwicklung</h2>
+                    <div class="section-image future"></div>
                     <ul class="statistics-list">
-                        <li>Benutzer
+                        <li>Folgearbeit von Prof. S. Keller ausgeschrieben</li>
+                        <li>Internationalisierung
                             <ul>
-                                <li>OpenStreetMap: <span id="osm_user_count" class="important"></span></li>
-                                <li>Google: <span id="google_user_count" class="important"></span></li>
-                                <li>&rArr; Total: <span id="user_count" class="important"></span>!</li>
+                                <li>Vorhanden: Deutsch, Englisch, (Italienisch)</li>
+                                <li>In Vorbereitung: Portugiesisch, Türkisch, Slovenisch, Rumänisch, Niederländisch, Spanisch, Katalanisch</li>
                             </ul>
                         </li>
-                        <li>Lösungsvorschläge: <span id="fix_count" class="important"></span></li>
+                        <li>Offene GitHub Issues: <strong>12</strong></li>
                     </ul>
-                    <br />
-                    <button id="statistics-refresh"><img src="resources/images/template/refresh.png" /> Aktualisieren</button>
-                    <br />
-                    <p>Kort ist <strong>live</strong>!<br />&#10132; Beginne noch heute Koins zu sammeln.</p>
-                    <h3 class="kort-link"><a href="http://play.kort.ch" target="_blank">play.kort.ch</a></h3>
+                </section>
+                
+                <!-- Kort live -->
+                <section data-state="statistics">
+                    <section>
+                        <h2>Fakten über Kort</h2>
+                        <div class="section-image facts"></div>
+                        <ul class="statistics-list">
+                            <li>Benutzer
+                                <ul>
+                                    <li>OpenStreetMap: <span id="osm_user_count" class="important"></span></li>
+                                    <li>Google: <span id="google_user_count" class="important"></span></li>
+                                    <li>&rArr; Total: <span id="user_count" class="important"></span>!</li>
+                                </ul>
+                            </li>
+                            <li>Überprüfungen: <span id="vote_count" class="important"></span></li>
+                            <li>Lösungsvorschläge: <span id="fix_count" class="important"></span></li>
+                        </ul>
+                        <br />
+                        <button id="statistics-refresh"><img src="resources/images/template/refresh.png" /> Aktualisieren</button>
+                    </section>
+                    <section>
+                        <h2>Kort ist LIVE!</h2>
+                        <div class="center"><img src="resources/images/kort-logo.png" /></div>
+                        <p>&#10132; Beginne noch heute Koins zu sammeln.</p>
+                        <h3 class="kort-link"><a href="http://play.kort.ch" target="_blank">play.kort.ch</a></h3>
+                    </section>
                 </section>
                 
                 <!-- Questions -->
@@ -440,13 +496,8 @@
                 <section>
                     <h2>TODO</h2>
                     <ul>
-                        <li>REST API</li>
-                        <li>Transactions</li>
-                        <li>Meilensteine</li>
-                        <li>Weitere Statistiken - Pull Requests?</li>
-                        <li>Weiterentwicklung - GitHub Issues</li>
-                        <li>Schrift herunterladen</li>
-                        <li>fixCount of undefined</li>
+                        <li>Section image: REST</li>
+                        <li>i18n flags</li>
                     </ul>
                 </section>
 
