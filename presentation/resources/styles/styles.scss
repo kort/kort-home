@@ -10,7 +10,31 @@
 @import "../../reveal.js/css/theme/template/settings";
 // ---------------------------------------------
 
-@import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic);
+@font-face {
+  font-family: 'Noticia Text';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noticia Text'), local('NoticiaText-Regular'), url(../font/NoticiaText-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Noticia Text';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Noticia Text Bold Italic'), local('NoticiaText-BoldItalic'), url(../font/NoticiaText-BoldItalic.woff) format('woff');
+}
+@font-face {
+  font-family: 'Noticia Text';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Noticia Text Italic'), local('NoticiaText-Italic'), url(../font/NoticiaText-Italic.woff) format('woff');
+}
+@font-face {
+  font-family: 'Noticia Text';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noticia Text Bold'), local('NoticiaText-Bold'), url(../font/NoticiaText-Bold.woff) format('woff');
+}
+
 
 $dark-grey: #4B4B4B;
 $light-grey: #7b7b7b;
@@ -89,7 +113,9 @@ $selectionColor: #fff;
             margin-bottom: 0.3em;
         }
     }
-    
+    p {
+        margin-bottom: 0.5em;
+    }
     ul {
         list-style-type: none;
         margin: 0;
@@ -121,7 +147,7 @@ $selectionColor: #fff;
         top: 0;
         margin-top: 30px;
         text-align: left;
-        max-width: 800px;
+        max-width: 850px;
         
         section {
             line-height: $mainLineHeight;
@@ -139,6 +165,10 @@ $selectionColor: #fff;
     border: none;
     box-shadow: none;
     margin: 0 0 1em 0;
+}
+.reveal section img.inline {
+    margin: 0 0.5em;
+    line-height: 1.2em;
 }
 .reveal a:hover img {
     background: none;
@@ -178,7 +208,7 @@ $selectionColor: #fff;
         $width: 90px;
         width: $width;
         background-size: $width auto;
-        margin-right: -70px;
+        margin-right: -30px;
     }
     &.login {
         background: url('../images/section/login.png') no-repeat;
@@ -191,21 +221,21 @@ $selectionColor: #fff;
         $width: 100px;
         width: $width;
         background-size: $width auto;
-        margin-right: -50px;
+        margin-right: -30px;
     }
     &.problems {
         background: url('../images/section/problems.png') no-repeat;
         $width: 90px;
         width: $width;
         background-size: $width auto;
-        margin-right: -50px;
+        margin-right: -30px;
     }
     &.osm {
         background: url('../images/section/osm.png') no-repeat;
         $width: 90px;
         width: $width;
         background-size: $width auto;
-        margin-right: -70px;
+        margin-right: -30px;
     }
     &.gamification {
         background: url('../images/section/gamification.png') no-repeat;
@@ -225,14 +255,20 @@ $selectionColor: #fff;
         width: $width;
         background-size: $width auto;
         margin-top: 20px;
-        margin-right: -20px;
     }
     &.projectmanagement {
         background: url('../images/section/projectmanagement.png') no-repeat;
         $width: 90px;
         width: $width;
         background-size: $width auto;
-        margin-right: -50px;
+        margin-right: -30px;
+    }
+    &.milestones {
+        background: url('../images/section/milestones.png') no-repeat;
+        $width: 90px;
+        width: $width;
+        background-size: $width auto;
+        margin-right: -30px;
     }
     &.facts {
         background: url('../images/section/facts.png') no-repeat;
@@ -258,7 +294,6 @@ $selectionColor: #fff;
         opacity: 0.3;
     }
 
-
     span.small {
         font-size: 0.8em;
     }
@@ -267,6 +302,15 @@ $selectionColor: #fff;
     }
     .important {
         font-weight: bold;
+    }
+    span.color-bad {
+        color: #ce2727;
+    }
+    span.color-middle {
+        color: #e5c552;
+    }
+    span.color-good {
+        color: #47bc3a;
     }
 }
 .reveal h2.left {
@@ -363,6 +407,31 @@ section.developer {
 }
 
 /* ------------------------
+ * Projectmanagement
+ * ------------------------ */
+.reveal {
+    ul.milestones {
+        list-style: none;
+        
+        li {
+            background: none;
+            padding: 0;
+            
+            span.color-good {
+                span.symbol {
+                    margin-right: 0.51em;
+                }
+            }
+            span.color-bad {
+                span.symbol {
+                    margin-right: 0.6em;
+                }
+            }
+        }
+    }
+}
+
+/* ------------------------
  * Statistics
  * ------------------------ */
 .statistics {
@@ -372,12 +441,16 @@ section.developer {
     }
 }
 
+.reveal .statistics-list {
+    margin: 0;
+}
+
 #statistics-refresh {
     font-size: 0.7em;
     font-family: Cambria;
     cursor: pointer;
     margin-left: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     
     img {
         margin: 0;
