@@ -210,6 +210,12 @@ $selectionColor: #fff;
         background-size: $width auto;
         margin-right: -30px;
     }
+    &.interface {
+        background: url('../images/section/interface.png') no-repeat;
+        $width: 80px;
+        width: $width;
+        background-size: $width auto;
+    }
     &.login {
         background: url('../images/section/login.png') no-repeat;
         $width: 90px;
