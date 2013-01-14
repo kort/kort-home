@@ -22,48 +22,49 @@ KortPresentation.updateStatistics = function() {
     statisticsUrl += '/server/webservices/statistics';
 
     KortPresentation.setLoadingState();
-    $.ajax(statisticsUrl, {
-        dataType: 'jsonp',
-        success: function(data, status) {
-            // xhr without jsonp
-            if(typeof data === "string") {
-                data = JSON.parse(data);
-            }
-            KortPresentation.setValues(data);
-        },
-        error: function() {
-            // default data
-            var data = {
-                "return": [
-                    {
-                        "fix_count":"3145",
-                        "falsepositive_fix_count":"250",
-                        "complete_fix_count":"53",
-                        "validated_fix_count":"42",
-                        "user_count":"507",
-                        "active_user_count":"207",
-                        "osm_user_count":"388",
-                        "google_user_count":"114",
-                        "vote_count":"560",
-                        "valid_vote_count":"488",
-                        "invalid_vote_count":"72",
-                        "badge_count":"398",
-                        "first_place_badge_count":"12",
-                        "second_place_badge_count":"11",
-                        "third_place_badge_count":"13",
-                        "hundred_missions_badge_count":"8",
-                        "fifty_missions_badge_count":"12",
-                        "ten_missions_badge_count":"71",
-                        "thousand_checks_badge_count":"0",
-                        "hundred_checks_badge_count":"1",
-                        "ten_checks_badge_count":"16",
-                        "first_mission_badge_count":"205",
-                        "first_check_badge_count":"49"
-                    }
-                ]
-            };
-            KortPresentation.setValues(data);
+    var jqXHR = $.ajax(statisticsUrl, {
+        dataType: 'jsonp'
+    });
+    jqXHR.done(function(data, status, jqXHR) {
+        // xhr without jsonp
+        if(typeof data === "string") {
+            data = JSON.parse(data);
         }
+        KortPresentation.setValues(data);
+    });
+    jqXHR.fail(function() {
+        // default data
+        console.log("Error occured, using local data.");
+        var data = {
+            "return": [
+                {
+                    "fix_count":"4444",
+                    "falsepositive_fix_count":"283",
+                    "complete_fix_count":"85",
+                    "validated_fix_count":"74",
+                    "user_count":"762",
+                    "active_user_count":"319",
+                    "osm_user_count":"574",
+                    "google_user_count":"183",
+                    "vote_count":"1204",
+                    "valid_vote_count":"1114",
+                    "invalid_vote_count":"90",
+                    "badge_count":"583",
+                    "first_place_badge_count":"12",
+                    "second_place_badge_count":"11",
+                    "third_place_badge_count":"14",
+                    "hundred_missions_badge_count":"11",
+                    "fifty_missions_badge_count":"19",
+                    "ten_missions_badge_count":"99",
+                    "thousand_checks_badge_count":"0",
+                    "hundred_checks_badge_count":"4",
+                    "ten_checks_badge_count":"25",
+                    "first_mission_badge_count":"312",
+                    "first_check_badge_count":"76"
+                }
+            ]
+        };
+        KortPresentation.setValues(data);
     });
 };
 KortPresentation.fields = [
