@@ -198,7 +198,7 @@ $selectionColor: #fff;
         background-size: $width auto;
     }
     &.kort {
-        background: url('../images/section/kort-icon_with_gloss.png') no-repeat;
+        background: url('../images/section/kort.png') no-repeat;
         $width: 80px;
         width: $width;
         background-size: $width auto;
@@ -231,6 +231,13 @@ $selectionColor: #fff;
     }
     &.problems {
         background: url('../images/section/problems.png') no-repeat;
+        $width: 90px;
+        width: $width;
+        background-size: $width auto;
+        margin-right: -30px;
+    }
+    &.sencha {
+        background: url('../images/section/sencha.png') no-repeat;
         $width: 90px;
         width: $width;
         background-size: $width auto;
@@ -276,6 +283,12 @@ $selectionColor: #fff;
         background-size: $width auto;
         margin-right: -30px;
     }
+    &.future {
+        background: url('../images/section/future.png') no-repeat;
+        $width: 90px;
+        width: $width;
+        background-size: $width auto;
+    }
     &.facts {
         background: url('../images/section/facts.png') no-repeat;
         $width: 90px;
@@ -316,7 +329,7 @@ $selectionColor: #fff;
         color: #e5c552;
     }
     span.color-good {
-        color: #47bc3a;
+        color: #3ea532;
     }
 }
 .reveal h2.left {
@@ -434,6 +447,15 @@ section.developer {
                 }
             }
         }
+    }
+}
+
+/* ------------------------
+ * Future
+ * ------------------------ */
+.reveal {
+    img.flag {
+        margin: 0;
     }
 }
 
