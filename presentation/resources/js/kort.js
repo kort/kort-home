@@ -38,29 +38,29 @@ KortPresentation.updateStatistics = function() {
         var data = {
             "return": [
                 {
-                    "fix_count":"4444",
-                    "falsepositive_fix_count":"283",
+                    "fix_count":"4528",
+                    "falsepositive_fix_count":"284",
                     "complete_fix_count":"85",
                     "validated_fix_count":"74",
-                    "user_count":"762",
-                    "active_user_count":"319",
-                    "osm_user_count":"574",
-                    "google_user_count":"183",
-                    "vote_count":"1204",
-                    "valid_vote_count":"1114",
-                    "invalid_vote_count":"90",
-                    "badge_count":"583",
+                    "user_count":"776",
+                    "active_user_count":"328",
+                    "osm_user_count":"580",
+                    "google_user_count":"191",
+                    "vote_count":"1239",
+                    "valid_vote_count":"1144",
+                    "invalid_vote_count":"95",
+                    "badge_count":"602",
                     "first_place_badge_count":"12",
                     "second_place_badge_count":"11",
                     "third_place_badge_count":"14",
                     "hundred_missions_badge_count":"11",
                     "fifty_missions_badge_count":"19",
-                    "ten_missions_badge_count":"99",
+                    "ten_missions_badge_count":"106",
                     "thousand_checks_badge_count":"0",
                     "hundred_checks_badge_count":"4",
-                    "ten_checks_badge_count":"25",
-                    "first_mission_badge_count":"312",
-                    "first_check_badge_count":"76"
+                    "ten_checks_badge_count":"27",
+                    "first_mission_badge_count":"320",
+                    "first_check_badge_count":"78"
                 }
             ]
         };
