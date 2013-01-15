@@ -139,7 +139,12 @@
                     <h2>Kort</h2>
                     <div class="section-image kort"></div>
                     <ul>
-                        <li>WebApp basierend auf HTML5 und JavaScript</li>
+                        <li>WebApp basierend auf HTML5 und CSS3
+                            <ul>
+                                <li>Frontend: JavaScript</li>
+                                <li>Backend: PHP</li>
+                            </ul>
+                        </li>
                         <li>
                             OpenStreetMap-Fehler
                             <ul>
@@ -176,15 +181,14 @@
                 <section>
                     <section>
                         <h2>Fehlerquellen</h2>
-                        <div class="center"><img src="resources/images/fehler.jpg" /></div>
+                        <div class="center"><img src="resources/images/kort-big_picture-fehlerquellen.png" /></div>
                     </section>
                     <section>
                         <h2>Anforderungen</h2>
                         <div class="section-image fehlerquellen"></div>
                         <ul>
-                            <li>Für Nicht-Mapper lösbar</li>
+                            <li>Für Nicht-Mapper lösbar &#10132; Kein Editor</li>
                             <li>Übersetzbar &#10132; Kein Freitext</li>
-                            <li>Nur Fehler in Metadaten &#10132; Kein Editor</li>
                             <li>Automatisiert UI zur Lösungseingabe erstellen</li>
                             <li>API verfügbar</li>
                         </ul>
@@ -203,8 +207,8 @@
                             </li>
                             <li>KeepRight
                                 <ul>
+                                    <li>Viele verschiedene Fehlertypen</li>
                                     <li>Erstellt durch automatisierten Job</li>
-                                    <li>Daten werden als Dump-File angeboten</li>
                                     <li>Lösungen nur zu OSM zurückschreiben</li>
                                 </ul>
                                 <span class="color-good">&#10132; geeignet</span>
@@ -216,12 +220,17 @@
                 <!-- Crossplatform -->
                 <section>
                     <section>
-                        <h2 class="left">Cross-platform WebApp</h2>
+                        <h2>Cross-platform WebApp</h2>
+                        <div class="center"><img src="resources/images/kort-big_picture-crossplatform.png" /></div>
+                    </section>
+                    <section>
+                        <h2>Sencha Touch</h2>
                         <div class="section-image crossplatform"></div>
                         <ul>
                             <li>Sencha Touch 2 Framework
                                 <ul>
                                     <li>JavaScript Framework für mobile Web-Applikationen</li>
+                                    <li>Optimiert für Touchscreens</li>
                                     <li>Verwendet Web Standards (HTML5, CSS3)</li>
                                 </ul>
                             </li>
@@ -262,6 +271,12 @@
                                 <span class="small">OpenStreetMap hat zu wenige Fehler ;-)</span>
                             </li>
                             <li>Gamification zeitaufwändig</li>
+                            <li>Unterstützung von
+                                <ul>
+                                    <li>bitforge AG</li>
+                                    <li>Professor der ZHdK</li>
+                                </ul>
+                            </li>
                             <li>Zurückschreiben der validierten Lösungen</li>
                         </ul>
                     </section>
@@ -316,20 +331,8 @@
                                 <li><strong>Ein- und Auschecken</strong> in öffentlichen Verkehrsmitteln</li>
                                 <li>Gewinnen von <strong>ConnectPoints</strong> und <strong>Badges</strong></li>
                                 <li><strong>Mayor</strong> von Haltestellen werden</li>
-                                <li>Könnte den "Vo-wo-bis-wo-fahred-si"-Kontrolleuren ablösen</li>
                             </ul>
                         </div>
-                        
-                    </section>
-                    <section>
-                        <h2>RedCritter Tracker</h2>
-                        <div class="section-image redcritter"></div>
-                        <ul>
-                            <li>Gamified Agile Project Management</li>
-                            <li>Mehr Punkte für unbeliebte Stories</li>
-                            <li>Belohnungen für Arbeitsalltag</li>
-                        </ul>
-                        <div class="center"><img src="resources/images/redcritterprofile.jpg" width="550px" /></div>
                     </section>
                 </section>
                 
@@ -346,7 +349,7 @@
                                 <li>In Vorbereitung:<br />
                                     <img class="flag" src="resources/images/flags/portugal.png" /> Portugiesisch, <img class="flag" src="resources/images/flags/turkey.png" /> Türkisch, <img class="flag" src="resources/images/flags/slovenia.png" /> Slovenisch,<br />
                                     <img class="flag" src="resources/images/flags/romania.png" /> Rumänisch, <img class="flag" src="resources/images/flags/netherlands.png" /> Niederländisch,<br />
-                                    <img class="flag" src="resources/images/flags/spain.png" /> Spanisch/Katalanisch</li>
+                                    <img class="flag" src="resources/images/flags/spain.png" /> Spanisch</li>
                             </ul>
                         </li>
                         <li>Offene GitHub Issues: <strong>12</strong></li>
@@ -384,6 +387,33 @@
                 <section>
                     <h1>Fragen</h1>
                     <h1 class="questions">?</h1>
+                </section>
+                
+                <!-- Weitere Themen -->
+                <section>
+                    
+                    <section>
+                        <h2>OSM-Daten in Sencha Touch</h2>
+                        <div class="section-image sencha"></div>
+                        <ul>
+                            <li>Nur Google Maps Komponente</li>
+                            <li>Neue Komponente basierend auf <strong>Leaflet.js</strong></li>
+                            <li>Im <a href="https://market.sencha.com/users/162/extensions/177" target="_blank">Sencha Market</a> veröffentlicht!</li>
+                        </ul>
+                        <div class="center"><img src="resources/images/leafletmap-sencha-market.jpg" height="300px" /></div>
+                    </section>
+                    
+                    <section>
+                        <h2>RedCritter Tracker</h2>
+                        <div class="section-image redcritter"></div>
+                        <ul>
+                            <li>Gamified Agile Project Management</li>
+                            <li>Mehr Punkte für unbeliebte Stories</li>
+                            <li>Belohnungen für Arbeitsalltag</li>
+                        </ul>
+                        <div class="center"><img src="resources/images/redcritterprofile.jpg" width="550px" /></div>
+                    </section>
+                    
                 </section>
 
             </div>

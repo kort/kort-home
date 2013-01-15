@@ -141,7 +141,12 @@
                     <h2>Kort</h2>
                     <div class="section-image kort"></div>
                     <ul>
-                        <li>WebApp basierend auf HTML5 und JavaScript</li>
+                        <li>WebApp basierend auf HTML5 und CSS3
+                            <ul>
+                                <li>Frontend: JavaScript</li>
+                                <li>Backend: PHP</li>
+                            </ul>
+                        </li>
                         <li>
                             OpenStreetMap-Fehler
                             <ul>
@@ -174,42 +179,18 @@
                     <div class="center"><img src="resources/images/kort-big_picture.png" /></div>
                 </section>
                 
-                <!-- Login -->
-                <!-- Part: HSR -->
-                <section>
-                    <section>
-                        <h2>Login (OAuth)</h2>
-                        <div class="section-image login"></div>
-                        <ul>
-                            <li>Standard für Authentifizierung</li>
-                            <li>Freigabe von Daten oder Diensten
-                                <ul>
-                                    <li>Vor- und Nachname</li>
-                                    <li>E-Mail</li>
-                                    <li>Kalender</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Ablauf</h2>
-                        <div class="center"><img src="resources/images/kort-login.png" /></div>
-                    </section>
-                </section>
-                
                 <!-- Fehlerquellen -->
                 <section>
                     <section>
                         <h2>Fehlerquellen</h2>
-                        <div class="center"><img src="resources/images/fehler.jpg" /></div>
+                        <div class="center"><img src="resources/images/kort-big_picture-fehlerquellen.png" /></div>
                     </section>
                     <section>
                         <h2>Anforderungen</h2>
                         <div class="section-image fehlerquellen"></div>
                         <ul>
-                            <li>Für Nicht-Mapper lösbar</li>
+                            <li>Für Nicht-Mapper lösbar &#10132; Kein Editor</li>
                             <li>Übersetzbar &#10132; Kein Freitext</li>
-                            <li>Nur Fehler in Metadaten &#10132; Kein Editor</li>
                             <li>Automatisiert UI zur Lösungseingabe erstellen</li>
                             <li>API verfügbar</li>
                         </ul>
@@ -228,8 +209,8 @@
                             </li>
                             <li>KeepRight
                                 <ul>
+                                    <li>Viele verschiedene Fehlertypen</li>
                                     <li>Erstellt durch automatisierten Job</li>
-                                    <li>Daten werden als Dump-File angeboten</li>
                                     <li>Lösungen nur zu OSM zurückschreiben</li>
                                 </ul>
                                 <span class="color-good">&#10132; geeignet</span>
@@ -241,12 +222,17 @@
                 <!-- Crossplatform -->
                 <section>
                     <section>
-                        <h2 class="left">Cross-platform WebApp</h2>
+                        <h2>Cross-platform WebApp</h2>
+                        <div class="center"><img src="resources/images/kort-big_picture-crossplatform.png" /></div>
+                    </section>
+                    <section>
+                        <h2>Sencha Touch</h2>
                         <div class="section-image crossplatform"></div>
                         <ul>
                             <li>Sencha Touch 2 Framework
                                 <ul>
                                     <li>JavaScript Framework für mobile Web-Applikationen</li>
+                                    <li>Optimiert für Touchscreens</li>
                                     <li>Verwendet Web Standards (HTML5, CSS3)</li>
                                 </ul>
                             </li>
@@ -272,17 +258,28 @@
                     </section>
                 </section>
                 
-                <!-- Ext.ux.LeafletMap -->
+                <!-- Login -->
                 <!-- Part: HSR -->
                 <section>
-                    <h2>OSM-Daten in Sencha Touch</h2>
-                    <div class="section-image sencha"></div>
-                    <ul>
-                        <li>Nur Google Maps Komponente</li>
-                        <li>Neue Komponente basierend auf <strong>Leaflet.js</strong></li>
-                        <li>Im <a href="https://market.sencha.com/users/162/extensions/177" target="_blank">Sencha Market</a> veröffentlicht!</li>
-                    </ul>
-                    <div class="center"><img src="resources/images/leafletmap-sencha-market.jpg" height="300px" /></div>
+                    <section>
+                        <h2>Login</h2>
+                        <div class="center"><img src="resources/images/kort-big_picture-oauth.png" /></div>
+                    </section>
+                    <section>
+                        <h2>OAuth</h2>
+                        <div class="section-image login"></div>
+                        <ul>
+                            <li>Standard für Authentifizierung</li>
+                            <li>Freigabe von Daten oder Diensten
+                                <ul>
+                                    <li>Vor- und Nachname</li>
+                                    <li>E-Mail</li>
+                                    <li>Kalender</li>
+                                </ul>
+                            </li>
+                            <li>In Kort: Eindeutige Wiedererkennung des Benutzers</li>
+                        </ul>
+                    </section>
                 </section>
                 
                 <!-- REST -->
@@ -290,7 +287,7 @@
                 <section>
                     <section>
                         <h2>REST Schnittstellen</h2>
-                        <div class="center"><img src="resources/images/kort-rest.png" /></div>
+                        <div class="center"><img src="resources/images/kort-big_picture-rest.png" /></div>
                     </section>
                     <section>
                         <h2>REST Schnittstellen</h2>
@@ -320,13 +317,6 @@
                     </section>
                 </section>
                 
-                <!-- Deployment -->
-                <!-- Part: HSR -->
-                <section>
-                    <h2>Deployment</h2>
-                    <div class="center"><img src="resources/images/kort-development.png" height="500px" /></div>
-                </section>
-                
                 <!-- Problems -->
                 <section>
                     <section>
@@ -342,6 +332,12 @@
                                 <span class="small">OpenStreetMap hat zu wenige Fehler ;-)</span>
                             </li>
                             <li>Gamification zeitaufwändig</li>
+                            <li>Unterstützung von
+                                <ul>
+                                    <li>bitforge AG</li>
+                                    <li>Professor der ZHdK</li>
+                                </ul>
+                            </li>
                             <li>Zurückschreiben der validierten Lösungen</li>
                         </ul>
                     </section>
@@ -396,20 +392,8 @@
                                 <li><strong>Ein- und Auschecken</strong> in öffentlichen Verkehrsmitteln</li>
                                 <li>Gewinnen von <strong>ConnectPoints</strong> und <strong>Badges</strong></li>
                                 <li><strong>Mayor</strong> von Haltestellen werden</li>
-                                <li>Könnte den "Vo-wo-bis-wo-fahred-si"-Kontrolleuren ablösen</li>
                             </ul>
                         </div>
-                        
-                    </section>
-                    <section>
-                        <h2>RedCritter Tracker</h2>
-                        <div class="section-image redcritter"></div>
-                        <ul>
-                            <li>Gamified Agile Project Management</li>
-                            <li>Mehr Punkte für unbeliebte Stories</li>
-                            <li>Belohnungen für Arbeitsalltag</li>
-                        </ul>
-                        <div class="center"><img src="resources/images/redcritterprofile.jpg" width="550px" /></div>
                     </section>
                 </section>
                 
@@ -435,20 +419,6 @@
                             </li>
                         </ul>
                         <p>&#10132; Agile Methodik bewährte sich</p>
-                    </section>
-                    <section>
-                        <h2>Meilensteine</h2>
-                        <div class="section-image milestones"></div>
-                        <ul class="milestones">
-                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS1: Aufbereiten von Fehlerdaten</span></li>
-                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS2: Lesen von Fehlerdaten</span></li>
-                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS3: Kartenanzeige von Fehlern</span></li>
-                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS4: OAuth</span></li>
-                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS5: Schreiben von Lösungsvorschlägen</span></li>
-                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS6: Validieren von Lösungsvorschlägen</span></li>
-                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS7: Gamification-Konzepte</span></li>
-                            <li><span class="color-bad"><span class="symbol">&#10007;</span>MS8: Daten zu OSM schicken</span></li>
-                        </ul>
                     </section>
                 </section>
                 
@@ -504,7 +474,59 @@
                     <h1>Fragen</h1>
                     <h1 class="questions">?</h1>
                 </section>
-
+                
+                <!-- Weitere Themen -->
+                <section>
+                    <section>
+                        <h2>Meilensteine</h2>
+                        <div class="section-image milestones"></div>
+                        <ul class="milestones">
+                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS1: Aufbereiten von Fehlerdaten</span></li>
+                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS2: Lesen von Fehlerdaten</span></li>
+                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS3: Kartenanzeige von Fehlern</span></li>
+                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS4: OAuth</span></li>
+                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS5: Schreiben von Lösungsvorschlägen</span></li>
+                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS6: Validieren von Lösungsvorschlägen</span></li>
+                            <li><span class="color-good"><span class="symbol">&#10003;</span>MS7: Gamification-Konzepte</span></li>
+                            <li><span class="color-bad"><span class="symbol">&#10007;</span>MS8: Daten zu OSM schicken</span></li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>OSM-Daten in Sencha Touch</h2>
+                        <div class="section-image sencha"></div>
+                        <ul>
+                            <li>Nur Google Maps Komponente</li>
+                            <li>Neue Komponente basierend auf <strong>Leaflet.js</strong></li>
+                            <li>Im <a href="https://market.sencha.com/users/162/extensions/177" target="_blank">Sencha Market</a> veröffentlicht!</li>
+                        </ul>
+                        <div class="center"><img src="resources/images/leafletmap-sencha-market.jpg" height="300px" /></div>
+                    </section>
+                    
+                    <section>
+                        <h2>RedCritter Tracker</h2>
+                        <div class="section-image redcritter"></div>
+                        <ul>
+                            <li>Gamified Agile Project Management</li>
+                            <li>Mehr Punkte für unbeliebte Stories</li>
+                            <li>Belohnungen für Arbeitsalltag</li>
+                        </ul>
+                        <div class="center"><img src="resources/images/redcritterprofile.jpg" width="550px" /></div>
+                    </section>
+                    
+                    <!-- Deployment -->
+                    <section>
+                        <h2>Deployment</h2>
+                        <div class="center"><img src="resources/images/kort-development.png" height="500px" /></div>
+                    </section>
+                    
+                    <!-- Login -->
+                    <section>
+                        <h2>Login Ablauf</h2>
+                        <div class="center"><img src="resources/images/kort-login.png" /></div>
+                    </section>
+                </section>
+                
             </div>
 
         </div>
