@@ -42,7 +42,7 @@ KortPresentation.updateStatistics = function() {
                     "falsepositive_fix_count":"284",
                     "complete_fix_count":"85",
                     "validated_fix_count":"74",
-                    "user_count":"776",
+                    "user_count":"771",
                     "active_user_count":"328",
                     "osm_user_count":"580",
                     "google_user_count":"191",
