@@ -80,11 +80,11 @@ $fixes = json_decode($result, true);
                     // votes
                     $fix['votes'] = "";
                     if ($fix['upratings'] > 0) {
-                        $thumbsUp = "<img class=\"thumb\" src=\"./resources/images/thumbs-up.png\" />";
+                        $thumbsUp = "<img class=\"thumb\" src=\"./resources/images/proposals/thumbs-up.png\" />";
                         $fix['votes'] = $fix['votes'] . "+" . $fix['upratings'] . $thumbsUp;
                     }
                     if ($fix['downratings'] > 0) {
-                        $thumbsDown = "<img class=\"thumb\" src=\"./resources/images/thumbs-down.png\" />";
+                        $thumbsDown = "<img class=\"thumb\" src=\"./resources/images/proposals/thumbs-down.png\" />";
                         $fix['votes'] = $fix['votes'] . "-" . $fix['downratings'] . $thumbsDown;
                     }
                     echo "<td>" . $fix['votes'] . "</td>\n";
