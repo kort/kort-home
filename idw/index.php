@@ -1,7 +1,8 @@
 <?php
-$redirectUrl = 'http://' . $_SERVER['HTTP_HOST'];
 if($_SERVER['HTTP_HOST'] == 'localhost') {
-    $redirectUrl .= '/kort-home';
+    $redirectUrl = 'http://localhost/kort-home';
+} else {
+    $redirectUrl = 'http://www.kort.ch';
 }
 $redirectUrl .= '/presentation/idw.html';
 
