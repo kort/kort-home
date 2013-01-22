@@ -4,6 +4,6 @@ if($_SERVER['HTTP_HOST'] == 'localhost') {
 } else {
     $redirectUrl = 'http://www.kort.ch';
 }
-$redirectUrl .= '/presentation/gispunkt.html';
+$redirectUrl .= '/presentation/gispunkt';
 
 header('Location: ' . $redirectUrl);

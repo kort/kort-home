@@ -79,7 +79,7 @@ KortPresentation.setLoadingState = function() {
     i;
     
     for(i = 0; i < fieldsCount; i++) {
-        $('#' + KortPresentation.fields[i]).html('<img class="loading" src="resources/images/template/ajax-loader.gif" />');
+        $('#' + KortPresentation.fields[i]).html('<img class="loading" src="../resources/images/template/ajax-loader.gif" />');
     }
 };
 KortPresentation.setValues = function(data) {
