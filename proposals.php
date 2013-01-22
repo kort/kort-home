@@ -69,7 +69,10 @@ $fixes = json_decode($result, true);
                 if (OsmChecker::notChangedInOsm($fix)) {
                     echo "<tr>\n";
                     echo "<td>" . $fix['username'] . "<br /><small><em>" . $fix['formatted_create_date'] . "</em></small></td>\n";
-                    echo "<td><strong>" . $locale->getValue($fix['error_type']) . "</strong></td>\n";
+                    echo "<td>";
+                    echo "<img class='error-type' src='http://play.kort.ch/resources/images/marker_icons/" . $fix['error_type'] . ".png' />";
+                    echo "<strong>" . $locale->getValue($fix['error_type_description']) . "</strong>";
+                    echo "</td>\n";
 
                     // answer
                     if ($fix['falsepositive'] == "t") {
