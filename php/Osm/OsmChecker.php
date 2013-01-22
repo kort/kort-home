@@ -26,7 +26,7 @@ class OsmChecker
         $result = $http->get($osmWsUrl);
 
         $value = null;
-        if(!empty($result)) {
+        if (!empty($result)) {
             $doc = new \DOMDocument();
             $doc->loadXML($result);
             $xPath = new \DOMXpath($doc);
