@@ -50,90 +50,93 @@ $fixes = json_decode($result, true);
             <p>Von Kort-Benutzern erfasst und validiert</p>
         </div>
     </header>
-    <div class="container with-margin">
-        <p class="lead">Derzeit ist das Zurückschreiben der validierten Daten zu OSM nicht implementiert! Stattdessen können Mapper auf dieser Seite die validierten Lösungen anschauen und diese allenfalls in OSM einpflegen.</p>
-        <?php
-        if (!empty($fixes)) {
-        ?>
-        <table class="table table-striped table-bordered">
-            <tr>
-                <th width="120">Erfasser</th>
-                <th width="*">Fehler</th>
-                <th width="*">Lösungsvorschlag</th>
-                <th width="80">Prüfungen</th>
-                <th width="80">OSM-Objekt</th>
-                <th width="80">Bearbeiten in OSM</th>
-            </tr>
+    
+    <div class="content">
+        <div class="container with-margin">
+            <p class="lead">Derzeit ist das Zurückschreiben der validierten Daten zu OSM nicht implementiert! Stattdessen können Mapper auf dieser Seite die validierten Lösungen anschauen und diese allenfalls in OSM einpflegen.</p>
             <?php
-            foreach ($fixes as $fix) {
-                if (OsmChecker::notChangedInOsm($fix)) {
-                    echo "<tr>\n";
-                    echo "<td>" . $fix['username'] . "<br /><small><em>" . $fix['formatted_create_date'] . "</em></small></td>\n";
-                    echo "<td>";
-                    echo "<img class='error-type' src='http://play.kort.ch/resources/images/marker_icons/" . $fix['error_type'] . ".png' />";
-                    echo "<strong>" . $locale->getValue($fix['error_type_description']) . "</strong>";
-                    echo "</td>\n";
+            if (!empty($fixes)) {
+            ?>
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th width="120">Erfasser</th>
+                    <th width="*">Fehler</th>
+                    <th width="*">Lösungsvorschlag</th>
+                    <th width="80">Prüfungen</th>
+                    <th width="80">OSM-Objekt</th>
+                    <th width="80">Bearbeiten in OSM</th>
+                </tr>
+                <?php
+                foreach ($fixes as $fix) {
+                    if (OsmChecker::notChangedInOsm($fix)) {
+                        echo "<tr>\n";
+                        echo "<td>" . $fix['username'] . "<br /><small><em>" . $fix['formatted_create_date'] . "</em></small></td>\n";
+                        echo "<td>";
+                        echo "<img class='error-type' src='http://play.kort.ch/resources/images/marker_icons/" . $fix['error_type'] . ".png' />";
+                        echo "<strong>" . $locale->getValue($fix['error_type_description']) . "</strong>";
+                        echo "</td>\n";
 
-                    // answer
-                    if ($fix['falsepositive'] == "t") {
-                        $fix['answer'] = "Nicht lösbar";
+                        // answer
+                        if ($fix['falsepositive'] == "t") {
+                            $fix['answer'] = "Nicht lösbar";
+                        }
+                        echo "<td><p class=\"text-success\"><strong>" . $fix['answer'] . "</strong></p></td>\n";
+
+                        // votes
+                        $fix['votes'] = "";
+                        if ($fix['upratings'] > 0) {
+                            $thumbsUp = "<img class=\"thumb\" src=\"./resources/images/proposals/thumbs-up.png\" />";
+                            $fix['votes'] = $fix['votes'] . "+" . $fix['upratings'] . $thumbsUp;
+                        }
+                        if ($fix['downratings'] > 0) {
+                            $thumbsDown = "<img class=\"thumb\" src=\"./resources/images/proposals/thumbs-down.png\" />";
+                            $fix['votes'] = $fix['votes'] . "-" . $fix['downratings'] . $thumbsDown;
+                        }
+                        echo "<td>" . $fix['votes'] . "</td>\n";
+
+                        // osm link
+                        $osmUrl = "http://www.openstreetmap.org/browse/" . $fix['osm_type'] . "/" . $fix['osm_id'];
+                        $fix['osm_link'] = "<a href=\"" . $osmUrl . "\" target=\"_blank\">" . $fix['osm_id'] . "</a>";
+                        echo "<td>" . $fix['osm_link'] . "</td>\n";
+
+                        // edit
+                        $potlatchUrl  = "http://www.openstreetmap.org/edit?editor=potlatch2&";
+                        $remoteUrl  = "http://www.openstreetmap.org/edit?editor=remote&";
+                        $params = "lat=" . $fix['latitude'] . "&lon=" . $fix['longitude'] . "&zoom=18";
+                        $keeprightUrl  = "http://www.keepright.at/report_map.php";
+                        $keeprightUrl .= "?schema=" . $fix['schema'] . "&error=" . $fix['error_id'];
+
+                        $fix['edit'] = "<div class=\"btn-group\">";
+                        $fix['edit'] = $fix['edit'] . "<a class=\"btn btn-info dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">";
+                        $fix['edit'] = $fix['edit'] . "Editor";
+                        $fix['edit'] = $fix['edit'] . " <span class=\"caret\"></span>";
+                        $fix['edit'] = $fix['edit'] . "</a>";
+                        $fix['edit'] = $fix['edit'] . "<ul class=\"dropdown-menu\">";
+                        $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $potlatchUrl . $params . "\"><i class=\"icon-pencil\"></i> Potlatch 2</a></li>";
+                        $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $remoteUrl . $params . "\"><i class=\"icon-pencil\"></i> JSOM</a></li>";
+                        $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $keeprightUrl . "\"><i class=\"icon-pencil\"></i> KeepRight</a></li>";
+                        $fix['edit'] = $fix['edit'] . "</ul>";
+                        $fix['edit'] = $fix['edit'] . "</div>";
+
+                        echo "<td>" . $fix['edit'] . "</td>\n";
+
+                        echo "</tr>\n";
                     }
-                    echo "<td><p class=\"text-success\"><strong>" . $fix['answer'] . "</strong></p></td>\n";
-
-                    // votes
-                    $fix['votes'] = "";
-                    if ($fix['upratings'] > 0) {
-                        $thumbsUp = "<img class=\"thumb\" src=\"./resources/images/proposals/thumbs-up.png\" />";
-                        $fix['votes'] = $fix['votes'] . "+" . $fix['upratings'] . $thumbsUp;
-                    }
-                    if ($fix['downratings'] > 0) {
-                        $thumbsDown = "<img class=\"thumb\" src=\"./resources/images/proposals/thumbs-down.png\" />";
-                        $fix['votes'] = $fix['votes'] . "-" . $fix['downratings'] . $thumbsDown;
-                    }
-                    echo "<td>" . $fix['votes'] . "</td>\n";
-
-                    // osm link
-                    $osmUrl = "http://www.openstreetmap.org/browse/" . $fix['osm_type'] . "/" . $fix['osm_id'];
-                    $fix['osm_link'] = "<a href=\"" . $osmUrl . "\" target=\"_blank\">" . $fix['osm_id'] . "</a>";
-                    echo "<td>" . $fix['osm_link'] . "</td>\n";
-
-                    // edit
-                    $potlatchUrl  = "http://www.openstreetmap.org/edit?editor=potlatch2&";
-                    $remoteUrl  = "http://www.openstreetmap.org/edit?editor=remote&";
-                    $params = "lat=" . $fix['latitude'] . "&lon=" . $fix['longitude'] . "&zoom=18";
-                    $keeprightUrl  = "http://www.keepright.at/report_map.php";
-                    $keeprightUrl .= "?schema=" . $fix['schema'] . "&error=" . $fix['error_id'];
-
-                    $fix['edit'] = "<div class=\"btn-group\">";
-                    $fix['edit'] = $fix['edit'] . "<a class=\"btn btn-info dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">";
-                    $fix['edit'] = $fix['edit'] . "Editor";
-                    $fix['edit'] = $fix['edit'] . " <span class=\"caret\"></span>";
-                    $fix['edit'] = $fix['edit'] . "</a>";
-                    $fix['edit'] = $fix['edit'] . "<ul class=\"dropdown-menu\">";
-                    $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $potlatchUrl . $params . "\"><i class=\"icon-pencil\"></i> Potlatch 2</a></li>";
-                    $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $remoteUrl . $params . "\"><i class=\"icon-pencil\"></i> JSOM</a></li>";
-                    $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $keeprightUrl . "\"><i class=\"icon-pencil\"></i> KeepRight</a></li>";
-                    $fix['edit'] = $fix['edit'] . "</ul>";
-                    $fix['edit'] = $fix['edit'] . "</div>";
-
-                    echo "<td>" . $fix['edit'] . "</td>\n";
-
-                    echo "</tr>\n";
                 }
+                ?>
+            </table>
+            <?php
+            } else {
+                echo "<div class=\"alert alert-info\">Derzeit sind keine validierten L&ouml;sungsvorschl&auml;ge vorhanden.</div>";
             }
             ?>
-        </table>
-        <?php
-        } else {
-            echo "<div class=\"alert alert-info\">Derzeit sind keine validierten L&ouml;sungsvorschl&auml;ge vorhanden.</div>";
-        }
-        ?>
+        </div>
     </div>
     
     <footer>
         <div class="container">
             <p class="pull-left">&copy; 2013 Stefan Oderbolz, Jürg Hunziker</p>
-            <a href="http://www.hsr.ch/informatik" target="_blank"><img class="pull-right" src="resources/images/hsr_logo.png" /></a>
+            <p class="pull-right"><a href="http://www.hsr.ch/informatik" target="_blank">Informatik-Studium an der HSR</a></p>
         </div>
     </footer>
     
