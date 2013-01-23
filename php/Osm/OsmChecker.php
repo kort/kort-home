@@ -25,6 +25,9 @@ class OsmChecker
         $osmWsUrl = "http://play.kort.ch/server/webservices/osm/" . $fix['osm_type']. "/" . $fix['osm_id'];
         $result = $http->get($osmWsUrl);
 
+        //sometimes the answer is contained in the tag, e.g. "name:XX" -> "name:en"
+        $fix['osm_tag'] = str_replace("XX", $fix['answer'], $fix['osm_tag']);
+
         $value = null;
         if (!empty($result)) {
             $doc = new \DOMDocument();
