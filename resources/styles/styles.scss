@@ -173,6 +173,55 @@ img.screenshot {
 }
 
 /* ----------------------
+ * Statistiken
+ * ---------------------- */
+.statistics {
+    h3 {
+        margin-top: 30px;
+    }
+    
+    table.stats {
+        th {
+            font-weight: normal;
+            width: 210px;
+            
+            &.important {
+                font-weight: bold;
+            }
+        }
+        td {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+    }
+    
+    .statistics-image {
+        width: 110px;
+    }
+    
+    .kort-badge {
+        width: 160px;
+        float: left;
+        text-align: center;
+        margin-bottom: 10px;
+
+        img {
+            width: 110px;
+            margin-bottom: 10px;
+        }
+        
+        .value {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        &.clear {
+            clear: both;
+        }
+    }
+}
+
+/* ----------------------
  * Lösungen
  * ---------------------- */
 img.thumb {
