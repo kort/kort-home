@@ -141,7 +141,8 @@ $fixes = json_decode($result, true);
     <footer>
         <div class="container">
             <p class="pull-left">&copy; 2013 Stefan Oderbolz, Jürg Hunziker</p>
-            <p class="pull-right"><img class="image-hsr-logo" src="resources/images/hsr_logo.png" /> <a href="http://www.hsr.ch/informatik" target="_blank">Informatik-Studium an der HSR</a></p>
+            <p class="pull-right"><a href="http://www.hsr.ch/informatik" target="_blank"><img class="image-hsr-logo" src="resources/images/hsr_logo.png" /></a></p>
+            <p class="pull-right"><a href="http://www.hsr.ch/informatik" target="_blank">Informatik-Studium an der HSR</a></p>
         </div>
     </footer>
     
