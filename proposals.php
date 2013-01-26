@@ -35,11 +35,11 @@ $fixes = json_decode($result, true);
             <div class="container">
                 <a class="brand" href="index.html">Kort</a>
                 <ul class="nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="screenshots.html">Screenshots</a></li>
-                    <li><a href="developers.html">Entwickler</a></li>
-                    <li><a href="statistics.php">Statistiken</a></li>
-                    <li class="active"><a href="proposals.php">Lösungen</a></li>
+                    <li><a href="index.html"><i class="nav-icon icon-home"></i> Home</a></li>
+                    <li><a href="screenshots.html"><i class="nav-icon icon-picture"></i> Screenshots</a></li>
+                    <li><a href="developers.html"><i class="nav-icon icon-user"></i> Entwickler</a></li>
+                    <li><a href="statistics.php"><i class="nav-icon icon-tasks"></i> Statistiken</a></li>
+                    <li class="active"><a href="proposals.php"><i class="nav-icon icon-ok-sign icon-white"></i> Lösungen</a></li>
                 </ul>
                 <p><a href="http://play.kort.ch" target="_blank" class="btn btn-success" type="button">Jetzt spielen! <i class="icon-play-circle icon-white"></i></a></p>
             </div>

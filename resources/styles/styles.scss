@@ -43,6 +43,18 @@ dd {
     margin-top: 0.2em;
 }
 
+// Navigation
+.nav {
+    .nav-icon {
+        margin-right: 0.5em;
+    }
+    li a:hover {
+        i {
+          background-image: url("../../lib/bootstrap/img/glyphicons-halflings-white.png");
+        }
+    }
+}
+
 /* Jumbotrons
 -------------------------------------------------- */
 
