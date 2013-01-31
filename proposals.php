@@ -56,7 +56,11 @@ $fixes = json_decode($result, true);
         <div class="container with-margin">
             <div class="row">
                <div class="span12">
-                    <p class="lead">Derzeit ist das Zurückschreiben der validierten Daten zu OSM nicht implementiert! Stattdessen können Mapper auf dieser Seite die validierten Lösungen anschauen und diese allenfalls in OSM einpflegen.</p>
+                    <p class="lead">
+                        Derzeit ist das Zurückschreiben der validierten Daten zu OSM nicht implementiert! 
+                        Stattdessen können Mapper auf dieser Seite die validierten Lösungen anschauen und diese allenfalls in OSM einpflegen.
+                        Aus Peformancegründen werden nur <strong>10 validierte Lösungen</strong> angezeigt.
+                    </p>
                     <?php
                     if (!empty($fixes)) {
                     ?>
@@ -70,8 +74,13 @@ $fixes = json_decode($result, true);
                             <th width="80">Bearbeiten in OSM</th>
                         </tr>
                         <?php
+                        $fixCount = 0;
                         foreach ($fixes as $fix) {
+                            if ($fixCount >= 10) {
+                                break;
+                            }
                             if (OsmChecker::notChangedInOsm($fix)) {
+                                $fixCount += 1;
                                 echo "<tr>\n";
                                 echo "<td>" . $fix['username'] . "<br /><small><em>" . $fix['formatted_create_date'] . "</em></small></td>\n";
                                 echo "<td>";
