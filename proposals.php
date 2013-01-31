@@ -104,8 +104,15 @@ $fixes = json_decode($result, true);
 
                                 // edit
                                 $potlatchUrl  = "http://www.openstreetmap.org/edit?editor=potlatch2&";
-                                $remoteUrl  = "http://www.openstreetmap.org/edit?editor=remote&";
-                                $params = "lat=" . $fix['latitude'] . "&lon=" . $fix['longitude'] . "&zoom=18";
+                                $potlatchUrl .= "lat=" . $fix['latitude'] . "&lon=" . $fix['longitude'] . "&zoom=18";
+
+                                $josmUrl  = "http://localhost:8111/load_and_zoom?zoom_mode=download&";
+                                $josmUrl .= "left=" . ($fix['longitude'] - 0.002) . "&";
+                                $josmUrl .= "right=" . ($fix['longitude'] + 0.002) . "&";
+                                $josmUrl .= "top=" . ($fix['latitude'] + 0.002) . "&";
+                                $josmUrl .= "bottom=" . ($fix['latitude'] - 0.002) . "&";
+                                $josmUrl .= "select=" . $fix['osm_type'] . $fix['osm_id'];
+
                                 $keeprightUrl  = "http://www.keepright.at/report_map.php";
                                 $keeprightUrl .= "?schema=" . $fix['schema'] . "&error=" . $fix['error_id'];
 
@@ -115,8 +122,8 @@ $fixes = json_decode($result, true);
                                 $fix['edit'] = $fix['edit'] . " <span class=\"caret\"></span>";
                                 $fix['edit'] = $fix['edit'] . "</a>";
                                 $fix['edit'] = $fix['edit'] . "<ul class=\"dropdown-menu\">";
-                                $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $potlatchUrl . $params . "\"><i class=\"icon-pencil\"></i> Potlatch 2</a></li>";
-                                $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $remoteUrl . $params . "\"><i class=\"icon-pencil\"></i> JSOM</a></li>";
+                                $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $potlatchUrl . "\"><i class=\"icon-pencil\"></i> Potlatch 2</a></li>";
+                                $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $josmUrl . "\"><i class=\"icon-pencil\"></i> JOSM</a></li>";
                                 $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $keeprightUrl . "\"><i class=\"icon-pencil\"></i> KeepRight</a></li>";
                                 $fix['edit'] = $fix['edit'] . "</ul>";
                                 $fix['edit'] = $fix['edit'] . "</div>";
