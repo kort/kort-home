@@ -203,7 +203,7 @@ $statistics = json_decode($result, true);
         </div>
     </footer>
     
-    <a href="https://github.com/odi86/kort" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1500;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <a href="https://github.com/kort/kort" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1500;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
     <!-- UserVoice widget -->
     <script type="text/javascript">
     var uvOptions = {};
