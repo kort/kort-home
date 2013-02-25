@@ -8,7 +8,7 @@ env:
   global:
     - CI_HOME=`pwd`/odi86/kort-home
     - BUILD_DIR=`pwd`/build_heroku
-    - secure: "YYySn8SFZEAMKDqNMPpdhatf0QmzQRNeOFrc/LAb7LSR1oFzSDltiCtUl08W\nzJTIFuPT/6Q4D06wsMiSD4nTfKtnc61N1SUqJd1hFt9VqQRZyUtgigtl6Ub8\n63l95MZGYnuDxD9Une++xO7IPuXs05uKDu62WOYwOJLiHhKZJRg="
+    - secure: "NHfJqIEWAwVFC6hq6FSDpxxf3TqlIkJxxwNqkgQ/IgvodAoHQfIgVNW91wV6\nHjMgpVDRWTtcj3Xb5a0E2zKHKWu89LfwCAwQLF6vbdqwsgGbZd2jrAh63QQK\n2HMIWdr8UHdrqaL8sQ+fXlPRarAHh7yGRFL4RyhIQAKU/ZX7nU0="
 
 before_script:
   - gem install sass
