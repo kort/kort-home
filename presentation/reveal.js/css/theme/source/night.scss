@@ -1,5 +1,5 @@
 /**
- * Sky theme for reveal.js.
+ * Black theme for reveal.js.
  *
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
@@ -11,29 +11,23 @@
 // ---------------------------------------------
 
 
-
 // Include theme-specific fonts
-@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
 
 
 // Override theme settings (see ../template/settings.scss)
+$backgroundColor: #111;
+
 $mainFont: 'Open Sans', sans-serif;
-$mainColor: #333;
-$headingFont: 'Quicksand', sans-serif;
-$headingColor: #333;
-$headingLetterSpacing: -0.08em;
-$headingTextShadow: none;
-$backgroundColor: #f7fbfc;
-$linkColor: #3b759e;
+$linkColor: #e7ad52;
 $linkColorHover: lighten( $linkColor, 20% );
-$selectionBackgroundColor: #134674;
-
-// Background generator
-@mixin bodyBackground() {
-	@include radial-gradient( #add9e4, #f7fbfc );
-}
-
+$headingFont: 'Montserrat', Impact, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+$selectionBackgroundColor: #e7ad52;
+$mainFontSize: 30px;
 
 
 // Theme template ------------------------------
