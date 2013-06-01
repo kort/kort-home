@@ -1,7 +1,7 @@
 /**
- * Beige theme for reveal.js.
+ * Theme for Kort
  * 
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ * Copyright (C) 2013 Juerg Hunziker, http://about.me/juerg.hunziker
  */
 
 
@@ -144,15 +144,10 @@ $selectionColor: #fff;
     }
 
     .slides {
-        top: 0;
-        margin-top: 30px;
         text-align: left;
-        max-width: 850px;
         
         section {
             line-height: $mainLineHeight;
-            min-height: 700px;
-            max-height: 700px;
         }
     }
 }
