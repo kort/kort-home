@@ -19,4 +19,6 @@ cp -r $SOURCE_DIR/proposals $BUILD_DIR
 cp -r $SOURCE_DIR/*.php $BUILD_DIR
 cp -r $SOURCE_DIR/*.html $BUILD_DIR
 cp -r $SOURCE_DIR/*.pdf $BUILD_DIR
+cp -r $SOURCE_DIR/news.xml $BUILD_DIR
 cp -r $SOURCE_DIR/.htaccess $BUILD_DIR
+
