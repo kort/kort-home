@@ -38,15 +38,16 @@ KortPresentation.updateStatistics = function() {
         var data = {
             "return": [
                 {
-                    "fix_count":"4528",
+                    "fix_count":"24090",
                     "falsepositive_fix_count":"284",
                     "complete_fix_count":"85",
                     "validated_fix_count":"74",
-                    "user_count":"771",
+                    "user_count":"1820",
                     "active_user_count":"328",
-                    "osm_user_count":"580",
-                    "google_user_count":"191",
-                    "vote_count":"1239",
+                    "osm_user_count":"1067",
+                    "google_user_count":"748",
+                    "fb_user_count":"5",
+                    "vote_count":"7218",
                     "valid_vote_count":"1144",
                     "invalid_vote_count":"95",
                     "badge_count":"602",
@@ -72,21 +73,29 @@ KortPresentation.fields = [
     'user_count',
     'osm_user_count',
     'google_user_count',
+    'fb_user_count',
     'vote_count'
 ];
 KortPresentation.setLoadingState = function() {
     var fieldsCount = KortPresentation.fields.length,
-    i;
+    i, currentField;
     
     for(i = 0; i < fieldsCount; i++) {
-        $('#' + KortPresentation.fields[i]).html('<img class="loading" src="../resources/images/template/ajax-loader.gif" />');
+        currentField = $('#' + KortPresentation.fields[i]);
+        if(currentField) {
+            currentField.html('<img class="loading" src="../resources/images/template/ajax-loader.gif" />');
+        }
     }
 };
 KortPresentation.setValues = function(data) {
     var fieldsCount = KortPresentation.fields.length,
-    i;
+    i, currentField;
+    
     
     for(i = 0; i < fieldsCount; i++) {
-        $('#' + KortPresentation.fields[i]).html(data['return'][0][KortPresentation.fields[i]]);
+        currentField = $('#' + KortPresentation.fields[i]);
+        if(currentField) {
+            currentField.html(data['return'][0][KortPresentation.fields[i]]);
+        }
     }
 };
