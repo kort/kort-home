@@ -62,7 +62,7 @@ $statistics = json_decode($result, true);
                             <div class="span3">
                                 <img class="statistics-image" src="resources/images/statistics/user.png" />
                             </div>
-                            <div class="span4">
+                            <div class="span5">
                                 <?php
                                 echo "<table class='table table-striped stats'>\n";
                                     echo "<tr>\n";
@@ -74,36 +74,40 @@ $statistics = json_decode($result, true);
                                         echo "<td>" . $values['google_user_count'] . "</td>\n";
                                     echo "</tr>\n";
                                     echo "<tr>\n";
-                                        echo "<th>Aktiv</th>\n";
-                                        echo "<td>" . $values['active_user_count'] . "</td>\n";
+                                        echo "<th>Facebook</th>\n";
+                                        echo "<td>" . $values['fb_user_count'] . "</td>\n";
                                     echo "</tr>\n";
                                     echo "<tr>\n";
                                         echo "<th class='important'>Total</th>\n";
                                         echo "<td>" . $values['user_count'] . "</td>\n";
                                     echo "</tr>\n";
+                                    echo "<tr>\n";
+                                        echo "<th>Davon aktiv</th>\n";
+                                        echo "<td>" . $values['active_user_count'] . "</td>\n";
+                                    echo "</tr>\n";
                                 echo "</table>\n";
                                 ?>
                             </div>
                         </div>
-                        <h3>Lösungsvorschläge</h3>
+                        <h3>Aufträge</h3>
                         <div class="row">
                             <div class="span3">
                                 <img class="statistics-image" src="resources/images/statistics/fixes.png" />
                             </div>
-                            <div class="span4">
+                            <div class="span5">
                                 <?php
                                 echo "<table class='table table-striped stats'>\n";
                                     echo "<tr>\n";
-                                        echo "<th>Unlösbare Fehler</th>\n";
+                                        echo "<th class='important'>Erledigte Aufträge</th>\n";
+                                        echo "<td>" . $values['fix_count'] . "</td>\n";
+                                    echo "</tr>\n";
+                                    echo "<tr>\n";
+                                        echo "<th>Davon unlösbar</th>\n";
                                         echo "<td>" . $values['falsepositive_fix_count'] . "</td>\n";
                                     echo "</tr>\n";
                                     echo "<tr>\n";
-                                        echo "<th>Validierte Lösungsvorschläge</th>\n";
+                                        echo "<th>Davon vollständig überprüft</th>\n";
                                         echo "<td>" . $values['validated_fix_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th class='important'>Total</th>\n";
-                                        echo "<td>" . $values['fix_count'] . "</td>\n";
                                     echo "</tr>\n";
                                 echo "</table>\n";
                                 ?>
@@ -114,20 +118,24 @@ $statistics = json_decode($result, true);
                             <div class="span3">
                                 <img class="statistics-image" src="resources/images/statistics/votes.png" />
                             </div>
-                            <div class="span4">
+                            <div class="span5">
                                 <?php
                                 echo "<table class='table table-striped stats'>\n";
                                     echo "<tr>\n";
-                                        echo "<th>Korrekt</th>\n";
+                                        echo "<th>Noch zu prüfende Lösungsvorschläge</th>\n";
+                                        echo "<td>" . $values['incomplete_fix_count'] . "</td>\n";
+                                    echo "</tr>\n";
+                                    echo "<tr>\n";
+                                        echo "<th class='important'>Getätigte Überprüfungen</th>\n";
+                                        echo "<td>" . $values['vote_count'] . "</td>\n";
+                                    echo "</tr>\n";
+                                    echo "<tr>\n";
+                                        echo "<th>Davon als korrekt markiert</th>\n";
                                         echo "<td>" . $values['valid_vote_count'] . "</td>\n";
                                     echo "</tr>\n";
                                     echo "<tr>\n";
-                                        echo "<th>Falsch</th>\n";
+                                        echo "<th>Davon als falsch markiert</th>\n";
                                         echo "<td>" . $values['invalid_vote_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th class='important'>Total</th>\n";
-                                        echo "<td>" . $values['vote_count'] . "</td>\n";
                                     echo "</tr>\n";
                                 echo "</table>\n";
                                 ?>
