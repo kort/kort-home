@@ -256,9 +256,9 @@ $selectionColor: #fff;
         width: $width;
         background-size: $width auto;
     }
-    &.redcritter {
-        background: url('../images/section/redcritter.png') no-repeat;
-        $width: 100px;
+    &.nikeplus {
+        background: url('../images/section/nikeplus.png') no-repeat;
+        $width: 80px;
         width: $width;
         background-size: $width auto;
         margin-top: 20px;
@@ -360,7 +360,7 @@ $selectionColor: #fff;
 .reveal .poloraid {
     border: solid $light-grey 1px;
     line-height: 0.1em;
-    float: left;
+    margin-bottom: 0.5em;
         
     img {
         margin: 0;
@@ -463,7 +463,16 @@ section.developer {
         margin-left: 0.5em;
     }
 }
-
+.reveal .statistics {
+    h2 {
+        .facts-size1 {
+            font-size: 0.6em;
+        }
+        .facts-size2 {
+            font-size: 0.8em;
+        }
+    }
+}
 .reveal .statistics-list {
     margin: 0;
 }
