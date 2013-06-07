@@ -4,6 +4,6 @@ if($_SERVER['HTTP_HOST'] == 'localhost') {
 } else {
     $redirectUrl = 'http://www.kort.ch';
 }
-$redirectUrl .= '/presentation/fosgis';
+$redirectUrl .= '/presentation/fossgis';
 
 header('Location: ' . $redirectUrl);
