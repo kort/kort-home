@@ -346,6 +346,7 @@ $selectionColor: #fff;
         margin-top: 0.3em;
         float: left;
         line-height: 0.1em;
+        text-align: center;
         
         img {
             width: 180px;
@@ -384,15 +385,23 @@ section.title {
 /* ------------------------
  * Team
  * ------------------------ */
-section.developer {
-    .poloraid {
-        img {
-            width: 180px;
+.reveal {
+    section.developer {
+        .poloraid {
+            img {
+                width: 180px;
+            }
         }
-    }
-    ul.info {
-        display: block;
-        margin-left: 240px;
+        .logo-liip img {
+            width: 100px;
+        }
+        .logo-winterthur img {
+            width: 150px;
+        }
+        ul.info {
+            display: block;
+            margin-left: 240px;
+        }
     }
 }
 
@@ -405,6 +414,10 @@ section.developer {
 	padding: 49px 0 0 395px;
 	color: #00CCFF;
     font-size: 50px;
+    
+    a {
+        color: #00CCFF;
+    }
 }
 .tweet .reveal {
     h1,
@@ -463,18 +476,21 @@ section.developer {
         margin-left: 0.5em;
     }
 }
-.reveal .statistics {
-    h2 {
-        .facts-size1 {
-            font-size: 0.6em;
-        }
-        .facts-size2 {
-            font-size: 0.8em;
+.reveal {
+    .statistics {
+        h2 {
+            .facts-size1 {
+                font-size: 0.6em;
+            }
+            .facts-size2 {
+                font-size: 0.8em;
+            }
         }
     }
-}
-.reveal .statistics-list {
-    margin: 0;
+    
+    .statistics-list {
+        margin: 0;
+    }
 }
 
 #statistics-refresh {
