@@ -197,6 +197,7 @@ $selectionColor: #fff;
         $width: 80px;
         width: $width;
         background-size: $width auto;
+        margin-top: 20px;
     }
     &.crossplatform {
         background: url('../images/section/crossplatform.png') no-repeat;
@@ -398,9 +399,10 @@ section.title {
         .logo-winterthur img {
             width: 150px;
         }
-        ul.info {
-            display: block;
-            margin-left: 240px;
+        .twitter {
+            float: left;
+            width: 40px;
+            margin: 0 0.5em 0 0;
         }
     }
 }
@@ -510,5 +512,59 @@ section.title {
  * Questions
  * ------------------------ */
 h1.questions {
-    font-size: 10.3em;
+    font-size: 9em;
+}
+
+h2.followus {
+    margin-top: 1em;
+    font-size: 1.1em;
+}
+
+.follow-developers {
+    overflow: hidden;
+    
+    .developer {
+        float: left;
+        width: 400px;
+        margin-right: 1em;
+        
+        &.last {
+            margin-right: 0;
+        }
+        
+        .poloraid {
+            float: left;
+            img {
+                width: 80px;
+                margin: 0;
+                border: solid #fff 0.15em;
+            }
+        }
+        
+        .text {
+            float: left;
+            margin-left: 0.3em;
+        
+            h3 {
+                text-align: left;
+                font-size: 0.8em;
+                margin-bottom: 0.2em;
+            }
+            p {
+                font-size: 0.6em;
+            }
+            .twitter {
+                float: left;
+                width: 30px;
+                margin: 0 0.5em 0 0;
+            }
+        }
+    }
+}
+
+/* line height fix */
+section.line-height-fix {
+    li {
+        line-height: 1.4em;
+    }
 }
