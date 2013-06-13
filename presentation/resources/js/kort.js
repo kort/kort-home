@@ -16,9 +16,9 @@ KortPresentation.updateStatistics = function() {
     var host = window.location.host,
         statisticsUrl = 'http://play.kort.ch';
 
-    if (host === 'localhost') {
+    /*if (host === 'localhost') {
         statisticsUrl = 'http://' + host + '/kort';
-    }
+    }*/
     statisticsUrl += '/server/webservices/statistics';
 
     KortPresentation.setLoadingState();
