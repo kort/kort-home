@@ -112,6 +112,9 @@ $fixes = json_decode($result, true);
                                 echo "<td>" . $fix['osm_link'] . "</td>\n";
 
                                 // edit
+                                $idUrl  = "http://www.openstreetmap.org/edit?editor=id&";
+                                $idUrl .= $fix['osm_type'] . "=" . $fix['osm_id'];
+
                                 $potlatchUrl  = "http://www.openstreetmap.org/edit?editor=potlatch2&";
                                 $potlatchUrl .= "lat=" . $fix['latitude'] . "&lon=" . $fix['longitude'] . "&zoom=18";
 
@@ -131,6 +134,7 @@ $fixes = json_decode($result, true);
                                 $fix['edit'] = $fix['edit'] . " <span class=\"caret\"></span>";
                                 $fix['edit'] = $fix['edit'] . "</a>";
                                 $fix['edit'] = $fix['edit'] . "<ul class=\"dropdown-menu\">";
+                                $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $idUrl . "\"><i class=\"icon-pencil\"></i> iD</a></li>";
                                 $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $potlatchUrl . "\"><i class=\"icon-pencil\"></i> Potlatch 2</a></li>";
                                 $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $josmUrl . "\"><i class=\"icon-pencil\"></i> JOSM</a></li>";
                                 $fix['edit'] = $fix['edit'] . "<li><a target=\"_blank\" href=\"" . $keeprightUrl . "\"><i class=\"icon-pencil\"></i> KeepRight</a></li>";
