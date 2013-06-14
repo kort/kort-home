@@ -6,3 +6,6 @@
 composer.lock
 composer.phar
 presentation/resources/styles/styles.css
+presentation/resources/styles/style.css
+presentation/resources/styles/.sass-cache
+
