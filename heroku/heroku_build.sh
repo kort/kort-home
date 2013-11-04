@@ -15,6 +15,7 @@ cp -r $SOURCE_DIR/presentation $BUILD_DIR
 cp -r $SOURCE_DIR/gispunkt $BUILD_DIR
 cp -r $SOURCE_DIR/idw $BUILD_DIR
 cp -r $SOURCE_DIR/fossgis $BUILD_DIR
+cp -r $SOURCE_DIR/swisscom $BUILD_DIR
 cp -r $SOURCE_DIR/proposals $BUILD_DIR
 cp -r $SOURCE_DIR/*.php $BUILD_DIR
 cp -r $SOURCE_DIR/*.html $BUILD_DIR
