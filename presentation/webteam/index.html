@@ -32,68 +32,81 @@
     <body>
 
         <div class="reveal">
-
+            
             <div class="kort-logo"></div>
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-
+                
                 <!-- Titel -->
                 <section class="title">
                     <h1>Kort</h1>
                     <h4>Gamified Mobile App zur Verbesserung von OpenStreetMap</h4>
-                    <div class="center">
-                        <a href="http://www.kort.ch" target="_blank"><img src="../resources/images/section/kort.png" width="150px" /></a>
-                    </div>
+                    <div class="center"><img src="../resources/images/section/kort.png" width="100px" /></div>
                     <dl>
                         <dt>Arbeit:</dt>
-                        <dd>Bachelorarbeit Herbstsemester 2012/13</dd>
+                        <dd>Bachelorarbeit HS2012/13</dd>
                         <dd class="last">HSR Hochschule für Technik Rapperswil</dd>
                         <dt>Entwickler:</dt>
-                        <dd>Jürg Hunziker <span class="small">(<a href="http://twitter.com/tschortsch85" target="_blank">@tschortsch85</a>)</span></dd>
-                        <dd class="last">Stefan Oderbolz <span class="small">(<a href="http://twitter.com/odi" target="_blank">@odi</a>)</span></dd>
+                        <dd>Jürg Hunziker <span class="small">(<a href="http://twitter.com/tschortsch85">@tschortsch85</a>)</span></dd>
+                        <dd class="last">Stefan Oderbolz <span class="small">(<a href="http://twitter.com/odi">@odi</a>)</span></dd>
                     </dl>
-                    <p class="date">5. Dezember 2013</p>
+                    <p class="date">15. Januar 2013</p>
                 </section>
 
                 <!-- About us -->
-                <section class="line-height-fix">
+                <section>
                     <section>
                         <h2>Le Team</h2>
                         <div class="center"><img src="../resources/images/team.jpg" height="500px" /></div>
                     </section>
                     <section class="developer">
                         <div class="section-image team"></div>
-                        <h2>Le Team</h2>
-                        <div class="follow-developers">
-                            <div class="developer">
-                                <div class="poloraid"><img src="../resources/images/tschortsch.jpg" /></div>
-                                <div class="text">
-                                    <h3>Jürg Hunziker</h3>
-                                    <p><img src="../resources/images/twitter-bird-light-bgs.png" class="twitter" /> <a href="http://twitter.com/tschortsch85" target="_blank">@tschortsch85</a></p>
-                                </div>
-                            </div>
-                            <div class="developer last">
-                                <div class="poloraid"><img src="../resources/images/odi.jpg" /></div>
-                                <div class="text">
-                                    <h3>Stefan Oderbolz</h3>
-                                    <p><img src="../resources/images/twitter-bird-light-bgs.png" class="twitter" /> <a href="http://twitter.com/odi" target="_blank">@odi</a></p>
-                                </div>
-                            </div>
+                        <h2>Jürg Hunziker</h2>
+                        <div class="textpic">
+                            <div class="picture poloraid"><img src="../resources/images/tschortsch.jpg" /></div>
+                            <ul class="text">
+                                <li>Webentwickler, Stadt Winterthur</li>
+                                <li>Interessen: Design, Webtechnologien</li>
+                                <li>Fokus: Frontend-Entwicklung</li>
+                                <li>Twitter: <a href="http://twitter.com/tschortsch85">@tschortsch85</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="developer">
+                        <div class="section-image team"></div>
+                        <h2>Stefan Oderbolz</h2>
+                        <div class="textpic">
+                            <div class="picture poloraid"><img src="../resources/images/odi.jpg" /></div>
+                            <ul class="text">
+                                <li>Webentwickler, Liip AG Zürich</li>
+                                <li>Interessen: Automatisierung, Architektur</li>
+                                <li>Fokus: Backend-Entwicklung</li>
+                                <li>Twitter: <a href="http://twitter.com/odi">@odi</a>
+                                </li>
+                            </ul>
                         </div>
                     </section>
                 </section>
-
+                
                 <!-- Presentation -->
                 <!-- Part: GIS -->
                 <section>
                     <h2>Folgen</h2>
                     <div class="center"><img src="../resources/images/folgen.jpg" /></div>
-                    <div class="center"><h3 class="kort-link"><a href="http://www.kort.ch/idw" target="_blank">www.kort.ch/idw</a></h3></div>
+                    <div class="center"><h3 class="kort-link"><a href="http://www.kort.ch/webteam" target="_blank">www.kort.ch/webteam</a></h3></div>
                 </section>
-
+                
+                <!-- Twitter -->
+                <!-- Part: GIS -->
+                <section data-state="tweet">
+                    <h2>Tweet about it!</h2>
+                    <p id="tweetme">#KortGame</p>
+                </section>
+                
                 <!-- Ziele der Arbeit -->
                 <section>
-                    <h2>Ziele</h2>
+                    <h2>Ziele der Arbeit</h2>
                     <div class="section-image ziele"></div>
                     <ul>
                         <li>App für verschiedene mobile <strong>Betriebssysteme</strong> (cross-platform)</li>
@@ -103,7 +116,7 @@
                         <li>Als <strong>Spiel</strong> gestalten</li>
                     </ul>
                 </section>
-
+                
                 <!-- OpenStreetMap -->
                 <section>
                     <h2>OpenStreetMap</h2>
@@ -112,7 +125,7 @@
                         <li>Frei nutzbare Geodaten</li>
                         <li>Über 1 Million registrierte Benutzer</li>
                         <li>
-                            Fehlende/falsche Daten
+                            Fehlende/falsche Daten<br />
                             <ul>
                                 <li>Strasse ohne Namen</li>
                                 <li>Fehlendes Tempolimit</li>
@@ -120,7 +133,7 @@
                         </li>
                     </ul>
                 </section>
-
+                
                 <!-- Kort -->
                 <section>
                     <h2>Kort</h2>
@@ -137,7 +150,7 @@
                             <ul>
                                 <li>Auf Karte darstellen</li>
                                 <li>Beheben</li>
-                                <li>Lösungen überprüfen</li>
+                                <li>Lösungen validieren</li>
                             </ul>
                         </li>
                         <li>
@@ -150,22 +163,62 @@
                         </li>
                     </ul>
                 </section>
-
+                
                 <!-- Demo -->
                 <section>
                     <h2>Demo</h2>
                     <div class="center"><a href="http://play.kort.ch/index_iphone.html" target="_blank"><img src="../resources/images/demo.jpg" height="380px" /></a></div>
                     <div class="center"><h3 class="kort-link"><a href="http://play.kort.ch" target="_blank">play.kort.ch</a></h3></div>
                 </section>
-
+                
                 <!-- Big picture -->
                 <section>
                     <h2>Wie bitte?</h2>
                     <div class="center"><img src="../resources/images/kort-big_picture.png" /></div>
                 </section>
-
+                
+                <!-- Fehlerquellen -->
+                <section>
+                    <section>
+                        <h2>Fehlerquellen</h2>
+                        <div class="center"><img src="../resources/images/kort-big_picture-fehlerquellen.png" /></div>
+                    </section>
+                    <section>
+                        <h2>Anforderungen</h2>
+                        <div class="section-image fehlerquellen"></div>
+                        <ul>
+                            <li>Für Nicht-Mapper lösbar &#10132; Kein Editor</li>
+                            <li>Übersetzbar &#10132; Kein Freitext</li>
+                            <li>Automatisiert UI zur Lösungseingabe erstellen</li>
+                            <li>API verfügbar</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Mögliche Quellen</h2>
+                        <div class="section-image fehlerquellen"></div>
+                        <ul>
+                            <li>Direkt aus OpenStreetMap <span class="color-bad">&#10132; aufwendig</span>
+                            </li>
+                            <li>FIXME-Tags <span class="color-bad">&#10132; nicht standardisiert</span>
+                            </li>
+                            <li>OpenStreetBugs <span class="color-bad">&#10132; nicht standardisiert</span>
+                            </li>
+                            <li>Housenumbervalidator <span class="color-middle">&#10132; nur 1 Fehlertyp</span>
+                            </li>
+                            <li>KeepRight
+                                <ul>
+                                    <li>Viele verschiedene Fehlertypen</li>
+                                    <li>Erstellt durch automatisierten Job</li>
+                                    <li>Lösungen nur zu OSM zurückschreiben</li>
+                                </ul>
+                                <span class="color-good">&#10132; geeignet</span>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                
                 <!-- Crossplatform -->
-                <section class="line-height-fix">
+                <section>
                     <section>
                         <h2>Cross-platform WebApp</h2>
                         <div class="center"><img src="../resources/images/kort-big_picture-crossplatform.png" /></div>
@@ -189,10 +242,39 @@
                             </li>
                         </ul>
                     </section>
+                    <section>
+                        <h2>Vorher</h2>
+                        <div class="center"><img src="../resources/images/kort-devices_before.jpg" /></div>
+                    </section>
+                    <section>
+                        <h2>Nachher</h2>
+                        <div class="center"><img src="../resources/images/kort-devices_after.jpg" /></div>
+                    </section>
+                    <section>
+                        <h2>Wait there is more!</h2>
+                        <div class="center"><img src="../resources/images/kort-devices_after_more.jpg" /></div>
+                    </section>
+                    
+                    <section>
+                        <h2>OSM-Daten in Sencha Touch</h2>
+                        <div class="section-image sencha"></div>
+                        <ul>
+                            <li>Nur Google Maps Komponente</li>
+                            <li>Neue Komponente basierend auf <strong>Leaflet.js</strong></li>
+                            <li>Im <a href="https://market.sencha.com/users/162/extensions/177" target="_blank">Sencha Market</a> veröffentlicht!</li>
+                        </ul>
+                        <div class="center"><img src="../resources/images/leafletmap-sencha-market.jpg" height="300px" /></div>
+                    </section>
                 </section>
-
+                
+                <!-- Deployment -->
+                <section>
+                    <h2>Deployment</h2>
+                    <div class="center"><img src="../resources/images/kort-development.png" height="500px" /></div>
+                </section>
+                
                 <!-- Gamification -->
-                <section class="line-height-fix">
+                <section>
                     <section>
                         <h2>Gamification</h2>
                         <div class="section-image gamification"></div>
@@ -239,10 +321,52 @@
                         <div class="center"><img src="../resources/images/redcritterprofile.jpg" width="550px" /></div>
                     </section>
                 </section>
-
+                
+                <!-- Problems -->
+                <section>
+                    <section>
+                        <h2>Probleme</h2>
+                        <div class="center"><img src="../resources/images/problems.jpg" /></div>
+                    </section>
+                    <section>
+                        <h2>Probleme</h2>
+                        <div class="section-image problems"></div>
+                        <ul>
+                            <li>
+                                Nicht genügend Fehlerdaten<br />
+                                <span class="small">OpenStreetMap hat zu wenige Fehler ;-)</span><br />
+                                &#10132; Weitere Fehlerquellen einbinden
+                            </li>
+                            <li>Gamification zeitaufwändig</li>
+                            <li>Unterstützung von
+                                <ul>
+                                    <li>Reto Senn, bitforge AG</li>
+                                    <li>René Bauer, GameLab ZHdK</li>
+                                </ul>
+                            </li>
+                            <li>Zurückschreiben der validierten Lösungen</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Zurückschreiben der Lösungen</h2>
+                        <div class="section-image problems"></div>
+                        <ul>
+                            <li>
+                                OSM Stammtisch<br />
+                                &#10132; Technischer Benutzer nicht erlaubt (?)
+                            </li>
+                            <li>Fehlende Zeit</li>
+                            <li>
+                                Übergangslösung:<br />
+                                <a href="http://www.kort.ch" target="_blank">&#10132; Proposals auf www.kort.ch</a>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                
                 <!-- Projektmanagement -->
                 <!-- Part: HSR -->
-                <section class="line-height-fix">
+                <section>
                     <section>
                         <h2>Projektmanagement</h2>
                         <div class="section-image projectmanagement"></div>
@@ -264,44 +388,43 @@
                         <p>&#10132; Agile Methodik bewährte sich</p>
                     </section>
                 </section>
-
+                
                 <!-- Weiterentwicklung -->
                 <section>
                     <h2>Weiterentwicklung</h2>
                     <div class="section-image future"></div>
-                    <ul>
-                        <li>Projekt ist OpenSource (MIT) &rarr; <a href="https://github.com/kort/kort" target="_blank">GitHub</a></li>
-                        <li>Offene GitHub Issues: <span class="important">21</span></li>
+                    <ul class="statistics-list">
+                        <li>Folgearbeit von Prof. S. Keller ausgeschrieben</li>
                         <li>Internationalisierung mit <a href="https://www.transifex.com/projects/p/kort/" target="_blank">Transifex <img class="inline" src="../resources/images/transifex.png" width="145px" /></a>
-                            <br />
-                            <span class="important">22</span> Übersetzungen vorhanden<br />
-                            <img class="no-margin" src="../resources/images/flags/germany.png" /> <img class="no-margin" src="../resources/images/flags/usa.png" />
-                            <img class="no-margin" src="../resources/images/flags/italy.png" />
-                            <img class="no-margin" src="../resources/images/flags/croatia.png" /> <img class="no-margin" src="../resources/images/flags/czech.png" />
-                            <img class="no-margin" src="../resources/images/flags/netherlands.png" /> <img class="no-margin" src="../resources/images/flags/france.png" />
-                            <img class="no-margin" src="../resources/images/flags/portugal.png" /> <img class="no-margin" src="../resources/images/flags/romania.png" />
-                            <img class="no-margin" src="../resources/images/flags/slovenia.png" /> <img class="no-margin" src="../resources/images/flags/spain.png" />
-                            <img class="no-margin" src="../resources/images/flags/japan.png" /> <img class="no-margin" src="../resources/images/flags/turkey.png" />
-                            <img class="no-margin" src="../resources/images/flags/slovakia.png" /> <img class="no-margin" src="../resources/images/flags/hungary.png" />
-                            <img class="no-margin" src="../resources/images/flags/russia.png" /> ...
+                            <ul>
+                                <li>Vorhanden:<br />
+                                    <img class="flag" src="../resources/images/flags/germany.png" /> Deutsch, <img class="flag" src="../resources/images/flags/usa.png" /> Englisch, <img class="flag" src="../resources/images/flags/italy.png" /> Italienisch,<br />
+                                    <img class="flag" src="../resources/images/flags/croatia.png" /> Kroatisch, <img class="flag" src="../resources/images/flags/czech.png" /> Tschechisch,<br />
+                                    <img class="flag" src="../resources/images/flags/netherlands.png" /> Niederländisch, <img class="flag" src="../resources/images/flags/france.png" /> Französisch,<br />
+                                    <img class="flag" src="../resources/images/flags/portugal.png" /> Portugiesisch, <img class="flag" src="../resources/images/flags/romania.png" /> Rumänisch,<br />
+                                    <img class="flag" src="../resources/images/flags/slovenia.png" /> Slovenisch, <img class="flag" src="../resources/images/flags/spain.png" /> Spanisch
+                                </li>
+                                <li>In Vorbereitung:<br />
+                                    <img class="flag" src="../resources/images/flags/turkey.png" /> Türkisch, <img class="flag" src="../resources/images/flags/slovakia.png" /> Slowenisch, <img class="flag" src="../resources/images/flags/japan.png" /> Japanisch,<br />
+                                    <img class="flag" src="../resources/images/flags/sweden.png" /> Schwedisch
+                                </li>
+                            </ul>
                         </li>
-                        <li>Kompatibilität Firefox, Windows Phone 8 (IE10)<br />&rarr; Update auf Sencha Touch 2.3</li>
-                        <li>Umzug der Datenbank zu Sourcepole</li>
+                        <li>Offene GitHub Issues: <strong>12</strong></li>
                     </ul>
                 </section>
-
+                
                 <!-- Kort live -->
-                <section data-state="statistics" class="statistics line-height-fix">
+                <section data-state="statistics">
                     <section>
-                        <h2>Fakten</h2>
+                        <h2>Fakten über Kort</h2>
                         <div class="section-image facts"></div>
-                        <ul>
+                        <ul class="statistics-list">
                             <li>"Inoffizielles" Ziel: <strong>50</strong> Benutzer</li>
                             <li>Benutzer
                                 <ul>
                                     <li>OpenStreetMap: <span id="osm_user_count" class="important"></span></li>
                                     <li>Google: <span id="google_user_count" class="important"></span></li>
-                                    <li>Facebook: <span id="fb_user_count" class="important"></span></li>
                                     <li>&rArr; Total: <span id="user_count" class="important"></span>!</li>
                                 </ul>
                             </li>
@@ -311,43 +434,18 @@
                         <br />
                         <button id="statistics-refresh"><img src="../resources/images/template/refresh.png" /> Aktualisieren</button>
                     </section>
-
                     <section>
-                        <h2>Auszeichnungen</h2>
-                        <div class="section-image award"></div>
-                        <ul>
-                            <li>Beste Bachelorarbeit HSR Herbstsemester 2012/13</li>
-                            <li>Regionaler Siemens Excellence Award 2013</li>
-                            <li>ITG Innovationspreis 2013</li>
-                        </ul>
-                        <div class="center">
-                            <img src="../resources/images/award-siemens_excellence_award_2013.jpg" height="300px" class="no-margin" alt="Siemens Excellence Award 2013" />
-                            <img src="../resources/images/award-itg_innovationspreis_2013.jpg" height="300px" class="no-margin" alt="ITG Innovationspreis 2013" />
-                        </div>
+                        <h2>Kort ist LIVE!</h2>
+                        <div class="center"><img src="../resources/images/section/kort.png" height="250px" /></div>
+                        <p>&#10132; Beginne noch heute Koins zu sammeln.</p>
+                        <h3 class="kort-link"><a href="http://play.kort.ch" target="_blank">play.kort.ch</a></h3>
                     </section>
                 </section>
-
+                
                 <!-- Questions -->
                 <section>
-                    <h2>Fragen</h2>
+                    <h1>Fragen</h1>
                     <h1 class="questions">?</h1>
-                    <h2 class="followus">Feedback:</h2>
-                    <div class="follow-developers">
-                        <div class="developer">
-                            <div class="poloraid"><img src="../resources/images/tschortsch.jpg" /></div>
-                            <div class="text">
-                                <h3>Jürg Hunziker</h3>
-                                <p><img src="../resources/images/twitter-bird-light-bgs.png" class="twitter" /> <a href="http://twitter.com/tschortsch85" target="_blank">@tschortsch85</a></p>
-                            </div>
-                        </div>
-                        <div class="developer last">
-                            <div class="poloraid"><img src="../resources/images/odi.jpg" /></div>
-                            <div class="text">
-                                <h3>Stefan Oderbolz</h3>
-                                <p><img src="../resources/images/twitter-bird-light-bgs.png" class="twitter" /> <a href="http://twitter.com/odi" target="_blank">@odi</a></p>
-                            </div>
-                        </div>
-                    </div>
                 </section>
 
             </div>
@@ -367,7 +465,7 @@
                 progress: true,
                 history: true,
                 rollingLinks: false,
-
+                
                 width: 850,
 
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
@@ -385,7 +483,7 @@
             });
 
         </script>
-
+        
         <script src="../resources/js/kort.js"></script>
         <script type="text/javascript">
 

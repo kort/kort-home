@@ -290,6 +290,12 @@ $selectionColor: #fff;
         width: $width;
         background-size: $width auto;
     }
+    &.award {
+        background: url('../images/section/award.png') no-repeat;
+        $width: 100px;
+        width: $width;
+        background-size: $width auto;
+    }
 }
 
 
@@ -464,8 +470,11 @@ section.title {
  * Future
  * ------------------------ */
 .reveal {
-    img.flag {
-        margin: 0;
+    img {
+        &.no-margin,
+        &.flag {
+            margin: 0;
+        }
     }
 }
 
