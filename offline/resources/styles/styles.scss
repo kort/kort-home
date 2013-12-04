@@ -1,0 +1,15 @@
+#iphone {
+    margin: auto;
+    text-align: center;
+    background: url('../images/iphone.png') no-repeat 50% 0;
+    height: 620px;
+    padding-top: 164px;
+}
+#iphone .content {
+    border: none;
+
+    img {
+        width: 320px;
+        height: 480px;
+    }
+}
