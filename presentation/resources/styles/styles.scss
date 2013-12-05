@@ -536,7 +536,12 @@ h2.followus {
         float: left;
         width: 400px;
         margin-right: 1em;
-        
+
+        &.developer-small {
+            .text {
+                clear: both;
+            }
+        }
         &.last {
             margin-right: 0;
         }
