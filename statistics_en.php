@@ -37,6 +37,7 @@ $statistics = json_decode($result, true);
 <li><a href="developers.html"><i class="nav-icon icon-user"></i> Developers</a></li>
 <li class="active"><a href="statistics.php"><i class="nav-icon icon-tasks icon-white"></i> Statistics</a></li>
 <li><a href="proposals.php"><i class="nav-icon icon-ok-sign"></i> Solutions</a></li>
+<li><a href="statistics.php"><i class="nav-icon icon-home icon-white"></i> German</a></li>
 </ul>
 <p><a href="http://play.kort.ch" target="_blank" class="btn btn-success" type="button">Play now! <i class="icon-play-circle icon-white"></i></a></p>
 </div>
