@@ -32,11 +32,11 @@ $statistics = json_decode($result, true);
 <div class="container">
 <a class="brand" href="index.html">Kort</a>
 <ul class="nav">
-<li><a href="index.html"><i class="nav-icon icon-home"></i> Home</a></li>
-<li><a href="screenshots.html"><i class="nav-icon icon-picture"></i> Screenshots</a></li>
-<li><a href="developers.html"><i class="nav-icon icon-user"></i> Developers</a></li>
-<li class="active"><a href="statistics.php"><i class="nav-icon icon-tasks icon-white"></i> Statistics</a></li>
-<li><a href="proposals.php"><i class="nav-icon icon-ok-sign"></i> Solutions</a></li>
+<li><a href="index_en.html"><i class="nav-icon icon-home"></i> Home</a></li>
+<li><a href="screenshots_en.html"><i class="nav-icon icon-picture"></i> Screenshots</a></li>
+<li><a href="developers_en.html"><i class="nav-icon icon-user"></i> Developers</a></li>
+<li class="active"><a href="statistics_en.php"><i class="nav-icon icon-tasks icon-white"></i> Statistics</a></li>
+<li><a href="proposals_en.php"><i class="nav-icon icon-ok-sign"></i> Solutions</a></li>
 <li><a href="statistics.php"><i class="nav-icon icon-home icon-white"></i> German</a></li>
 </ul>
 <p><a href="http://play.kort.ch" target="_blank" class="btn btn-success" type="button">Play now! <i class="icon-play-circle icon-white"></i></a></p>
