@@ -11,7 +11,7 @@ use Helper\HttpHelper;
 use Helper\LocaleHelper;
 use Osm\OsmChecker;
 
-$fixesUrl = 'http://play.kort.ch/server/webservices/bug/fix/completed';
+$fixesUrl = 'http://play.kort.ch/server/webservices/mission/fix/completed';
 $http = new HttpHelper();
 $locale = new LocaleHelper("de");
 $result = $http->get($fixesUrl);
