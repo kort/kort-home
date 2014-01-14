@@ -57,8 +57,11 @@ $fixes = json_decode($result, true);
 <div class="row">
 <div class="span12">
 <p class="lead">
-Currently, writing back the validated data to OSM is not implemented. 
-Instead, mappers can view the validated solutions on this site and if need be integrate them into OSM. 
+The validated solutions of Kort are being <strong>updated in OpenStreetMap on a daily basis</strong>.
+They can be tracked via the <a href="http://www.openstreetmap.org/user/kort-to-osm" title="OpenStreetMap user kort-to-osm">OpenStreetMap user kort-to-osm</a>.
+</p>
+<p class="lead">
+Apart from that, mappers can view the validated solutions on this site and integrate them in OpenStreetMap themself. 
 Due to performance reasons, only <strong>10 validated solution</strong> are shown
 </p>
 <?php

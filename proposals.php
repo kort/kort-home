@@ -58,8 +58,11 @@ $fixes = json_decode($result, true);
             <div class="row">
                <div class="span12">
                     <p class="lead">
-                        Derzeit ist das Zurückschreiben der validierten Daten zu OSM nicht implementiert! 
-                        Stattdessen können Mapper auf dieser Seite die validierten Lösungen anschauen und diese allenfalls in OSM einpflegen.
+                        Die validierten Lösungsvorschläge von Kort werden <strong>täglich zu OpenStreetMap zurückgeschrieben</strong>.
+                        Auf OpenStreetMap sind diese unter dem <a href="http://www.openstreetmap.org/user/kort-to-osm" title="OpenStreetMap Benutzer kort-to-osm">Benutzer kort-to-osm</a> nachvollziehbar.
+                    </p>
+                    <p class="lead">
+                        Daneben können Mapper auf dieser Seite die validierten Lösungen anschauen und diese auch selbst in OSM einpflegen.
                         Aus Peformancegründen werden nur <strong>10 validierte Lösungen</strong> angezeigt.
                     </p>
                     <?php
