@@ -40,6 +40,7 @@ $fixes = json_decode($result, true);
                     <li><a href="developers.html"><i class="nav-icon icon-user"></i> Entwickler</a></li>
                     <li><a href="statistics.php"><i class="nav-icon icon-tasks"></i> Statistiken</a></li>
                     <li class="active"><a href="proposals.php"><i class="nav-icon icon-ok-sign icon-white"></i> Lösungen</a></li>
+					<li><a href="proposals_en.php"><i class="nav-icon icon-home icon-white"></i> English</a></li>
                 </ul>
                 <p><a href="http://play.kort.ch" target="_blank" class="btn btn-success" type="button">Jetzt spielen! <i class="icon-play-circle icon-white"></i></a></p>
             </div>
