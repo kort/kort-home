@@ -33,7 +33,7 @@ $fixes = json_decode($result, true);
 <div class="navbar navbar-inverse navbar-fixed-top">
 <div class="navbar-inner">
 <div class="container">
-<a class="brand" href="index.html">Kort</a>
+<a class="brand" href="index_en.html">Kort</a>
 <ul class="nav">
 <li><a href="index_en.html"><i class="nav-icon icon-home"></i> Home</a></li>
 <li><a href="screenshots_en.html"><i class="nav-icon icon-picture"></i> Screenshots</a></li>
