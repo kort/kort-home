@@ -16,6 +16,7 @@ cp -r $SOURCE_DIR/gispunkt $BUILD_DIR
 cp -r $SOURCE_DIR/idw $BUILD_DIR
 cp -r $SOURCE_DIR/fossgis $BUILD_DIR
 cp -r $SOURCE_DIR/offline $BUILD_DIR
+cp -r $SOURCE_DIR/siemens $BUILD_DIR
 cp -r $SOURCE_DIR/swisscom $BUILD_DIR
 cp -r $SOURCE_DIR/itg $BUILD_DIR
 cp -r $SOURCE_DIR/webteam $BUILD_DIR
