@@ -381,14 +381,14 @@ $selectionColor: #fff;
     height: 180px;
     border-radius: 90px;
     margin-bottom: 0.5em;
+    background-size: 180px;
+    background-repeat: no-repeat;
 
     &.tschortsch {
-        background: url('../images/tschortsch.jpg') no-repeat;
-        background-size: 200px;
+        background-image: url('../images/tschortsch.jpg');
     }
     &.odi {
-        background: url('../images/odi.jpg') no-repeat;
-        background-size: 200px;
+        background-image: url('../images/odi.jpg');
     }
 }
 
@@ -569,6 +569,12 @@ h2.followus {
                 margin: 0;
                 border: solid #fff 0.15em;
             }
+        }
+        .circular {
+            float: left;
+            width: 80px;
+            height: 80px;
+            background-size: 80px;
         }
         
         .text {
