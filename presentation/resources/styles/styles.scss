@@ -376,6 +376,22 @@ $selectionColor: #fff;
     }
 }
 
+.reveal .circular {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    margin-bottom: 0.5em;
+
+    &.tschortsch {
+        background: url('../images/tschortsch.jpg') no-repeat;
+        background-size: 200px;
+    }
+    &.odi {
+        background: url('../images/odi.jpg') no-repeat;
+        background-size: 200px;
+    }
+}
+
 /* ------------------------
  * Title
  * ------------------------ */
