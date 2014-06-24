@@ -23,6 +23,7 @@ KortPresentation.updateStatistics = function() {
 
     KortPresentation.setLoadingState();
     var jqXHR = $.ajax(statisticsUrl, {
+        timeout: 2000,
         dataType: 'jsonp'
     });
     jqXHR.done(function(data, status, jqXHR) {
@@ -36,35 +37,33 @@ KortPresentation.updateStatistics = function() {
         // default data
         console.log("Error occured, using local data.");
         var data = {
-            "return": [
-                {
-                    active_user_count: "1309",
-                    badge_count: "2635",
-                    complete_fix_count: "832",
-                    falsepositive_fix_count: "1858",
-                    fb_user_count: "50",
-                    fifty_missions_badge_count: "121",
-                    first_check_badge_count: "486",
-                    first_mission_badge_count: "1254",
-                    first_place_badge_count: "16",
-                    fix_count: "28290",
-                    google_user_count: "876",
-                    hundred_checks_badge_count: "12",
-                    hundred_missions_badge_count: "51",
-                    incomplete_fix_count: "27458",
-                    invalid_vote_count: "476",
-                    osm_user_count: "1239",
-                    second_place_badge_count: "16",
-                    ten_checks_badge_count: "141",
-                    ten_missions_badge_count: "519",
-                    third_place_badge_count: "18",
-                    thousand_checks_badge_count: "1",
-                    user_count: "2165",
-                    valid_vote_count: "8169",
-                    validated_fix_count: "796",
-                    vote_count: "8645"
-                }
-            ]
+            "return":[{
+                "fix_count":"39745",
+                "falsepositive_fix_count":"2574",
+                "complete_fix_count":"1297",
+                "incomplete_fix_count":"38448",
+                "validated_fix_count":"1245",
+                "user_count":"2869",
+                "active_user_count":"1807",
+                "osm_user_count":"1665",
+                "google_user_count":"1078",
+                "fb_user_count":"126",
+                "vote_count":"11942",
+                "valid_vote_count":"11300",
+                "invalid_vote_count":"642",
+                "badge_count":"3633",
+                "first_place_badge_count":"16",
+                "second_place_badge_count":"16",
+                "third_place_badge_count":"18",
+                "hundred_missions_badge_count":"65",
+                "fifty_missions_badge_count":"172",
+                "ten_missions_badge_count":"682",
+                "thousand_checks_badge_count":"1",
+                "hundred_checks_badge_count":"15",
+                "ten_checks_badge_count":"204",
+                "first_mission_badge_count":"1716",
+                "first_check_badge_count":"728"
+            }]
         };
         KortPresentation.setValues(data);
     });
