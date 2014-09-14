@@ -10,19 +10,19 @@ fi
 
 
 if [[ $DEPLOY == "true" ]] ; then
-    if [ -z $BUILD_DIR -a -z $CI_HOME ] ; then
-       echo "You need to specify the BUILD_DIR and CI_HOME environment variable."
+    if [ -z $BUILD_DIR -a -z $TRAVIS_BUILD_DIR ] ; then
+       echo "You need to specify the BUILD_DIR and TRAVIS_BUILD_DIR environment variable."
        exit 1
     fi
 
-    export SOURCE_DIR=$CI_HOME
+    export SOURCE_DIR=$TRAVIS_BUILD_DIR
 
-    yes | ruby $CI_HOME/heroku/heroku_prepare.rb
-    bash $CI_HOME/heroku/heroku_keys.sh
-    bash $CI_HOME/heroku/heroku_build.sh
+    yes | ruby $TRAVIS_BUILD_DIR/heroku/heroku_prepare.rb
+    bash $TRAVIS_BUILD_DIR/heroku/heroku_keys.sh
+    bash $TRAVIS_BUILD_DIR/heroku/heroku_build.sh
     cd $BUILD_DIR
-    bash $CI_HOME/heroku/heroku_add.sh >/dev/null
-    bash $CI_HOME/heroku/heroku_push.sh
+    bash $TRAVIS_BUILD_DIR/heroku/heroku_add.sh >/dev/null
+    bash $TRAVIS_BUILD_DIR/heroku/heroku_push.sh
 else
     echo "Omitting deployment to heroku"
 fi

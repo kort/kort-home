@@ -6,16 +6,15 @@ php:
 
 env:
   global:
-    - CI_HOME=`pwd`/kort/kort-home
     - DEPLOY="true"
-    - BUILD_DIR=`pwd`/build_heroku
+    - BUILD_DIR=$TRAVIS_BUILD_DIR/build_heroku
     - secure: "NHfJqIEWAwVFC6hq6FSDpxxf3TqlIkJxxwNqkgQ/IgvodAoHQfIgVNW91wV6\nHjMgpVDRWTtcj3Xb5a0E2zKHKWu89LfwCAwQLF6vbdqwsgGbZd2jrAh63QQK\n2HMIWdr8UHdrqaL8sQ+fXlPRarAHh7yGRFL4RyhIQAKU/ZX7nU0="
 
 before_script:
   - gem install sass
   - gem install compass
   - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh >/dev/null 2>&1
-  - export PATH="$PATH:$CI_HOME:/usr/local/heroku/bin"
+  - export PATH="$PATH:$TRAVIS_BUILD_DIR:/usr/local/heroku/bin"
   - curl -s http://getcomposer.org/installer | php --
   - php composer.phar install --dev
   - phpenv rehash
@@ -23,4 +22,4 @@ before_script:
 script: ant build
 
 after_success:
-  - bash $CI_HOME/heroku/heroku.sh
+  - bash $TRAVIS_BUILD_DIR/heroku/heroku.sh
