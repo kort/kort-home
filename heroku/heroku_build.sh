@@ -14,6 +14,7 @@ cp -r $SOURCE_DIR/resources $BUILD_DIR
 cp -r $SOURCE_DIR/presentation $BUILD_DIR
 cp -r $SOURCE_DIR/gispunkt $BUILD_DIR
 cp -r $SOURCE_DIR/idw $BUILD_DIR
+cp -r $SOURCE_DIR/symposium $BUILD_DIR
 cp -r $SOURCE_DIR/fossgis $BUILD_DIR
 cp -r $SOURCE_DIR/offline $BUILD_DIR
 cp -r $SOURCE_DIR/siemens $BUILD_DIR
