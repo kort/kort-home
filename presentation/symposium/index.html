@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="../resources/images/template/kort-favicon.ico" type="image/png" />
+
+        <title>Kort - An OpenStreetMap Game</title>
+
+        <meta name="description" content="Gamified Mobile App zur Verbesserung von OpenStreetMap">
+        <meta name="author" content="Jürg Hunziker, Stefan Oderbolz">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="../resources/styles/styles.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="../reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="kort-logo"></div>
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <!-- Titel -->
+                <section class="title">
+                    <h1>Gamification</h1>
+                    <h4>Kort - Gamified Mobile App zur Verbesserung von OpenStreetMap</h4>
+                    <div class="center">
+                        <a href="http://www.kort.ch" target="_blank"><img src="../resources/images/section/kort.png" width="150px" /></a>
+                    </div>
+                    <dl>
+                        <dt>Arbeit:</dt>
+                        <dd>Bachelorarbeit Herbstsemester 2012/13</dd>
+                        <dd class="last">HSR Hochschule für Technik Rapperswil</dd>
+                        <dt>Entwickler:</dt>
+                        <dd>Stefan Oderbolz <span class="small">(<a href="http://twitter.com/odi" target="_blank">@odi</a>)</span></dd>
+                        <dd class="last">Jürg Hunziker <span class="small">(<a href="http://twitter.com/tschortsch85" target="_blank">@tschortsch85</a>)</span></dd>
+                    </dl>
+                    <p class="date">Symposium Königslutter 2015, 12. Mai 2015</p>
+                </section>
+
+                <!-- Presentation -->
+                <!-- Part: GIS -->
+                <section>
+                    <h2>Folgen</h2>
+                    <div class="center"><img src="../resources/images/folgen.jpg" /></div>
+                    <div class="center"><h3 class="kort-link"><a href="http://www.kort.ch/symposium" target="_blank">www.kort.ch/symposium</a></h3></div>
+                </section>
+
+                <!-- Gamification -->
+                <section class="line-height-fix">
+                    <section>
+                        <h2>Gamification</h2>
+                        <div class="section-image gamification"></div>
+                        <blockquote cite="http://de.wikipedia.org/wiki/Gamification">
+                            Als Gamification bezeichnet man die Anwendung <strong>spieltypischer Elemente</strong> in einem <strong>spielfremden Kontext</strong>.
+                        </blockquote>
+                        <small class="blockquote-source"><a href="http://de.wikipedia.org/wiki/Gamification" target="_blank">Quelle: Wikipedia</a></small>
+                    </section>
+                    <section>
+                        <h2>Gamification</h2>
+                        <div class="section-image gamification"></div>
+                        <ul>
+                            <li>Typische Elemente
+                                <ul>
+                                    <li>Punkte</li>
+                                    <li>Auszeichnungen</li>
+                                    <li>Highscore</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p><strong>&#10132; Ziel: Attraktivität der Arbeiten steigern</strong></p>
+                    </section>
+                    <section>
+                        <h2>SBB.Connect</h2>
+                        <div class="section-image sbbconnect"></div>
+                        <div class="textpic">
+                            <div class="picture"><img src="../resources/images/sbbconnect-screenshot.png" /></div>
+                            <ul class="text">
+                                <li>Im Dezember 2012 lanciert</li>
+                                <li><strong>Ein- und Auschecken</strong> in öffentlichen Verkehrsmitteln</li>
+                                <li>Gewinnen von <strong>ConnectPoints</strong> und <strong>Badges</strong></li>
+                                <li><strong>Mayor</strong> von Haltestellen werden</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Nike+</h2>
+                        <div class="section-image nikeplus"></div>
+                        <ul>
+                            <li><span class="important">Motivation</span> durch Messung der Aktivitäten</li>
+                            <li>Je mehr Training desto mehr <span class="important">Punkte (Fuel)</span></li>
+                            <li><span class="important">Vergleich</span> mit Sportlern weltweit</li>
+                        </ul>
+                        <div class="center"><img src="../resources/images/nike_plus-fuelband.jpg" width="300px" /></div>
+                    </section>
+                    <section>
+                        <h2>Doritos Roulette</h2>
+                        <div class="section-image doritos"></div>
+                        <ul>
+                            <li><span class="important">Essen</span> wird zum Spiel</li>
+                            <li>"Traust du dich noch eines zu essen?"</li>
+                            <li>Kunden erstellen <span class="important">Videos</span> und machen so <span class="important">Werbung</span> (#BurnSelfie)</li>
+                        </ul>
+                        <div class="center"><img src="../resources/images/doritos-roulette.jpg" width="300px" /></div>
+                    </section>
+                    <section>
+                        <h2>Ingress</h2>
+                        <div class="section-image ingress"></div>
+                        <ul>
+                            <li>Basiert auf <span class="important">Google Maps</span></li>
+                            <li>Spieler gehören zu einer von <span class="important">zwei Gruppen</span> (grün oder blau)</li>
+                            <li>Zusammen mit Spielern ihrer Gruppe "erobern" sie <span class="important">virtuelle</span> Portale in der <span class="important">"echten"</span> Welt</li>
+                            <li>Daten der Spieler werden verwendet um das <span class="important">Fussgänger-Routing</span> zu verbessern</li>
+                        </ul>
+                        <div class="center"><img src="../resources/images/ingress.png" width="200px" /></div>
+                    </section>
+                </section>
+
+                <!-- OpenStreetMap -->
+                <section>
+                    <h2>OpenStreetMap</h2>
+                    <div class="section-image osm"></div>
+                    <ul>
+                        <li>Frei nutzbare Geodaten</li>
+                        <li>Über 2 Million registrierte Benutzer</li>
+                        <li>
+                            Fehlende/falsche Daten
+                            <ul>
+                                <li>Strasse ohne Namen</li>
+                                <li>Fehlendes Tempolimit</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Ziele der Arbeit -->
+                <section>
+                    <h2>Ziele</h2>
+                    <div class="section-image ziele"></div>
+                    <ul>
+                        <li>App für verschiedene mobile <strong>Betriebssysteme</strong> (cross-platform)</li>
+                        <li>Implementation als <strong>Webapplikation</strong> (WebApp)</li>
+                        <li><strong>OpenStreetMap</strong>-Daten korrigieren</li>
+                        <li>Vorhandene <strong>Benutzer-Basis</strong> verwenden</li>
+                        <li>Als <strong>Spiel</strong> gestalten</li>
+                    </ul>
+                </section>
+
+                <!-- Kort -->
+                <section>
+                    <h2>Kort</h2>
+                    <div class="section-image kort"></div>
+                    <ul>
+                        <li>WebApp basierend auf HTML5 und CSS3
+                            <ul>
+                                <li>Frontend: JavaScript</li>
+                                <li>Backend: PHP</li>
+                            </ul>
+                        </li>
+                        <li>
+                            OpenStreetMap-Fehler
+                            <ul>
+                                <li>Auf Karte darstellen</li>
+                                <li>Beheben</li>
+                                <li>Lösungen überprüfen</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Spielelemente
+                            <ul>
+                                <li>Punkte (Koins) <img class="inline" src="../resources/images/gamification-koin.png" height="40px" /></li>
+                                <li>Auszeichnungen <img class="inline" src="../resources/images/gamification-badges.png" height="40px" /></li>
+                                <li>Highscore</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Demo -->
+                <section>
+                    <h2>Demo</h2>
+                    <div class="center"><a href="http://play.kort.ch/index_iphone.html" target="_blank"><img src="../resources/images/demo.jpg" height="380px" /></a></div>
+                    <div class="center"><h3 class="kort-link"><a href="http://play.kort.ch" target="_blank">play.kort.ch</a></h3></div>
+                </section>
+
+
+
+                <!-- Weiterentwicklung -->
+                <section>
+                    <h2>Weiterentwicklung</h2>
+                    <div class="section-image future"></div>
+                    <ul>
+                        <li>Projekt ist OpenSource (MIT) &rarr; <a href="https://github.com/kort/kort" target="_blank">GitHub</a></li>
+                        <li>Internationalisierung mit <a href="https://www.transifex.com/projects/p/kort/" target="_blank">Transifex <img class="inline" src="../resources/images/transifex.png" width="145px" /></a>
+                            <br />
+                            <span class="important">22</span> Übersetzungen vorhanden<br />
+                            <img class="no-margin" src="../resources/images/flags/germany.png" /> <img class="no-margin" src="../resources/images/flags/usa.png" />
+                            <img class="no-margin" src="../resources/images/flags/italy.png" />
+                            <img class="no-margin" src="../resources/images/flags/croatia.png" /> <img class="no-margin" src="../resources/images/flags/czech.png" />
+                            <img class="no-margin" src="../resources/images/flags/netherlands.png" /> <img class="no-margin" src="../resources/images/flags/france.png" />
+                            <img class="no-margin" src="../resources/images/flags/portugal.png" /> <img class="no-margin" src="../resources/images/flags/romania.png" />
+                            <img class="no-margin" src="../resources/images/flags/slovenia.png" /> <img class="no-margin" src="../resources/images/flags/spain.png" />
+                            <img class="no-margin" src="../resources/images/flags/japan.png" /> <img class="no-margin" src="../resources/images/flags/turkey.png" />
+                            <img class="no-margin" src="../resources/images/flags/slovakia.png" /> <img class="no-margin" src="../resources/images/flags/hungary.png" />
+                            <img class="no-margin" src="../resources/images/flags/russia.png" /> ...
+                        </li>
+                        <li>Update auf Sencha Touch 2.3<br />&rarr; Kompatibilität Windows Phone 8 (IE10), Firefox</li>
+                        <li>Weitere Missionen &rarr; Benutzer bei Stange halten
+                            <ul>
+                                <li>Hausnummern</li>
+                                <li>Interesse von Erdbebenforschern für bessere Modelle</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Kort live -->
+                <section data-state="statistics" class="statistics line-height-fix">
+                    <section>
+                        <h2>Fakten</h2>
+                        <div class="section-image facts"></div>
+                        <ul>
+                            <li>"Inoffizielles" Ziel: <strong>50</strong> Benutzer</li>
+                            <li>Benutzer
+                                <ul>
+                                    <li>OpenStreetMap: <span id="osm_user_count" class="important"></span></li>
+                                    <li>Google: <span id="google_user_count" class="important"></span></li>
+                                    <li>Facebook: <span id="fb_user_count" class="important"></span></li>
+                                    <li>&rArr; Total: <span id="user_count" class="important"></span>!</li>
+                                </ul>
+                            </li>
+                            <li>Lösungsvorschläge: <span id="fix_count" class="important"></span></li>
+                            <li>Überprüfungen: <span id="vote_count" class="important"></span></li>
+                        </ul>
+                        <br />
+                        <button id="statistics-refresh"><img src="../resources/images/template/refresh.png" /> Aktualisieren</button>
+                    </section>
+
+                    <section>
+                        <h2>Auszeichnungen</h2>
+                        <div class="section-image award"></div>
+                        <ul>
+                            <li>Nationaler Siemens Excellence Award 2015</li>
+                            <li>Regionaler Siemens Excellence Award 2013</li>
+                            <li>ITG Innovationspreis 2013</li>
+                            <li>Beste Bachelorarbeit Hochschule für Technik Rapperswil (HSR) Herbstsemester 2012/13</li>
+                        </ul>
+                        <div class="center">
+                            <img src="../resources/images/award-siemens_excellence_award_2013.jpg" height="300px" class="no-margin" alt="Siemens Excellence Award 2013" />
+                            <img src="../resources/images/award-itg_innovationspreis_2013.jpg" height="300px" class="no-margin" alt="ITG Innovationspreis 2013" />
+                        </div>
+                    </section>
+                </section>
+
+                <!-- Questions -->
+                <section>
+                    <h2>Fragen</h2>
+                    <h1 class="questions">?</h1>
+                    <h2 class="followus">Feedback:</h2>
+                    <div class="follow-developers">
+                        <div class="developer">
+                            <div class="poloraid"><img src="../resources/images/tschortsch.jpg" /></div>
+                            <div class="text">
+                                <h3>Jürg Hunziker</h3>
+                                <p><img src="../resources/images/twitter-bird-light-bgs.png" class="twitter" /> <a href="http://twitter.com/tschortsch85" target="_blank">@tschortsch85</a></p>
+                            </div>
+                        </div>
+                        <div class="developer last">
+                            <div class="poloraid"><img src="../resources/images/odi.jpg" /></div>
+                            <div class="text">
+                                <h3>Stefan Oderbolz</h3>
+                                <p><img src="../resources/images/twitter-bird-light-bgs.png" class="twitter" /> <a href="http://twitter.com/odi" target="_blank">@odi</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Big picture -->
+                <section>
+                    <h2>Wie bitte?</h2>
+                    <div class="center"><img src="../resources/images/kort-big_picture.png" /></div>
+                </section>
+
+                <!-- MapRoulette -->
+                <section>
+                    <h2>MapRoulette</h2>
+                    <div class="section-image maproulette"></div>
+                    <ul>
+                        <li><span class="important">Armchair Mapping</span> mit thematischen "Challenges"</li>
+                        <li>Benutzer kann mit wenig Zeit, einfache Aufgaben lösen</li>
+                        <li>Es geht immer weiter (nächstes "Level")</li>
+                        <li>Highscore? Punkte?</li>
+                    </ul>
+                    <div class="center"><img src="../resources/images/maproulette.png" width="400px" /></div>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="../lib/jquery-1.8.3/jquery-1.8.3.min.js"></script>
+        <script src="../reveal.js/lib/js/head.min.js"></script>
+        <script src="../reveal.js/js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                rollingLinks: false,
+
+                width: 850,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+        <script src="../resources/js/kort.js"></script>
+        <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37644286-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>
+    </body>
+</html>
