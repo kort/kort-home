@@ -26,7 +26,7 @@ class ClassLoader
     /**
      * This function is called whenever a yet unknown class is requested.
      *
-     * If the class is found it get loaded immediately.
+     * If the class is found it gets loaded immediately.
      *
      * @param string $className Name of the requested class.
      *

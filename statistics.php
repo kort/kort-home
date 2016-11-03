@@ -18,7 +18,7 @@ $statistics = json_decode($result, true);
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>Kort - Statistiken</title>
+    <title>Kort - Dokumentation</title>
     <meta charset="utf-8">
     <link rel="icon" href="./resources/images/kort-favicon.ico" type="image/png" />
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -33,19 +33,18 @@ $statistics = json_decode($result, true);
                 <a class="brand" href="index.html">Kort</a>
                 <ul class="nav">
                     <li><a href="index.html"><i class="nav-icon icon-home"></i> Home</a></li>
-                    <li><a href="screenshots.html"><i class="nav-icon icon-picture"></i> Screenshots</a></li>
-                    <li><a href="developers.html"><i class="nav-icon icon-user"></i> Entwickler</a></li>
-                    <li class="active"><a href="statistics.php"><i class="nav-icon icon-tasks icon-white"></i> Statistiken</a></li>
-                    <li><a href="proposals.php"><i class="nav-icon icon-ok-sign"></i> Lösungen</a></li>
-					<li><a href="statistics_en.php"><i class="nav-icon icon-home icon-white"></i> English</a></li>
+                    <!-- <li><a href="screenshots.html"><i class="nav-icon icon-picture"></i> Screenshots</a></li> -->
+					<li class="active"><a href="statistics.php"><i class="nav-icon icon-tasks icon-white"></i> Dokumentation</a></li>
+                    <li><a href="developers.html"><i class="nav-icon icon-user"></i> Über uns</a></li>
+                    <!-- <li><a href="proposals.php"><i class="nav-icon icon-ok-sign"></i> Lösungen</a></li> -->
+					<li><a href="statistics_en.php"><i class="nav-icon icon-home icon-white"></i> Englisch</a></li>
                 </ul>
-                <p><a href="http://play.kort.ch" target="_blank" class="btn btn-success" type="button">Jetzt spielen! <i class="icon-play-circle icon-white"></i></a></p>
             </div>
         </div>
     </div>
     <header class="jumbotron subhead">
         <div class="container">
-            <h1>Statistiken</h1>
+            <h1>Dokumentation</h1>
             <p>Fakten über Kort</p>
         </div>
     </header>
