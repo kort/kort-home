@@ -19,7 +19,7 @@
 	
     <link rel="icon" href="./resources/images/kort-favicon.ico" type="image/png" />
     <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" type="text/css" href="./resources/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="./resources/styles/styles.scss">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 </head>
@@ -50,7 +50,7 @@
             <ul class="bs-docs-social-buttons">
                 <li><iframe src="http://ghbtns.com/github-btn.html?user=kort&repo=kort&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe></li>
                 <li><iframe src="http://ghbtns.com/github-btn.html?user=kort&repo=kort&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe></li>
-                <li><a href="https://twitter.com/KortGame" class="twitter-follow-button" data-show-count="false" data-lang="de">follow @KortGame </a>
+                <li><a href="https://twitter.com/KortGame" class="twitter-follow-button" data-show-count="false" data-lang="en">follow @KortGame </a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
             </ul>
         </div>
@@ -137,5 +137,18 @@
         })();
 
       </script>
+	<!-- Piwik -->
+	<script type="text/javascript">
+	  var _paq = _paq || [];
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+		var u="//log.hsr.ch/";
+		_paq.push(['setTrackerUrl', u+'piwik.php']);
+		_paq.push(['setSiteId', '90']);
+		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
 </body>
 </html>
