@@ -18,11 +18,25 @@ $statistics = json_decode($result, true);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Kort - Statistics</title>
+<title>Kort - documentation</title>
 <meta charset="utf-8">
+
+	<!-- Facebook -->          
+	<meta property="og:title" content="Kort" />
+	<meta property="og:type" content="summary_large_image" />
+ 	<meta property="og:description" content="Kort - An OpenStreetMap Game" />
+	<meta property="og:image" content="./resources/images/twitterCard.png" />
+
+	<!-- Twitter -->          
+	<meta name="twitter:title" content="Kort">
+	<meta name="twitter:creator" content="@KortGame">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:description" content="Kort - An OpenStreetMap Game">
+	<meta name="twitter:image" content="./resources/images/twitterCard.png">
+	
 <link rel="icon" href="./resources/images/kort-favicon.ico" type="image/png" />
 <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link rel="stylesheet" type="text/css" href="resources/styles/styles.css">
+<link rel="stylesheet" type="text/css" href="resources/styles/styles.scss">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 </head>
@@ -33,19 +47,18 @@ $statistics = json_decode($result, true);
 <a class="brand" href="index_en.html">Kort</a>
 <ul class="nav">
 <li><a href="index_en.html"><i class="nav-icon icon-home"></i> Home</a></li>
-<li><a href="screenshots_en.html"><i class="nav-icon icon-picture"></i> Screenshots</a></li>
-<li><a href="developers_en.html"><i class="nav-icon icon-user"></i> Developers</a></li>
-<li class="active"><a href="statistics_en.php"><i class="nav-icon icon-tasks icon-white"></i> Statistics</a></li>
-<li><a href="proposals_en.php"><i class="nav-icon icon-ok-sign"></i> Solutions</a></li>
-<li><a href="statistics.php"><i class="nav-icon icon-home icon-white"></i> Deutsch</a></li>
+<!-- <li><a href="screenshots_en.html"><i class="nav-icon icon-picture"></i> Screenshots</a></li> -->
+<li class="active"><a href="statistics_en.php"><i class="nav-icon icon-tasks icon-white"></i> Documentation</a></li>
+<li><a href="developers_en.html"><i class="nav-icon icon-user"></i> About</a></li>
+<!-- <li><a href="proposals_en.php"><i class="nav-icon icon-ok-sign"></i> Solutions</a></li> -->
+<li><a href="statistics.php"><i class="nav-icon icon-home icon-white"></i> German</a></li>
 </ul>
-<p><a href="http://play.kort.ch" target="_blank" class="btn btn-success" type="button">Play now! <i class="icon-play-circle icon-white"></i></a></p>
 </div>
 </div>
 </div>
 <header class="jumbotron subhead">
 <div class="container">
-<h1>Statistics</h1>
+<h1>Documentation</h1>
 <p>Facts about Kort</p>
 </div>
 </header>
@@ -232,5 +245,18 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 })();
 
 </script>
+<!-- Piwik -->
+	<script type="text/javascript">
+	  var _paq = _paq || [];
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+		var u="//log.hsr.ch/";
+		_paq.push(['setTrackerUrl', u+'piwik.php']);
+		_paq.push(['setSiteId', '90']);
+		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
 </body>
 </html>

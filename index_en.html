@@ -3,9 +3,23 @@
 <head>
     <title>Kort - An OpenStreetMap Game</title>
     <meta charset="utf-8">
+	
+	<!-- Facebook -->          
+	<meta property="og:title" content="Kort" />
+	<meta property="og:type" content="summary_large_image" />
+ 	<meta property="og:description" content="Kort - An OpenStreetMap Game" />
+	<meta property="og:image" content="./resources/images/twitterCard.png" />
+
+	<!-- Twitter -->          
+	<meta name="twitter:title" content="Kort">
+	<meta name="twitter:creator" content="@KortGame">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:description" content="Kort - An OpenStreetMap Game">
+	<meta name="twitter:image" content="./resources/images/twitterCard.png">
+	
     <link rel="icon" href="./resources/images/kort-favicon.ico" type="image/png" />
     <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" type="text/css" href="./resources/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="./resources/styles/styles.scss">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 </head>
@@ -16,13 +30,12 @@
                 <a class="brand" href="index_en.html">Kort</a>
                 <ul class="nav">
                     <li class="active"><a href="index_en.html"><i class="nav-icon icon-home icon-white"></i> Home</a></li>
-                    <li><a href="screenshots_en.html"><i class="nav-icon icon-picture"></i> Screenshots</a></li>
-                    <li><a href="developers_en.html"><i class="nav-icon icon-user"></i> Developers</a></li>
-                    <li><a href="statistics_en.php"><i class="nav-icon icon-tasks"></i> Statistics</a></li>
-                    <li><a href="proposals_en.php"><i class="nav-icon icon-ok-sign"></i> Solutions</a></li>
-					<li><a href="index.html"><i class="nav-icon icon-home icon-white"></i> Deutsch</a></li>
+                    <!-- <li><a href="screenshots_en.html"><i class="nav-icon icon-picture"></i> Screenshots</a></li> -->
+					<li><a href="statistics_en.php"><i class="nav-icon icon-tasks"></i> Documentation</a></li>
+                    <li><a href="developers_en.html"><i class="nav-icon icon-user"></i> About</a></li>
+                    <!-- <li><a href="proposals_en.php"><i class="nav-icon icon-ok-sign"></i> Solutions</a></li> -->
+					<li><a href="index.html"><i class="nav-icon icon-home icon-white"></i> German</a></li>
                 </ul>
-                <p><a href="http://play.kort.ch" target="_blank" class="btn btn-success" type="button">Play now! <i class="icon-play-circle icon-white"></i></a></p>
             </div>
         </div>
     </div>
@@ -37,7 +50,7 @@
             <ul class="bs-docs-social-buttons">
                 <li><iframe src="http://ghbtns.com/github-btn.html?user=kort&repo=kort&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe></li>
                 <li><iframe src="http://ghbtns.com/github-btn.html?user=kort&repo=kort&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe></li>
-                <li><a href="https://twitter.com/KortGame" class="twitter-follow-button" data-show-count="false" data-lang="de">follow @KortGame </a>
+                <li><a href="https://twitter.com/KortGame" class="twitter-follow-button" data-show-count="false" data-lang="en">follow @KortGame </a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
             </ul>
         </div>
@@ -51,88 +64,45 @@
                         <img src="./resources/images/home/openstreetmap.png" class="introduction-image" />
                         <h2>OpenStreetMap</h2>
                         <p>
-                            <strong>Kort</strong> helps to improve <em>OpenStreetMap</em>-data.
-                            <em>Tasks</em> to be done are shown on a map.
+                            <strong>Kort</strong> helps to improve <em>OpenStreetMap</em>-data. <em>Missions</em> to be solved are shown on a map.
+							As soon as enough equal missions have been solved, the solution of a mission will be automatically inserted in OpenStreetMap.
                         </p>
                         <p>
                             Players can check already fulfilled tasks regarding their correctness. 
-                            As soon as enough positive examinations have been made, the solution of a task may be inserted in OpenStreetMap.
                         </p>
                     </div>
                     <div class="span4">
                         <img src="./resources/images/home/gamification.png" class="introduction-image" />
                         <h2>Gamification</h2>
                         <p>
-                            <strong>Kort</strong> uses <em>Gamification</em> to motivate users to play with the app. For both, 
-							solving tasks and checking existing solutions, points (so called  <em>Koins</em>) can be earned. 
-                            The goal is to continually rise through the ranks of the high score list. 
-							Additionally, the player is also awarded medals for his efforts.
+                            <strong>Kort</strong> uses <em>Gamification</em> to motivate users to play with the app. By solving missions, points (so called <em>Koins</em>) can be earned. 
+							The goal is to continually rise in ranking. Additionally, the player is awarded medals for his efforts.
                         </p>
                     </div>
                     <div class="span4">
                         <img src="./resources/images/home/crossplatform.png" class="introduction-image" />
-                        <h2>WebApp</h2>
+                        <h2>App</h2>
                         <p>
-                            <strong>Kort</strong> is a  <em>WebApp</em>, which is written in HTML5 and Javascript. 
-                            Through this, multiple mobile operation systems are supported. These include iOS, Android and Blackberry.
-                            
+                             <strong>Kort</strong> is a native <em>app</em> written in React Native and is therefore available on the major mobile plattforms Android and iOS. 
                         </p>
                         <p>
-                            The App is launched and played in the browser of the smartphone. 
+                            Kort is currently being developed and will be available in Q2 2017. Stay updated on <a href="https://github.com/kort/kort" target="_blank">GitHub</a>. 
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container with-margin">
-            <div class="row-fluid">
-                <div class="span12">
-                    <h2>Supported browsers</h2>
-                    <p>
-                        Kort was developed for usage on mobile devises (Smartphones, tablets). 
-                        However, due to the <a href="http://www.sencha.com/products/touch/" target="_blank">Sencha Touch 2 Frameworks</a>, all <strong>WebKit-Browser</strong> are supported as well.
-                    </p>
-                </div>
-            </div>
-            <div class="row-fluid">
-                <div class="span6">
-                    <img src="resources/images/home/supported-browsers.png" alt="Supported browsers" />
-                </div>
-                <div class="span3">
-                    <h4>Mobile Browser</h4>
-                    <ul>
-                        <li>iOS
-                            <ul>
-                                <li>Safari mobile</li>
-                                <li>Google Chrome</li>
-                            </ul>
-                        </li>
-                        <li>Android
-                            <ul>
-                                <li>Native Browser</li>
-                                <li>Google Chrome</li>
-                                <li>Dolphin</li>
-                            </ul>
-                        </li>
-                        <li>BlackBerry
-                            <ul>
-                                <li>Native Browser</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="span3">
-                    <h4>Desktop Browser</h4>
-                    <ul>
-                        <li>Google Chrome</li>
-                        <li>Safari</li>
-                    </ul>
-                </div>
+        <div class="container">
+            <div class="pagination-centered">
+				<div class="span12">
+					<!-- Embedded video -->
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/ixWWiSsw324" frameborder="0" allowfullscreen></iframe>
+				</div>
             </div>
         </div>
 
         <div class="container centered">
-            <p><a href="http://play.kort.ch" target="_blank" class="btn btn-large btn-info"><img class="image-koin" src="resources/images/home/koin_no_value.png" /> Collect Koins now! <i class="icon-play-circle icon-white"></i></a></p>
+			
         </div>
     </div>
     
@@ -167,5 +137,18 @@
         })();
 
       </script>
+	<!-- Piwik -->
+	<script type="text/javascript">
+	  var _paq = _paq || [];
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+		var u="//log.hsr.ch/";
+		_paq.push(['setTrackerUrl', u+'piwik.php']);
+		_paq.push(['setSiteId', '90']);
+		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
 </body>
 </html>

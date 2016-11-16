@@ -1,4 +1,4 @@
-DirectoryIndex index.html index.php
+DirectoryIndex index_en.html index.php
 
 RewriteEngine on
 RewriteCond %{HTTP_HOST}                 !^www\..* [NC]
