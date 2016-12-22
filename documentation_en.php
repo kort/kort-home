@@ -8,7 +8,6 @@ require_once('./php/ClassLoader.php');
 Kort\ClassLoader::registerAutoLoader();
 
 use Helper\HttpHelper;
-
 $statisticsUrl = 'http://play.kort.ch/server/webservices/statistics/';
 $http = new HttpHelper();
 $result = $http->get($statisticsUrl);
@@ -25,14 +24,14 @@ $statistics = json_decode($result, true);
 	<meta property="og:title" content="Kort" />
 	<meta property="og:type" content="summary_large_image" />
  	<meta property="og:description" content="Kort - An OpenStreetMap Game" />
-	<meta property="og:image" content="./resources/images/twitterCard.png" />
+	<meta property="og:image" content="http://www.kort.ch/resources/images/twitterCard.png" />
 
 	<!-- Twitter -->          
-	<meta name="twitter:title" content="Kort">
-	<meta name="twitter:creator" content="@KortGame">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:description" content="Kort - An OpenStreetMap Game">
-	<meta name="twitter:image" content="./resources/images/twitterCard.png">
+	<meta name="twitter:title" content="Kort"/>
+	<meta name="twitter:creator" content="@KortGame"/>
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:description" content="Kort - An OpenStreetMap Game"/>
+	<meta name="twitter:image" content="http://www.kort.ch/resources/images/twitterCard.png"/>
 	
 <link rel="icon" href="./resources/images/kort-favicon.ico" type="image/png" />
 <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -47,11 +46,9 @@ $statistics = json_decode($result, true);
 <a class="brand" href="index_en.html">Kort</a>
 <ul class="nav">
 <li><a href="index_en.html"><i class="nav-icon icon-home"></i> Home</a></li>
-<!-- <li><a href="screenshots_en.html"><i class="nav-icon icon-picture"></i> Screenshots</a></li> -->
-<li class="active"><a href="statistics_en.php"><i class="nav-icon icon-tasks icon-white"></i> Documentation</a></li>
-<li><a href="developers_en.html"><i class="nav-icon icon-user"></i> About</a></li>
-<!-- <li><a href="proposals_en.php"><i class="nav-icon icon-ok-sign"></i> Solutions</a></li> -->
-<li><a href="statistics.php"><i class="nav-icon icon-home icon-white"></i> German</a></li>
+<li class="active"><a href="documentation_en.php"><i class="nav-icon icon-tasks icon-white"></i> Documentation</a></li>
+<li><a href="about_en.html"><i class="nav-icon icon-user"></i> About</a></li>
+<li><a href="documentation.php"><i class="nav-icon icon-home icon-white"></i> German</a></li>
 </ul>
 </div>
 </div>
@@ -147,7 +144,7 @@ $statistics = json_decode($result, true);
                                         echo "<td>" . $values['valid_vote_count'] . "</td>\n";
                                     echo "</tr>\n";
                                     echo "<tr>\n";
-                                        echo "<th>There from marked as uncorrect</th>\n";
+                                        echo "<th>There from marked as incorrect</th>\n";
                                         echo "<td>" . $values['invalid_vote_count'] . "</td>\n";
                                     echo "</tr>\n";
                                 echo "</table>\n";
@@ -217,9 +214,7 @@ $statistics = json_decode($result, true);
 </div>
 <footer>
 <div class="container">
-<p class="pull-left">&copy; 2013 Stefan Oderbolz, Jürg Hunziker</p>
-<p class="pull-right"><a href="http://www.hsr.ch/informatik" target="_blank"><img class="image-hsr-logo" src="resources/images/hsr_logo.png" /></a></p>
-<p class="pull-right"><a href="http://www.hsr.ch/informatik" target="_blank">Study computer science at the HSR</a></p>
+<p class="pull-left">&copy; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="blank">CC BY-NC</a> - <a href="http://www.hsr.ch/geometalab" target="blank">Geometa Lab HSR</a> - HSR University of applied sciences Rapperswil</p>
 </div>
 </footer>
 <a href="https://github.com/kort/kort" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1500;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
