@@ -214,7 +214,7 @@ $statistics = json_decode($result, true);
 </div>
 <footer>
 <div class="container">
-<p class="pull-left">&copy; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="blank">CC BY-NC</a> - <a href="http://www.hsr.ch/geometalab" target="blank">Geometa Lab HSR</a> - HSR University of applied sciences Rapperswil</p>
+<p class="pull-left">&copy; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="blank">CC BY-NC</a> - <a href="http://www.hsr.ch/geometalab" target="blank">Geometa Lab HSR</a> - HSR University of Applied Sciences Rapperswil</p>
 </div>
 </footer>
 <a href="https://github.com/kort/kort" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1500;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
