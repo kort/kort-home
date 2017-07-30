@@ -13,7 +13,6 @@ $statisticsUrl = 'https://kort.dev.ifs.hsr.ch/v1.0/statistics';
 $http = new HttpHelper();
 $result = $http->get($statisticsUrl);
 $statistics = json_decode($result, true);
-echo "'<script>console.log(\"print_r ($statistics);\")</script>'"
 ?>
 
 <!DOCTYPE html>
@@ -67,6 +66,7 @@ echo "'<script>console.log(\"print_r ($statistics);\")</script>'"
             <div class="row">
                 <div class="span12">
                     <?php
+                    echo $statistics;
                     if (!empty($statistics)) {
                         $values = $statistics['return'][0];
                         echo "'<script>console.log(\"$values\")</script>'"
