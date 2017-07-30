@@ -13,7 +13,7 @@ $statisticsUrl = 'https://kort.dev.ifs.hsr.ch/v1.0/statistics';
 $http = new HttpHelper();
 $result = $http->get($statisticsUrl);
 $statistics = json_decode($result, true);
-echo $statistics['badge_count'];
+echo $statistics['osm_user_count'];
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +81,7 @@ echo $statistics['badge_count'];
                                 echo "<table class='table table-striped stats'>\n";
                                     echo "<tr>\n";
                                         echo "<th>OpenStreetMap</th>\n";
-                                        echo "<td>" . $values['osm_user_count'] . "</td>\n";
+                                        echo "<td>" . $statistics['osm_user_count'] . "</td>\n";
                                     echo "</tr>\n";
                                     echo "<tr>\n";
                                         echo "<th>Google</th>\n";
