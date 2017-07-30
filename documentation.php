@@ -9,10 +9,11 @@ Kort\ClassLoader::registerAutoLoader();
 
 use Helper\HttpHelper;
 
-$statisticsUrl = 'https://kort.dev.ifs.hsr.ch/v1.0/statistics';
+$statisticsUrl = 'http://kort.dev.ifs.hsr.ch/v1.0/statistics';
 $http = new HttpHelper();
 $result = $http->get($statisticsUrl);
 $statistics = json_decode($result, true);
+echo "'<script>console.log(\"$result\")</script>'";
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +70,6 @@ $statistics = json_decode($result, true);
                     echo $statistics;
                     if (!empty($statistics)) {
                         $values = $statistics['return'][0];
-                        echo "'<script>console.log(\"$values\")</script>'"
                         ?>
                         <h3>Benutzer</h3>
                         <div class="row">
