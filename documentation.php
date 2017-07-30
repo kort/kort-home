@@ -13,7 +13,7 @@ $statisticsUrl = 'https://kort.dev.ifs.hsr.ch/v1.0/statistics';
 $http = new HttpHelper();
 $result = $http->get($statisticsUrl);
 $statistics = json_decode($result, true);
-echo "'<script>console.log(\"$statistics\")</script>'"
+echo "'<script>console.log(\"print_r ($statistics);\")</script>'"
 ?>
 
 <!DOCTYPE html>
