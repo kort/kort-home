@@ -69,7 +69,8 @@ echo "'<script>console.log(\"$statistics\")</script>'"
                     <?php
                     if (!empty($statistics)) {
                         $values = $statistics['return'][0];
-                    ?>
+                        echo "'<script>console.log(\"$values\")</script>'"
+                        ?>
                         <h3>Benutzer</h3>
                         <div class="row">
                             <div class="span3">
