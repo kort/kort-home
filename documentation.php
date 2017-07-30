@@ -66,7 +66,6 @@ $statistics = json_decode($result, true);
             <div class="row">
                 <div class="span12">
                     <?php
-                    echo $statistics;
                     if (!empty($statistics)) {
                         $values = $statistics['return'][0];
                         ?>
@@ -87,16 +86,8 @@ $statistics = json_decode($result, true);
                                         echo "<td>" . $statistics['google_user_count'] . "</td>\n";
                                     echo "</tr>\n";
                                     echo "<tr>\n";
-                                        echo "<th>Facebook</th>\n";
-                                        echo "<td>" . $statistics['fb_user_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
                                         echo "<th class='important'>Total</th>\n";
                                         echo "<td>" . $statistics['user_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>Davon aktiv</th>\n";
-                                        echo "<td>"."</td>\n";
                                     echo "</tr>\n";
                                 echo "</table>\n";
                                 ?>
@@ -115,40 +106,12 @@ $statistics = json_decode($result, true);
                                         echo "<td>" . $statistics['fix_count'] . "</td>\n";
                                     echo "</tr>\n";
                                     echo "<tr>\n";
-                                        echo "<th>Davon unlösbar</th>\n";
-                                        echo "<td>" . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>Davon vollständig überprüft</th>\n";
-                                        echo "<td>" . $statistics['validated_fix_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                echo "</table>\n";
-                                ?>
-                            </div>
-                        </div>
-                        <h3>Überprüfungen</h3>
-                        <div class="row">
-                            <div class="span3">
-                                <img class="statistics-image" src="resources/images/statistics/votes.png" />
-                            </div>
-                            <div class="span5">
-                                <?php
-                                echo "<table class='table table-striped stats'>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>Noch zu prüfende Lösungsvorschläge</th>\n";
+                                        echo "<th>Davon noch nicht überprüft</th>\n";
                                         echo "<td>" . $statistics['incomplete_fix_count'] . "</td>\n";
                                     echo "</tr>\n";
                                     echo "<tr>\n";
-                                        echo "<th class='important'>Getätigte Überprüfungen</th>\n";
-                                        echo "<td>" . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>Davon als korrekt markiert</th>\n";
-                                        echo "<td>" . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>Davon als falsch markiert</th>\n";
-                                        echo "<td>" . "</td>\n";
+                                        echo "<th>Davon vollständig überprüft</th>\n";
+                                        echo "<td>" . $statistics['complete_fix_count'] . "</td>\n";
                                     echo "</tr>\n";
                                 echo "</table>\n";
                                 ?>
