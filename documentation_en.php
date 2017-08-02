@@ -72,137 +72,261 @@ $statistics = json_decode($result, true);
 <div class="span3">
 <img class="statistics-image" src="resources/images/statistics/user.png" />
 </div>
-<div class="span5">
-<?php
-                                echo "<table class='table table-striped stats'>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>OpenStreetMap</th>\n";
-                                        echo "<td>" . $values['osm_user_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>Google</th>\n";
-                                        echo "<td>" . $values['google_user_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>Facebook</th>\n";
-                                        echo "<td>" . $values['fb_user_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th class='important'>Total</th>\n";
-                                        echo "<td>" . $values['user_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>There from active</th>\n";
-                                        echo "<td>" . $values['active_user_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                echo "</table>\n";
-                                ?>
-</div>
+    <div class="span5">
+        <?php
+        echo "<table class='table table-striped stats'>\n";
+        echo "<tr>\n";
+        echo "<th>OpenStreetMap</th>\n";
+        echo "<td>" . $statistics['osm_user_count'] . "</td>\n";
+        echo "</tr>\n";
+        echo "<tr>\n";
+        echo "<th>Google</th>\n";
+        echo "<td>" . $statistics['google_user_count'] . "</td>\n";
+        echo "</tr>\n";
+        echo "<tr>\n";
+        echo "<th class='important'>Total</th>\n";
+        echo "<td>" . $statistics['user_count'] . "</td>\n";
+        echo "</tr>\n";
+        echo "</table>\n";
+        ?>
+    </div>
 </div>
 <h3>Tasks</h3>
 <div class="row">
 <div class="span3">
 <img class="statistics-image" src="resources/images/statistics/fixes.png" />
 </div>
-<div class="span5">
-<?php
-                                echo "<table class='table table-striped stats'>\n";
-                                    echo "<tr>\n";
-                                        echo "<th class='important'>Solved Tasks</th>\n";
-                                        echo "<td>" . $values['fix_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>There from unsolvable</th>\n";
-                                        echo "<td>" . $values['falsepositive_fix_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>There from fully examined</th>\n";
-                                        echo "<td>" . $values['validated_fix_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                echo "</table>\n";
+    <div class="span5">
+        <?php
+        echo "<table class='table table-striped stats'>\n";
+        echo "<tr>\n";
+        echo "<th class='important'>Missions (includes unsolvable)</th>\n";
+        echo "<td>" . $statistics['fix_count'] . "</td>\n";
+        echo "</tr>\n";
+        echo "<tr>\n";
+        echo "<th>Solved Missions</th>\n";
+        echo "<td>" . $statistics['validated_fix_count'] . "</td>\n";
+        echo "</tr>\n";
+        echo "<tr>\n";
+        echo "<th>thereof not validated</th>\n";
+        echo "<td>" . $statistics['incomplete_fix_count'] . "</td>\n";
+        echo "</tr>\n";
+        echo "<tr>\n";
+        echo "<th>thereof validated and ready to upload to OSM</th>\n";
+        echo "<td>" . $statistics['complete_fix_count'] . "</td>\n";
+        echo "</tr>\n";
+        echo "</table>\n";
+        ?>
+    </div>
+</div>
+                        <h3>Solved Missions</h3>
+                        <div class="row">
+                            <div class="span12">
+                                <?php
+                                $badgesUrl = './resources/images/missions/';
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "mission_language.png' />\n";
+                                echo "<p>Language of the name unknown: <span class='value'>" . $statistics['solved_language_unknown_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "mission_cuisine.png' />\n";
+                                echo "<p>Restaurant without a cuisine: <span class='value'>" . $statistics['solved_missing_cuisine_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "mission_floors.png' />\n";
+                                echo "<p>Missing Levels: <span class='value'>" . $statistics['solved_missing_level_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "mission_speed.png' />\n";
+                                echo "<p>Missing speed limit: <span class='value'>" . $statistics['solved_missing_maxspeed_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "mission_road.png' />\n";
+                                echo "<p>Type of track unknown: <span class='value'>" . $statistics['solved_missing_track_type_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "mission_motorway.png' />\n";
+                                echo "<p>Motorway without reference: <span class='value'>" . $statistics['solved_motorway_ref_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "mission_opening_hours.png' />\n";
+                                echo "<p>Place without opening hours: <span class='value'>" . $statistics['solved_opening_hours_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "mission_poi.png' />\n";
+                                echo "<p>Object without a name: <span class='value'>" . $statistics['solved_poi_name_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "mission_religion.png' />\n";
+                                echo "<p>Place of worship without religion: <span class='value'>" . $statistics['solved_religion_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "mission_missing_street_name.png' />\n";
+                                echo "<p>Street without a name: <span class='value'>" . $statistics['solved_way_wo_tags_count'] . "</span></p>\n";
+                                echo "</div>\n";
                                 ?>
-</div>
-</div>
-<h3>Examinations</h3>
-<div class="row">
-<div class="span3">
-<img class="statistics-image" src="resources/images/statistics/votes.png" />
-</div>
-<div class="span5">
-<?php
-                                echo "<table class='table table-striped stats'>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>Yet to be examined proposals for solutions</th>\n";
-                                        echo "<td>" . $values['incomplete_fix_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th class='important'>Made examinations</th>\n";
-                                        echo "<td>" . $values['vote_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>There from marked as correct</th>\n";
-                                        echo "<td>" . $values['valid_vote_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                    echo "<tr>\n";
-                                        echo "<th>There from marked as incorrect</th>\n";
-                                        echo "<td>" . $values['invalid_vote_count'] . "</td>\n";
-                                    echo "</tr>\n";
-                                echo "</table>\n";
-                                ?>
-</div>
-</div>
+                            </div>
+                        </div>
 <h3>Won awards</h3>
-<div class="row">
-<div class="span12">
-<?php
-                                $badgesUrl = 'http://play.kort.ch/resources/images/badges/';
+                        <div class="row">
+                            <div class="span12">
+                                <?php
+                                $badgesUrl = './resources/images/badges/';
                                 echo "<div class='kort-badge'>\n";
-                                echo "<img src='" . $badgesUrl . "fix_count_10.png' />\n";
-                                echo "<p>10 Tasks: <span class='value'>" . $values['ten_missions_badge_count'] . "</span></p>\n";
-                                echo "</div>\n";
-                                echo "<div class='kort-badge'>\n";
-                                echo "<img src='" . $badgesUrl . "fix_count_50.png' />\n";
-                                echo "<p>50 Tasks: <span class='value'>" . $values['fifty_missions_badge_count'] . "</span></p>\n";
-                                echo "</div>\n";
-                                echo "<div class='kort-badge'>\n";
-                                echo "<img src='" . $badgesUrl . "fix_count_100.png' />\n";
-                                echo "<p>100 Tasks: <span class='value'>" . $values['hundred_missions_badge_count'] . "</span></p>\n";
-                                echo "</div>\n";
-                                echo "<div class='kort-badge clear'>\n";
-                                echo "<img src='" . $badgesUrl . "vote_count_10.png' />\n";
-                                echo "<p>10 Examinations: <span class='value'>" . $values['ten_checks_badge_count'] . "</span></p>\n";
-                                echo "</div>\n";
-                                echo "<div class='kort-badge'>\n";
-                                echo "<img src='" . $badgesUrl . "vote_count_100.png' />\n";
-                                echo "<p>100 Examinations: <span class='value'>" . $values['hundred_checks_badge_count'] . "</span></p>\n";
-                                echo "</div>\n";
-                                echo "<div class='kort-badge'>\n";
-                                echo "<img src='" . $badgesUrl . "vote_count_1000.png' />\n";
-                                echo "<p>1000 Examinations: <span class='value'>" . $values['thousand_checks_badge_count'] . "</span></p>\n";
-                                echo "</div>\n";
-                                echo "<div class='kort-badge clear'>\n";
                                 echo "<img src='" . $badgesUrl . "highscore_place_3.png' />\n";
-                                echo "<p>3. Place: <span class='value'>" . $values['third_place_badge_count'] . "</span></p>\n";
+                                echo "<p>3. Place: <span class='value'>" . $statistics['highscore_place_3_count'] . "</span></p>\n";
                                 echo "</div>\n";
                                 echo "<div class='kort-badge'>\n";
                                 echo "<img src='" . $badgesUrl . "highscore_place_2.png' />\n";
-                                echo "<p>2. Place: <span class='value'>" . $values['second_place_badge_count'] . "</span></p>\n";
+                                echo "<p>2. Place: <span class='value'>" . $statistics['highscore_place_2_count'] . "</span></p>\n";
                                 echo "</div>\n";
                                 echo "<div class='kort-badge'>\n";
                                 echo "<img src='" . $badgesUrl . "highscore_place_1.png' />\n";
-                                echo "<p>1. Place: <span class='value'>" . $values['first_place_badge_count'] . "</span></p>\n";
-                                echo "</div>\n";
-                                echo "<div class='kort-badge clear'>\n";
-                                echo "<img src='" . $badgesUrl . "fix_count_1.png' />\n";
-                                echo "<p>1. Task: <span class='value'>" . $values['first_mission_badge_count'] . "</span></p>\n";
+                                echo "<p>1. Place: <span class='value'>" . $statistics['highscore_place_1_count'] . "</span></p>\n";
                                 echo "</div>\n";
                                 echo "<div class='kort-badge'>\n";
-                                echo "<img src='" . $badgesUrl . "vote_count_1.png' />\n";
-                                echo "<p>1. Examination: <span class='value'>" . $values['first_check_badge_count'] . "</span></p>\n";
+                                echo "<img src='" . $badgesUrl . "total_fix_count_1.png' />\n";
+                                echo "<p>1. Mission: <span class='value'>" . $statistics['total_fix_count_1_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "total_fix_count_10.png' />\n";
+                                echo "<p>10 Missions: <span class='value'>" . $statistics['total_fix_count_10_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "total_fix_count_50.png' />\n";
+                                echo "<p>50 Missions: <span class='value'>" . $statistics['total_fix_count_50_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "total_fix_count_100.png' />\n";
+                                echo "<p>100 Missions: <span class='value'>" . $statistics['total_fix_count_100_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "six_per_day.png' />\n";
+                                echo "<p>6 Missions a Day Keeps the Doctor Away: <span class='value'>" . $statistics['six_per_day_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_language_unknown_5.png' />\n";
+                                echo "<p>5 Language Unknown Missions: <span class='value'>" . $statistics['fix_count_language_unknown_5'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_language_unknown_50.png' />\n";
+                                echo "<p>50 Language Unknown Missions: <span class='value'>" . $statistics['fix_count_language_unknown_50'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_language_unknown_100.png' />\n";
+                                echo "<p>100 Language Unknown Missions: <span class='value'>" . $statistics['fix_count_language_unknown_100'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_cuisine_5.png' />\n";
+                                echo "<p>Chef Trainee: <span class='value'>" . $statistics['fix_count_missing_cuisine_5_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_cuisine_50.png' />\n";
+                                echo "<p>Gastronomist: <span class='value'>" . $statistics['fix_count_missing_cuisine_50_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_cuisine_100.png' />\n";
+                                echo "<p>Chef de Cuisine: <span class='value'>" . $statistics['fix_count_missing_cuisine_100_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_level_5.png' />\n";
+                                echo "<p>5 Building Levels Missions: <span class='value'>" . $statistics['fix_count_missing_level_5_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_level_50.png' />\n";
+                                echo "<p>50 Building Levels Missions: <span class='value'>" . $statistics['fix_count_missing_level_50_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_level_100.png' />\n";
+                                echo "<p>100 Building Levels Missions: <span class='value'>" . $statistics['fix_count_missing_level_100_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_maxspeed_5.png' />\n";
+                                echo "<p>5 Maxspeed Missions: <span class='value'>" . $statistics['fix_count_missing_maxspeed_5_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_maxspeed_50.png' />\n";
+                                echo "<p>50 Maxspeed Missions: <span class='value'>" . $statistics['fix_count_missing_maxspeed_50_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_maxspeed_100.png' />\n";
+                                echo "<p>100 Maxspeed Missions: <span class='value'>" . $statistics['fix_count_missing_maxspeed_100_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_track_type_5.png' />\n";
+                                echo "<p>5 Track Type Missions: <span class='value'>" . $statistics['fix_count_missing_track_type_5_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_track_type_50.png' />\n";
+                                echo "<p>50 Track Type Missions: <span class='value'>" . $statistics['fix_count_missing_track_type_50_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_missing_track_type_100.png' />\n";
+                                echo "<p>100 Track Type Missions: <span class='value'>" . $statistics['fix_count_missing_track_type_100_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_motorway_ref_5.png' />\n";
+                                echo "<p>5 Motorway Reference Missions: <span class='value'>" . $statistics['fix_count_motorway_ref_5_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_motorway_ref_50.png' />\n";
+                                echo "<p>50 Motorway Reference Missions: <span class='value'>" . $statistics['fix_count_motorway_ref_50_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_motorway_ref_100.png' />\n";
+                                echo "<p>100 Motorway Reference Missions: <span class='value'>" . $statistics['fix_count_motorway_ref_100_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_opening_hours_5.png' />\n";
+                                echo "<p>5 Opening Hour Missions: <span class='value'>" . $statistics['fix_count_opening_hours_5_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_opening_hours_50.png' />\n";
+                                echo "<p>50 Opening Hour Missions: <span class='value'>" . $statistics['fix_count_opening_hours_50_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_opening_hours_100.png' />\n";
+                                echo "<p>100 Opening Hour Missions: <span class='value'>" . $statistics['fix_count_opening_hours_100_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_poi_name_5.png' />\n";
+                                echo "<p>5 POI Missions: <span class='value'>" . $statistics['fix_count_poi_name_5_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_poi_name_50.png' />\n";
+                                echo "<p>50 POI Missions: <span class='value'>" . $statistics['fix_count_poi_name_50_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_poi_name_100.png' />\n";
+                                echo "<p>100 POI Missions: <span class='value'>" . $statistics['fix_count_poi_name_100_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_religion_5.png' />\n";
+                                echo "<p>5 Religion Missions: <span class='value'>" . $statistics['fix_count_religion_5_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_religion_50.png' />\n";
+                                echo "<p>50 Religion Missions: <span class='value'>" . $statistics['fix_count_religion_50_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_religion_100.png' />\n";
+                                echo "<p>100 Religion Missions: <span class='value'>" . $statistics['fix_count_religion_100_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_way_wo_tags_5.png' />\n";
+                                echo "<p>5 Street Name Missions: <span class='value'>" . $statistics['fix_count_way_wo_tags_5_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_way_wo_tags_50.png' />\n";
+                                echo "<p>50 Street Name Missions: <span class='value'>" . $statistics['fix_count_way_wo_tags_50_count'] . "</span></p>\n";
+                                echo "</div>\n";
+                                echo "<div class='kort-badge'>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_way_wo_tags_100.png' />\n";
+                                echo "<p>100 Street Name Missions: <span class='value'>" . $statistics['fix_count_way_wo_tags_100_count'] . "</span></p>\n";
                                 echo "</div>\n";
                                 ?>
-</div>
-</div>
+                            </div>
+                        </div>
 <?php
                     } else {
                         echo "<div class=\"alert alert-error\">Error loading statistics.</div>\n";
