@@ -102,18 +102,22 @@ $statistics = json_decode($result, true);
                                 <?php
                                 echo "<table class='table table-striped stats'>\n";
                                     echo "<tr>\n";
-                                        echo "<th class='important'>Erledigte Aufträge</th>\n";
+                                        echo "<th class='important'>Erledigte Missionen (inklusive nicht gelöste)</th>\n";
                                         echo "<td>" . $statistics['fix_count'] . "</td>\n";
+                                    echo "</tr>\n";
+                                    echo "<tr>\n";
+                                    echo "<th>Erledigte Missionen</th>\n";
+                                    echo "<td>" . $statistics['validated_fix_count'] . "</td>\n";
                                     echo "</tr>\n";
                                     echo "<tr>\n";
                                         echo "<th>Davon noch nicht überprüft</th>\n";
                                         echo "<td>" . $statistics['incomplete_fix_count'] . "</td>\n";
                                     echo "</tr>\n";
                                     echo "<tr>\n";
-                                        echo "<th>Davon vollständig überprüft</th>\n";
+                                        echo "<th>Davon vollständig überprüft und bereit für Übertragung nach OSM</th>\n";
                                         echo "<td>" . $statistics['complete_fix_count'] . "</td>\n";
                                     echo "</tr>\n";
-                                echo "</table>\n";
+                                    echo "</table>\n";
                                 ?>
                             </div>
                         </div>
@@ -121,18 +125,18 @@ $statistics = json_decode($result, true);
                         <div class="row">
                             <div class="span12">
                                 <?php
-                                $badgesUrl = 'http://play.kort.ch/resources/images/badges/';
+                                $badgesUrl = './resources/images/badges/';
                                 echo "<div class='kort-badge'>\n";
-                                echo "<img src='" . $badgesUrl . "fix_count_10.png' />\n";
-                                echo "<p>10 Aufträge: <span class='value'>" . "</span></p>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_language_unknown_5.png' />\n";
+                                echo "<p>10 Aufträge: <span class='value'>" . $statistics['fix_count_language_unknown_5_count'] . "</span></p>\n";
                                 echo "</div>\n";
                                 echo "<div class='kort-badge'>\n";
-                                echo "<img src='" . $badgesUrl . "fix_count_50.png' />\n";
-                                echo "<p>50 Aufträge: <span class='value'>" . "</span></p>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_language_unknown_50.png' />\n";
+                                echo "<p>50 Aufträge: <span class='value'>" . $statistics['fix_count_language_unknown_50_count'] . "</span></p>\n";
                                 echo "</div>\n";
                                 echo "<div class='kort-badge'>\n";
-                                echo "<img src='" . $badgesUrl . "fix_count_100.png' />\n";
-                                echo "<p>100 Aufträge: <span class='value'>" . "</span></p>\n";
+                                echo "<img src='" . $badgesUrl . "fix_count_language_unknown_100.png' />\n";
+                                echo "<p>100 Aufträge: <span class='value'>" . $statistics['fix_count_language_unknown_100_count'] . "</span></p>\n";
                                 echo "</div>\n";
                                 echo "<div class='kort-badge clear'>\n";
                                 echo "<img src='" . $badgesUrl . "vote_count_10.png' />\n";
