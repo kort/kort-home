@@ -9,7 +9,7 @@ Kort\ClassLoader::registerAutoLoader();
 
 use Helper\HttpHelper;
 
-$statisticsUrl = 'https://kort.dev.ifs.hsr.ch/v1.0/statistics';
+$statisticsUrl = 'https://prod.kort.dev.ifs.hsr.ch/v1.0/statistics';
 $http = new HttpHelper();
 $result = $http->get($statisticsUrl);
 $statistics = json_decode($result, true);
